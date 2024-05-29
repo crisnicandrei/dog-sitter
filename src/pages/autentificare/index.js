@@ -1,8 +1,51 @@
+// ** Next Imports
 import Link from "next/link";
+
+// ** React Imports
 import React from "react";
+
+// ** Layout Imports
 import Layout from "../../layout/Layout";
 
+// ** Third party libraries imports
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+
+const defaultValues = {
+  password: "",
+  email: "",
+  termsAndConditions: false,
+};
+
+const validationSchema = yup.object().shape({
+  email: yup
+    .string()
+    .email("Adresa de email nu este validă.")
+    .required("Email-ul este obligatoriu."),
+  password: yup
+    .string()
+    .required("Parola este obligatorie.")
+    .min(6, "Parola trebuie să conțină cel puțin 6 caractere."),
+  termsAndConditions: yup
+    .boolean()
+    .oneOf([true], "Trebuie să fiți de acord cu termenii și condițiile."),
+});
+
 function loginPage() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues,
+    resolver: yupResolver(validationSchema),
+  });
+
+  const onSubmit = (data) => console.log("Form data:", data);
+
+  console.log("THE ERRORS ARE:", errors);
+
   return (
     <>
       <Layout>
@@ -24,15 +67,21 @@ function loginPage() {
                       </Link>
                     </p>
                   </div>
-                  <form className="w-100">
+                  <form className="w-100" onSubmit={handleSubmit(onSubmit)}>
                     <div className="row">
                       <div className="col-12">
                         <div className="form-inner">
                           <label>Introduceți adresa de email *</label>
                           <input
-                            type="email"
+                            type="text"
                             placeholder="Introduceți adresa de email"
+                            {...register("email")}
                           />
+                          {errors.email && (
+                            <p className="text-danger">
+                              {errors.email.message}
+                            </p>
+                          )}
                         </div>
                       </div>
                       <div className="col-12">
@@ -43,14 +92,25 @@ function loginPage() {
                             name="password"
                             id="password"
                             placeholder="Parola"
+                            {...register("password")}
                           />
                           <i className="bi bi-eye-slash" id="togglePassword" />
+                          {errors.password && (
+                            <p className="text-danger">
+                              {errors.password.message}
+                            </p>
+                          )}
                         </div>
                       </div>
                       <div className="col-12">
                         <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
                           <div className="form-group">
-                            <input type="checkbox" id="html" />
+                            <input
+                              type="checkbox"
+                              id="html"
+                              {...register("termsAndConditions")}
+                            />
+
                             <label htmlFor="html">
                               Sunt de acord cu{" "}
                               <a href="#">Termenii &amp; Politica</a>
@@ -59,6 +119,11 @@ function loginPage() {
                           <a href="#" className="forgot-pass">
                             Parolă uitată
                           </a>
+                          {errors.termsAndConditions && (
+                            <p className="text-danger">
+                              {errors.termsAndConditions.message}
+                            </p>
+                          )}
                         </div>
                       </div>
                     </div>
