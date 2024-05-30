@@ -12,6 +12,39 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { useDropzone } from "react-dropzone";
+import Scheduler from "devextreme-react/scheduler";
+
+const data = [
+  {
+    text: "Website Re-Design Plan",
+    startDate: new Date("2021-04-26T16:30:00.000Z"),
+    endDate: new Date("2021-04-26T18:30:00.000Z"),
+  },
+  {
+    text: "Book Flights to San Fran for Sales Trip",
+    startDate: new Date("2021-04-26T19:00:00.000Z"),
+    endDate: new Date("2021-04-26T20:00:00.000Z"),
+    allDay: true,
+  },
+  {
+    text: "Install New Router in Dev Room",
+    startDate: new Date("2021-04-26T21:30:00.000Z"),
+    endDate: new Date("2021-04-26T22:30:00.000Z"),
+  },
+  {
+    text: "Approve Personal Computer Upgrade Plan",
+    startDate: new Date("2021-04-27T17:00:00.000Z"),
+    endDate: new Date("2021-04-27T18:00:00.000Z"),
+  },
+  {
+    text: "Final Budget Review",
+    startDate: new Date("2021-04-27T19:00:00.000Z"),
+    endDate: new Date("2021-04-27T20:35:00.000Z"),
+  },
+];
+
+const currentDate = new Date(2021, 3, 29);
+const views = ["day", "week", "workWeek", "month"];
 
 const defaultValues = {
   firstName: "",
@@ -171,6 +204,19 @@ function editProfilePage() {
                     <button className="account-btn">Salveaza</button>
                   </form>
                 </div>
+              </div>
+              <div className="col-xl-10 col-lg-10 col-md-10 mt-100">
+                <h1>Orar</h1>
+
+                <Scheduler
+                  timeZone="America/Los_Angeles"
+                  dataSource={data}
+                  views={views}
+                  defaultCurrentView="day"
+                  defaultCurrentDate={currentDate}
+                  height={730}
+                  startDayHour={9}
+                />
               </div>
             </div>
           </div>
