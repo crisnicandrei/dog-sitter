@@ -44,8 +44,6 @@ function loginPage() {
 
   const onSubmit = (data) => console.log("Form data:", data);
 
-  console.log("THE ERRORS ARE:", errors);
-
   return (
     <>
       <Layout>

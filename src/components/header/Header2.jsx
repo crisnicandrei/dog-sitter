@@ -50,8 +50,8 @@ function Header2() {
       ref={headerRef}
       className={
         state.scrollY > 150
-          ? "header-area style-2 sticky"
-          : "header-area style-2"
+          ? "header-area style-2 sticky shadow-lg   bg-white rounded"
+          : "header-area style-2 shadow-lg  bg-white rounded"
       }
     >
       <div className="container-fluid d-flex justify-content-between align-items-center">
@@ -98,8 +98,8 @@ function Header2() {
                 onClick={() => dispatch({ type: "home" })}
               />
             </li>
-            <li className={currentRoute === "/" ? "active" : ""}>
-              <Link href="/" legacyBehavior>
+            <li className={currentRoute === "/profil" ? "active" : ""}>
+              <Link href="/profil" legacyBehavior>
                 <a>Profil</a>
               </Link>
               <i
@@ -107,9 +107,18 @@ function Header2() {
                 onClick={() => dispatch({ type: "home" })}
               />
             </li>
-            <li className={currentRoute === "/" ? "active" : ""}>
-              <Link href="/" legacyBehavior>
+            <li className={currentRoute === "/editare-profil" ? "active" : ""}>
+              <Link href="/editare-profil" legacyBehavior>
                 <a>Editare Profil</a>
+              </Link>
+              <i
+                className="bi bi-plus dropdown-icon"
+                onClick={() => dispatch({ type: "home" })}
+              />
+            </li>
+            <li className={currentRoute === "/profiluri" ? "active" : ""}>
+              <Link href="/profiluri" legacyBehavior>
+                <a>Profiluri</a>
               </Link>
               <i
                 className="bi bi-plus dropdown-icon"
