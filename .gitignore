@@ -9,8 +9,6 @@ node_modules
 /.next
 /out
 
-# Next.js static files output
-/public
 
 # Production build output
 /build
