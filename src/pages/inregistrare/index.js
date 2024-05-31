@@ -11,7 +11,10 @@ import Layout from "../../layout/Layout";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { signInWithGoogle } from "../../configs/firebase.config";
+import {
+  signInWithGoogle,
+  registerWithEmailAndPassword,
+} from "../../configs/firebase.config";
 
 const defaultValues = {
   firstName: "",
@@ -52,7 +55,13 @@ function signUpPage() {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = (data) => console.log("Form data:", data);
+  const onSubmit = (formData) => {
+    const { firstName, lastName, email, password } = formData;
+    const name = firstName + " " + lastName;
+    console.log("Form data:", name, email, password);
+
+    registerWithEmailAndPassword(name, email, password);
+  };
 
   const handleLoginWithGoogle = () => {
     signInWithGoogle();

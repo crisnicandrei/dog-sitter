@@ -70,6 +70,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
       name,
       authProvider: "local",
       email,
+      isSuperAdmin: false,
     });
   } catch (err) {
     console.error(err);
