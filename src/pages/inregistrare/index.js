@@ -11,6 +11,8 @@ import Layout from "../../layout/Layout";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
+import signInWithGoogle from "../../configs/firebase.config";
+
 const defaultValues = {
   firstName: "",
   lastName: "",
@@ -51,6 +53,10 @@ function signUpPage() {
   });
 
   const onSubmit = (data) => console.log("Form data:", data);
+
+  const handleLoginWithGoogle = () => {
+    signInWithGoogle();
+  };
 
   return (
     <>
@@ -181,17 +187,14 @@ function signUpPage() {
                   <div className="alternate-signup-box">
                     <h6>SAU ÎNSCRIE-TE CU</h6>
                     <div className="btn-group gap-4">
-                      <a
-                        href="#"
+                      <button
                         className="eg-btn google-btn d-flex align-items-center"
+                        onClick={() => handleLoginWithGoogle()}
                       >
                         <i className="bx bxl-google" />
                         <span>ÎNSCRIE-TE CU GOOGLE</span>
-                      </a>
-                      <a
-                        href="#"
-                        className="eg-btn facebook-btn d-flex align-items-center"
-                      >
+                      </button>
+                      <a className="eg-btn facebook-btn d-flex align-items-center">
                         <i className="bx bxl-facebook" />
                         ÎNSCRIE-TE CU FACEBOOK
                       </a>
