@@ -11,7 +11,7 @@ import Layout from "../../layout/Layout";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import signInWithGoogle from "../../configs/firebase.config";
+import { signInWithGoogle } from "../../configs/firebase.config";
 
 const defaultValues = {
   firstName: "",
