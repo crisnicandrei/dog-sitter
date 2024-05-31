@@ -125,6 +125,124 @@ function Header2() {
                 onClick={() => dispatch({ type: "home" })}
               />
             </li>
+            <li className="menu-item-has-children">
+              <Link legacyBehavior href="#">
+                <a>Implicare Socială</a>
+              </Link>
+              <i
+                className="bi bi-plus dropdown-icon"
+                onClick={() => dispatch({ type: "shop" })}
+              />
+              <ul
+                className={
+                  state.activeMenu === "shop"
+                    ? "sub-menu  d-block"
+                    : "sub-menu d-xl-block d-none"
+                }
+              >
+                <li>
+                  <Link legacyBehavior href="/campanie-de-sterilizare">
+                    <a
+                      className={
+                        currentRoute === "/campanie-de-sterilizare"
+                          ? "active"
+                          : ""
+                      }
+                    >
+                      Campanie de sterilizare
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/salveaza">
+                    <a className={currentRoute === "/salveaza" ? "active" : ""}>
+                      Salvează
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/adopta-virtual">
+                    <a
+                      className={
+                        currentRoute === "/adopta-virtual" ? "active" : ""
+                      }
+                    >
+                      Adoptă Virtual
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item-has-children">
+              <Link legacyBehavior href="#">
+                <a>Donează</a>
+              </Link>
+              <i
+                className="bi bi-plus dropdown-icon"
+                onClick={() => dispatch({ type: "shop" })}
+              />
+              <ul
+                className={
+                  state.activeMenu === "shop"
+                    ? "sub-menu  d-block"
+                    : "sub-menu d-xl-block d-none"
+                }
+              >
+                <li>
+                  <Link legacyBehavior href="/impozit">
+                    <a className={currentRoute === "/impozit" ? "active" : ""}>
+                      Impozit
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/ajutor-direct">
+                    <a
+                      className={
+                        currentRoute === "/ajutor-direct" ? "active" : ""
+                      }
+                    >
+                      Ajutor direct
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item-has-children">
+              <Link legacyBehavior href="#">
+                <a>Devino Sitter</a>
+              </Link>
+              <i
+                className="bi bi-plus dropdown-icon"
+                onClick={() => dispatch({ type: "shop" })}
+              />
+              <ul
+                className={
+                  state.activeMenu === "shop"
+                    ? "sub-menu  d-block"
+                    : "sub-menu d-xl-block d-none"
+                }
+              >
+                <li>
+                  <Link legacyBehavior href="/impozit">
+                    <a className={currentRoute === "/impozit" ? "active" : ""}>
+                      Impozit
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/ajutor-direct">
+                    <a
+                      className={
+                        currentRoute === "/ajutor-direct" ? "active" : ""
+                      }
+                    >
+                      Ajutor direct
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
         <div className="nav-right d-flex jsutify-content-end align-items-center">

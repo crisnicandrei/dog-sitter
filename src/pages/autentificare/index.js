@@ -12,6 +12,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
+import { logInWithEmailAndPassword } from "../../configs/firebase.config";
+
 const defaultValues = {
   password: "",
   email: "",
@@ -42,7 +44,11 @@ function loginPage() {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = (data) => console.log("Form data:", data);
+  const onSubmit = (formData) => {
+    const { email, password } = formData;
+    logInWithEmailAndPassword(email, password);
+    console.log("Form data:", email, password);
+  };
 
   return (
     <>

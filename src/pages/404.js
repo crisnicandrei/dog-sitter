@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import Footer1 from "../components/footer/Footer1";
-import Header1 from "../components/header/Header1";
+import Header2 from "../components/header/Header2";
 
 function errorPage() {
   return (
     <>
-      <Header1 />
+      <Header2 />
       <Breadcrumb pageName="Error" pageTitle="Error" />
       <div className="error-page mb-120">
         <div className="container">
