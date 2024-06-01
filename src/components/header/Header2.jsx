@@ -224,20 +224,34 @@ function Header2() {
                 }
               >
                 <li>
-                  <Link legacyBehavior href="/impozit">
-                    <a className={currentRoute === "/impozit" ? "active" : ""}>
-                      Impozit
+                  <Link legacyBehavior href="/comunitate">
+                    <a
+                      className={currentRoute === "/comunitate" ? "active" : ""}
+                    >
+                      Intră în comunitate
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link legacyBehavior href="/ajutor-direct">
+                  <Link legacyBehavior href="/training">
+                    <a className={currentRoute === "/training" ? "active" : ""}>
+                      Training
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/partener">
+                    <a className={currentRoute === "/partener" ? "active" : ""}>
+                      Partener
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/beneficii">
                     <a
-                      className={
-                        currentRoute === "/ajutor-direct" ? "active" : ""
-                      }
+                      className={currentRoute === "/beneficii" ? "active" : ""}
                     >
-                      Ajutor direct
+                      Beneficii
                     </a>
                   </Link>
                 </li>
