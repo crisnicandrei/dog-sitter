@@ -105,22 +105,13 @@ const logInWithEmailAndPassword = async (email, password) => {
   try {
     const res = await signInWithEmailAndPassword(auth, email, password);
     const user = res.user;
+    localStorage.setItem("user", JSON.stringify(user));
 
     const userData = await getUserData(user.uid);
-    const token = user.accessToken;
 
-    localStorage.setItem("token", JSON.stringify(token));
     return userData;
   } catch (err) {
     return undefined;
-  }
-};
-
-const getUserInfoUsingToken = async (token) => {
-  try {
-    const userData = await signInWithCustomToken(auth, token);
-  } catch (err) {
-    console.log("THE ERROR FROM TOKEN IS:", err);
   }
 };
 
@@ -139,6 +130,15 @@ const getUserData = async (id) => {
   }
 };
 
+const getUserInfoUsingUiid = async (uid) => {
+  try {
+    const userData = await getUserData(uid);
+    return userData;
+  } catch (err) {
+    console.log("THE ERROR FROM TOKEN IS:", err);
+  }
+};
+
 const updateProfile = async () => {
   try {
   } catch (error) {}
@@ -150,5 +150,5 @@ export {
   signInWithGoogle,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
-  getUserInfoUsingToken,
+  getUserInfoUsingUiid,
 };

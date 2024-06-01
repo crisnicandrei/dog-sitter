@@ -8,7 +8,7 @@ import {
   signInWithGoogle,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
-  getUserInfoUsingToken,
+  getUserInfoUsingUiid,
 } from "../configs/firebase.config";
 
 // ** Defaults
@@ -35,10 +35,17 @@ const AuthProvider = ({ children }) => {
     setUser(userData);
   };
 
+  const setUserUsingUid = async () => {
+    const localStorageUser = JSON.parse(localStorage.getItem("user"));
+    if (localStorageUser && !user) {
+      const userData = await getUserInfoUsingUiid(localStorageUser.uid);
+      console.log("THE USER IS:", userData);
+    }
+  };
+
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    token && !user && getUserInfoUsingToken(token);
-    console.log("THE USER IS:", token && !user);
+    setUserUsingUid();
+    console.log("THE USER IS:", user);
   }, [user]);
 
   //   const logout = () => {
