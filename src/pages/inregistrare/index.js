@@ -197,16 +197,12 @@ function signUpPage() {
                     <h6>SAU ÎNSCRIE-TE CU</h6>
                     <div className="btn-group gap-4">
                       <button
-                        className="eg-btn google-btn d-flex align-items-center"
+                        className="eg-btn google-btn d-flex align-items-center p-2 rounded-2"
                         onClick={() => handleLoginWithGoogle()}
                       >
                         <i className="bx bxl-google" />
                         <span>ÎNSCRIE-TE CU GOOGLE</span>
                       </button>
-                      <a className="eg-btn facebook-btn d-flex align-items-center">
-                        <i className="bx bxl-facebook" />
-                        ÎNSCRIE-TE CU FACEBOOK
-                      </a>
                     </div>
                   </div>
                   <div className="form-poicy-area">

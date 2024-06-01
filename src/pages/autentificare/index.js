@@ -12,7 +12,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
-import { logInWithEmailAndPassword } from "../../configs/firebase.config";
+import {
+  logInWithEmailAndPassword,
+  signInWithGoogle,
+} from "../../configs/firebase.config";
 
 const defaultValues = {
   password: "",
@@ -48,6 +51,10 @@ function loginPage() {
     const { email, password } = formData;
     logInWithEmailAndPassword(email, password);
     console.log("Form data:", email, password);
+  };
+
+  const handleLoginWithGoogle = () => {
+    signInWithGoogle();
   };
 
   return (
@@ -136,20 +143,13 @@ function loginPage() {
                   <div className="alternate-signup-box">
                     <h6>SAU ÎNSCRIE-TE CU</h6>
                     <div className="btn-group gap-4">
-                      <a
-                        href="#"
-                        className="eg-btn google-btn d-flex align-items-center"
+                      <button
+                        className="eg-btn google-btn d-flex align-items-center p-2 rounded-2"
+                        onClick={() => handleLoginWithGoogle()}
                       >
                         <i className="bx bxl-google" />
                         <span>ÎNSCRIE-TE CU GOOGLE</span>
-                      </a>
-                      <a
-                        href="#"
-                        className="eg-btn facebook-btn d-flex align-items-center"
-                      >
-                        <i className="bx bxl-facebook" />
-                        ÎNSCRIE-TE CU FACEBOOK
-                      </a>
+                      </button>
                     </div>
                   </div>
                   <div className="form-poicy-area">
