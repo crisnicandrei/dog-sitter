@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // ** React Imports
-import React from "react";
+import React, { useContext } from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
@@ -11,6 +11,7 @@ import Layout from "../../layout/Layout";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
+import { AuthContext } from "../../context/AuthContext";
 
 import {
   logInWithEmailAndPassword,
@@ -38,6 +39,8 @@ const validationSchema = yup.object().shape({
 });
 
 function loginPage() {
+  const { login } = useContext(AuthContext);
+
   const {
     register,
     handleSubmit,
@@ -49,7 +52,8 @@ function loginPage() {
 
   const onSubmit = (formData) => {
     const { email, password } = formData;
-    logInWithEmailAndPassword(email, password);
+    login(email, password);
+    // logInWithEmailAndPassword(email, password);
     console.log("Form data:", email, password);
   };
 

@@ -9,6 +9,7 @@ import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
   signOut,
+  signInWithCustomToken,
 } from "firebase/auth";
 
 import {
@@ -102,19 +103,24 @@ const registerWithEmailAndPassword = async (name, email, password) => {
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
-    console.log("THE Login DATA IS:", email, password);
-
     const res = await signInWithEmailAndPassword(auth, email, password);
     const user = res.user;
 
-    console.log("THE USER IS:", user);
+    const userData = await getUserData(user.uid);
+    const token = user.accessToken;
 
-    const data = await getUserData(user.uid);
-    data.token = user.accessToken;
-    localStorage.setItem("user", JSON.stringify(data));
+    localStorage.setItem("token", JSON.stringify(token));
+    return userData;
   } catch (err) {
-    console.error(err);
-    alert(err.message);
+    return undefined;
+  }
+};
+
+const getUserInfoUsingToken = async (token) => {
+  try {
+    const userData = await signInWithCustomToken(auth, token);
+  } catch (err) {
+    console.log("THE ERROR FROM TOKEN IS:", err);
   }
 };
 
@@ -144,4 +150,5 @@ export {
   signInWithGoogle,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
+  getUserInfoUsingToken,
 };
