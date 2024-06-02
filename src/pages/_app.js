@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 /*all css import*/
 import "../../styles/main.css";
-// import "devextreme/dist/css/dx.light.css";
+import "devextreme/dist/css/dx.light.css";
 
 import { AuthProvider } from "../context/AuthContext.js";
 
