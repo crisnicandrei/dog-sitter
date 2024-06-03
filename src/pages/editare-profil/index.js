@@ -224,7 +224,7 @@ function editProfilePage() {
                 />
               </div>
               <div className="col-xl-10 col-lg-10 col-md-10 mt-5">
-                <Map />
+                <Map latLong={{}} profileEdit={true} />
                 <div />
               </div>
             </div>

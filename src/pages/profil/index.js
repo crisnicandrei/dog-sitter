@@ -5,8 +5,12 @@ import React from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
+import Map from "../../components/map";
 
 function Profile() {
+  const { user } = useContext(AuthContext);
   return (
     <Layout>
       <div className="blog-details-pages pt-80 mb-120">
@@ -14,25 +18,9 @@ function Profile() {
           <div className="row g-lg-4 gy-5 justify-content-center mb-70">
             <div className="col-lg-8">
               <div className="blog-details-wrap mb-120">
-                <h2 className="post-title">
-                  Luctus justo quis feugiat lacus orcha ornare auguelon Integer
-                  gon form together nicelon.
-                </h2>
+                <h2 className="post-title">{user ? user.name : ""}</h2>
                 <div className="post-content">
-                  <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                    id. Maecenas eu lorem quisesdoi massal molestie vulputate in
-                    sitagi amet diam. Cras eu odio sit amet ipsum cursus for
-                    that gone pellentesquea. thisaton Vestibulum ut aliquet
-                    risus. In hac habitasse plateajoa dictumst. Nuncet posuere
-                    scelerisque justo in accumsan.Pellentesque maximus augue
-                    orci, quis congue purus iaculison id. Maecenas eu lorem
-                    quisesdoi massal molestie vulputate in sitagi amet diam.
-                    Cras eu odio sit amet ipsum cursus for that gone
-                    pellentesquea. thisaton Vestibulum ut aliquet risus. In hac
-                    habitasse plateajoa dictumst. Nuncet posuere scelerisque
-                    justo in accumsan.
-                  </p>
+                  <p>{user ? user.description : ""}</p>
                   <blockquote>
                     <p>
                       <sup>
@@ -107,6 +95,7 @@ function Profile() {
                     justo in accumsan.
                   </p>
                 </div>
+                <Map />
                 <div className="blog-tag-social-area">
                   <div className="bolg-tag">
                     <ul>

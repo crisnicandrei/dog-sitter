@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Loader, Marker } from "@googlemaps/js-api-loader";
 import { useJsApiLoader } from "@react-google-maps/api";
 import { set } from "date-fns";
+import { AuthContext } from "../../context/AuthContext";
 
 const libs = ["core", "maps", "places", "marker"];
 
@@ -13,12 +14,13 @@ const buildMapInfoCard = (title, body) =>
         <p>${body}</p>
    </div>`;
 
-export default function Map(latlong) {
+export default function Map({ latlong, profileEdit = false }) {
   const mapRef = useRef(null);
   const placeAuthCompleteRef = useRef(null);
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [map, setMap] = useState(null);
   const [autoComplete, setAutoComplete] = useState(null);
+  const { user, updateUser } = useContext(AuthContext);
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyC2Q3EuM1N37s_5AZSDhKlZc_Z-PZoyfxM",
@@ -82,6 +84,11 @@ export default function Map(latlong) {
       title: "Marker",
     });
 
+    const lat = location.lat();
+    const lng = location.lng();
+
+    updateUser({ ...user, coords: { lat, lng } });
+
     const infoCard = new google.maps.InfoWindow({
       position: location,
       content: buildMapInfoCard(name, name),
@@ -93,7 +100,7 @@ export default function Map(latlong) {
   return (
     <div>
       <div className="form-inner">
-        <input ref={placeAuthCompleteRef} type="text" />
+        {profileEdit ? <input ref={placeAuthCompleteRef} type="text" /> : ""}
       </div>
       {isLoaded ? (
         <div style={{ height: "600px" }} ref={mapRef} />

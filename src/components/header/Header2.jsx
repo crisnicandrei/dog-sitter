@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useReducer, useRef } from "react";
+import React, { useContext, useEffect, useReducer, useRef } from "react";
+import { AuthContext } from "../../context/AuthContext";
 /*---------Using reducer mange the active or inactive menu----------*/
 const initialState = {
   activeMenu: "",
@@ -37,6 +38,8 @@ function Header2() {
     const { scrollY } = window;
     dispatch({ type: "setScrollY", payload: scrollY });
   };
+
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -116,15 +119,19 @@ function Header2() {
                 onClick={() => dispatch({ type: "home" })}
               />
             </li>
-            <li className={currentRoute === "/profiluri" ? "active" : ""}>
-              <Link href="/profiluri" legacyBehavior>
-                <a>Profiluri</a>
-              </Link>
-              <i
-                className="bi bi-plus dropdown-icon"
-                onClick={() => dispatch({ type: "home" })}
-              />
-            </li>
+            {user?.isSuperAdmin ? (
+              <li className={currentRoute === "/profiluri" ? "active" : ""}>
+                <Link href="/profiluri" legacyBehavior>
+                  <a>Profiluri</a>
+                </Link>
+                <i
+                  className="bi bi-plus dropdown-icon"
+                  onClick={() => dispatch({ type: "home" })}
+                />
+              </li>
+            ) : (
+              ""
+            )}
             <li className="menu-item-has-children">
               <Link legacyBehavior href="#">
                 <a>Implicare Socială</a>
