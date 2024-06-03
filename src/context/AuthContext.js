@@ -9,7 +9,9 @@ import {
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
   getUserInfoUsingUiid,
+  updateProfile,
 } from "../configs/firebase.config";
+import { set } from "date-fns";
 
 // ** Defaults
 const defaultProvider = {
@@ -40,6 +42,15 @@ const AuthProvider = ({ children }) => {
     if (localStorageUser && !user) {
       const userData = await getUserInfoUsingUiid(localStorageUser.uid);
       console.log("THE USER IS:", userData);
+      setUser(userData);
+    }
+  };
+
+  const updateUser = async (data) => {
+    try {
+      await updateProfile(data);
+    } catch (error) {
+      console.error("Error updating user profile:", error);
     }
   };
 
@@ -68,6 +79,7 @@ const AuthProvider = ({ children }) => {
     login,
     // logout,
     // register,
+    updateUser,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;

@@ -21,6 +21,7 @@ import {
   addDoc,
   doc,
   getDoc,
+  updateDoc,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -139,9 +140,20 @@ const getUserInfoUsingUiid = async (uid) => {
   }
 };
 
-const updateProfile = async () => {
+const updateProfile = async (data) => {
   try {
-  } catch (error) {}
+    const q = query(collection(db, "users"), where("uid", "==", data.uid));
+    const querySnapshot = await getDocs(q);
+    if (querySnapshot.empty) {
+      console.error("No matching documents.");
+      return;
+    }
+    const userDoc = querySnapshot.docs[0];
+    const userRef = doc(db, "users", userDoc.id);
+    await updateDoc(userRef, data);
+  } catch (error) {
+    console.error("Error updating user profile:", error);
+  }
 };
 
 export {
@@ -151,4 +163,5 @@ export {
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
   getUserInfoUsingUiid,
+  updateProfile,
 };

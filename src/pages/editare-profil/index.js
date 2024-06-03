@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // ** React Imports
-import React from "react";
+import React, { useEffect } from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
@@ -14,6 +14,8 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { useDropzone } from "react-dropzone";
 import Scheduler from "devextreme-react/scheduler";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 const data = [
   {
@@ -51,7 +53,6 @@ const defaultValues = {
   firstName: "",
   lastName: "",
   phone: "",
-  location: "",
   description: "",
 };
 
@@ -59,7 +60,6 @@ const validationSchema = yup.object().shape({
   firstName: yup.string().required("Prenumele este obligatoriu."),
   lastName: yup.string().required("Numele este obligatoriu."),
   phone: yup.string().required("Telefonul este obligatoriu."),
-  location: yup.string().required("Locația este obligatorie."),
   description: yup.string().required("Descrierea este obligatorie."),
 });
 
@@ -68,10 +68,13 @@ function editProfilePage() {
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useForm({
     defaultValues,
     resolver: yupResolver(validationSchema),
   });
+
+  const { user, updateUser } = useContext(AuthContext);
 
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 
@@ -81,7 +84,23 @@ function editProfilePage() {
     </li>
   ));
 
-  const onSubmit = (data) => console.log("Form data:", data);
+  const onSubmit = (data) => {
+    updateUser({
+      ...user,
+      description: data.description,
+      phone: data.phone,
+    });
+  };
+
+  useEffect(() => {
+    if (user) {
+      const [firstName, lastName] = user.name.split(" ");
+      setValue("firstName", firstName);
+      setValue("lastName", lastName);
+      setValue("phone", user.phone);
+      setValue("description", user.description);
+    }
+  }, [user, setValue]);
 
   return (
     <>
@@ -141,21 +160,6 @@ function editProfilePage() {
                           {errors.phone && (
                             <p className="text-danger">
                               {errors.phone.message}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-inner">
-                          <label>Locație *</label>
-                          <input
-                            type="text"
-                            placeholder="Locație"
-                            {...register("location")}
-                          />
-                          {errors.location && (
-                            <p className="text-danger">
-                              {errors.location.message}
                             </p>
                           )}
                         </div>
