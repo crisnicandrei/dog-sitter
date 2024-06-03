@@ -6,6 +6,7 @@ import React from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
+import Map from "../../components/map";
 
 // ** Third party libraries imports
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -217,6 +218,10 @@ function editProfilePage() {
                   height={730}
                   startDayHour={9}
                 />
+              </div>
+              <div className="col-xl-10 col-lg-10 col-md-10 mt-5">
+                <Map />
+                <div />
               </div>
             </div>
           </div>
