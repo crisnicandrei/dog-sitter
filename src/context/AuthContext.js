@@ -48,6 +48,7 @@ const AuthProvider = ({ children }) => {
 
   const updateUser = async (data) => {
     try {
+      console.log("THE DATA IS:", data);
       await updateProfile(data);
       setUser(data);
     } catch (error) {

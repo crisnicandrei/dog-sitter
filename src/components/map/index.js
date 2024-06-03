@@ -21,6 +21,7 @@ export default function Map({ latlong, profileEdit = false }) {
   const [map, setMap] = useState(null);
   const [autoComplete, setAutoComplete] = useState(null);
   const { user, updateUser } = useContext(AuthContext);
+  const [userState, setUserState] = useState(null);
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyC2Q3EuM1N37s_5AZSDhKlZc_Z-PZoyfxM",
@@ -30,7 +31,7 @@ export default function Map({ latlong, profileEdit = false }) {
   useEffect(() => {
     if (isLoaded) {
       const mapOptions = {
-        center: { lat: 45.75149353718256, lng: 21.37802036583673 },
+        center: latlong || { lat: 44.4268, lng: 26.1025 },
         zoom: 17,
       };
 
@@ -58,10 +59,15 @@ export default function Map({ latlong, profileEdit = false }) {
   }, [isLoaded]);
 
   useEffect(() => {
+    if (user) {
+      setUserState(user);
+    }
+  }, [user]);
+
+  useEffect(() => {
     if (autoComplete) {
       autoComplete.addListener("place_changed", () => {
         const place = autoComplete.getPlace();
-        console.log("THE PLACE IS:", place);
         setSelectedPlace(place.formatted_address);
 
         const position = place.geometry?.location;
@@ -70,7 +76,7 @@ export default function Map({ latlong, profileEdit = false }) {
         }
       });
     }
-  }, [autoComplete]);
+  }, [autoComplete, userState]);
 
   const setMarker = (location, name) => {
     if (!map) {
@@ -83,6 +89,9 @@ export default function Map({ latlong, profileEdit = false }) {
       map: map,
       title: "Marker",
     });
+
+    console.log(userState);
+    console.log(user);
 
     const lat = location.lat();
     const lng = location.lng();
