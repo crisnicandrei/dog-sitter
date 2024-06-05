@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // ** React Imports
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
@@ -46,7 +46,7 @@ const data = [
   },
 ];
 
-const currentDate = new Date(2021, 3, 29);
+const currentDate = new Date();
 const views = ["day", "week", "workWeek", "month"];
 
 const defaultValues = {
@@ -76,6 +76,8 @@ function editProfilePage() {
 
   const { user, updateUser } = useContext(AuthContext);
 
+  const [appointments, setAppointments] = useState([]);
+
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 
   const files = acceptedFiles.map((file) => (
@@ -85,8 +87,10 @@ function editProfilePage() {
   ));
 
   const onSubmit = (data) => {
+    const name = `${data.firstName} ${data.lastName}`;
     updateUser({
       ...user,
+      name,
       description: data.description,
       phone: data.phone,
     });
@@ -99,8 +103,37 @@ function editProfilePage() {
       setValue("lastName", lastName);
       setValue("phone", user.phone);
       setValue("description", user.description);
+      if (user.appointments) {
+        setAppointments(user.appointments);
+      }
     }
   }, [user, setValue]);
+
+  const onAppointmentDeleted = (e) => {
+    const updatedAppointments = appointments.filter(
+      (appointment) => appointment !== e.appointmentData
+    );
+    const updatedUser = {
+      ...user,
+      appointments: updatedAppointments,
+    };
+    updateUser(updatedUser);
+  };
+
+  const onAppointmentAdded = (e) => {
+    console.log(e.appointmentData);
+    const appointmentsArray = user.appointments
+      ? [...user.appointments, e.appointmentData]
+      : [e.appointmentData];
+    console.log(appointments);
+    const updatedUser = {
+      ...user,
+      appointmentsArray,
+    };
+
+    console.log("THE UPDATED USER IS:", updatedUser);
+    updateUser(updatedUser);
+  };
 
   return (
     <>
@@ -215,12 +248,14 @@ function editProfilePage() {
 
                 <Scheduler
                   timeZone="America/Los_Angeles"
-                  dataSource={data}
+                  dataSource={appointments}
                   views={views}
                   defaultCurrentView="day"
                   defaultCurrentDate={currentDate}
                   height={730}
                   startDayHour={9}
+                  onAppointmentDeleted={onAppointmentDeleted}
+                  onAppointmentAdded={onAppointmentAdded}
                 />
               </div>
               <div className="col-xl-10 col-lg-10 col-md-10 mt-5">

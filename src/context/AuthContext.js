@@ -34,6 +34,15 @@ const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     const userData = await logInWithEmailAndPassword(email, password);
     console.log("THE USER DATA IS:", userData);
+    if (userData.appointments) {
+      userData.appointments = userData.appointments.map((appointment) => {
+        return {
+          ...appointment,
+          startDate: new Date(appointment.startDate.seconds * 1000),
+          endDate: new Date(appointment.endDate.seconds * 1000),
+        };
+      });
+    }
     setUser(userData);
   };
 
@@ -41,6 +50,15 @@ const AuthProvider = ({ children }) => {
     const localStorageUser = JSON.parse(localStorage.getItem("user"));
     if (localStorageUser && !user) {
       const userData = await getUserInfoUsingUiid(localStorageUser.uid);
+      if (userData.appointments) {
+        userData.appointments = userData.appointments.map((appointment) => {
+          return {
+            ...appointment,
+            startDate: new Date(appointment.startDate.seconds * 1000),
+            endDate: new Date(appointment.endDate.seconds * 1000),
+          };
+        });
+      }
       console.log("THE USER IS:", userData);
       setUser(userData);
     }
