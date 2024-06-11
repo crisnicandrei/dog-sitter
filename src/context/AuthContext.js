@@ -61,6 +61,7 @@ const AuthProvider = ({ children }) => {
       }
       console.log("THE USER IS:", userData);
       setUser(userData);
+      setLoading(false);
     }
   };
 
@@ -90,16 +91,24 @@ const AuthProvider = ({ children }) => {
   //     });
 
   //     return unsubscribe;
-  //   }, []);
+  //   }, [])
+
+  const logoutUser = async () => {
+    try {
+      setUser(null);
+      localStorage.removeItem("user");
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
 
   const values = {
     user,
     loading,
     loginError,
     login,
-    // logout,
-    // register,
     updateUser,
+    logoutUser,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;

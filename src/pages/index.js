@@ -15,12 +15,14 @@ import Home1Service from "../components/service/Home1Service";
 import Home1Team from "../components/team/Home1Team";
 import Home1Testimonial from "../components/testimonial/Home1Testimonial";
 import VideoBanner1 from "../components/video/VideoBanner1";
+import ImageCarousel from "../components/carousel";
 
 export default function Home() {
   return (
     <>
       <Header2 />
       <Banner1 />
+      <ImageCarousel />
       <VideoBanner1 />
       <Home1Service />
       <Home1About />

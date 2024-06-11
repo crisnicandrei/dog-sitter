@@ -17,6 +17,8 @@ import {
   logInWithEmailAndPassword,
   signInWithGoogle,
 } from "../../configs/firebase.config";
+import { async } from "@firebase/util";
+import { useRouter } from "next/router";
 
 const defaultValues = {
   password: "",
@@ -40,6 +42,7 @@ const validationSchema = yup.object().shape({
 
 function loginPage() {
   const { login } = useContext(AuthContext);
+  const router = useRouter();
 
   const {
     register,
@@ -50,15 +53,23 @@ function loginPage() {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = (formData) => {
+  const onSubmit = async (formData) => {
     const { email, password } = formData;
-    login(email, password);
-    // logInWithEmailAndPassword(email, password);
-    console.log("Form data:", email, password);
+    try {
+      await login(email, password);
+      router.push("/profil");
+    } catch (error) {
+      alert("Nume sau parola incorecta!");
+    }
   };
 
-  const handleLoginWithGoogle = () => {
-    signInWithGoogle();
+  const handleLoginWithGoogle = async () => {
+    try {
+      await signInWithGoogle();
+      router.push("/profil");
+    } catch (error) {
+      alert("A aparut o problema");
+    }
   };
 
   return (

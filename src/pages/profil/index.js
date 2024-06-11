@@ -5,12 +5,18 @@ import React from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
-import { AuthContext } from "../../context/AuthContext";
-import { useContext } from "react";
 import Map from "../../components/map";
+import useProtectedRoute from "../../hooks/useProtectedRoute";
 
 function Profile() {
-  const { user } = useContext(AuthContext);
+  const { loading, user } = useProtectedRoute();
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (!user) {
+    return null;
+  }
   return (
     <Layout>
       <div className="blog-details-pages pt-80 mb-120">

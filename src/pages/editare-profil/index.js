@@ -16,6 +16,7 @@ import { useDropzone } from "react-dropzone";
 import Scheduler from "devextreme-react/scheduler";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import useProtectedRoute from "../../hooks/useProtectedRoute";
 
 const data = [
   {
@@ -74,7 +75,8 @@ function editProfilePage() {
     resolver: yupResolver(validationSchema),
   });
 
-  const { user, updateUser } = useContext(AuthContext);
+  const { loading } = useProtectedRoute();
+  const { updateUser, user } = useContext(AuthContext);
 
   const [appointments, setAppointments] = useState([]);
 
@@ -134,6 +136,14 @@ function editProfilePage() {
     console.log("THE UPDATED USER IS:", updatedUser);
     updateUser(updatedUser);
   };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (!user) {
+    return null;
+  }
 
   return (
     <>
