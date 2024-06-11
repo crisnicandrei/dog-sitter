@@ -3,7 +3,7 @@ import React from "react";
 import Morphext from "../morphext/Morphext";
 
 function Banner1() {
-  const phrases = ["Cart .", "Dog .", "Cat ."];
+  const phrases = ["Dog .", "Cat ."];
   return (
     <div className="hero-style-1">
       <div className="container-fluid">
@@ -34,7 +34,7 @@ function Banner1() {
                 <div className="banner-img">
                   <img
                     className="img-fluid"
-                    src="assets/images/bg/new-banner-img.png"
+                    src="assets/images/image2.jpeg"
                     alt=""
                   />
                 </div>
@@ -108,6 +108,16 @@ function Banner1() {
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="reservation-btn">
+              <Link legacyBehavior href="/contact">
+                <a className="primary-btn1">Gaseste sitter</a>
+              </Link>
+              <div className="reservation-btn">
+                <Link legacyBehavior href="/contact">
+                  <a className="primary-btn1">Devino sitter</a>
+                </Link>
               </div>
             </div>
           </div>

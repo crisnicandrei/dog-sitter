@@ -10,7 +10,7 @@ import Header1 from "../components/header/Header1";
 import Header2 from "../components/header/Header2";
 import Home1Newslatter from "../components/newslatter/Home1Newslatter";
 import Home1Partner from "../components/partner/Home1Partner";
-import Home1PricePlan from "../components/pricePlan/Home1PricePlan";
+// import Home1PricePlan from "../components/pricePlan/Home1PricePlan";
 import Home1Service from "../components/service/Home1Service";
 import Home1Team from "../components/team/Home1Team";
 import Home1Testimonial from "../components/testimonial/Home1Testimonial";
@@ -23,19 +23,19 @@ export default function Home() {
       <Header2 />
       <Banner1 />
       <ImageCarousel />
-      <VideoBanner1 />
+      {/* <VideoBanner1 /> */}
       <Home1Service />
       <Home1About />
       <Home1feature />
       <FeatureCounter />
       <ChooseUs />
       <Home1Partner />
-      <Home1PricePlan />
+      {/* <Home1PricePlan /> */}
       <Home1Testimonial />
       <Home1Team />
-      <Home1Newslatter />
-      <Home1Blog />
-      <Home1Gallary />
+      {/* <Home1Newslatter /> */}
+      {/* <Home1Blog /> */}
+      {/* <Home1Gallary /> */}
       <Footer1 />
     </>
   );

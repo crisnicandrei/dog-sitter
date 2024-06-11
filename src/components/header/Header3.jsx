@@ -103,7 +103,8 @@ function Header3() {
                 <img
                   alt="image"
                   className="img-fluid"
-                  src="assets/images/header2-logo.svg"
+                  src="assets/images/logo.svg"
+                  style={{ maxWidth: "150px" }}
                 />
               </a>
             </Link>
@@ -120,7 +121,11 @@ function Header3() {
                 <Link legacyBehavior href="/">
                   <a>
                     {" "}
-                    <img alt="image" src="assets/images/header2-logo.svg" />
+                    <img
+                      alt="image"
+                      src="assets/images/logo.svg"
+                      style={{ maxWidth: "150px" }}
+                    />
                   </a>
                 </Link>
               </div>

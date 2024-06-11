@@ -82,7 +82,7 @@ function Footer1() {
           </div>
           <div className="col-lg-3 col-sm-6 d-flex justify-content-sm-end justify-content-start order-3">
             <div className="footer-items opening-time">
-              <h3>Opening Hours</h3>
+              <h3>Orar:</h3>
               <h6 className="mb-25">Mon - Fri: 9.00AM - 6.00PM</h6>
               <h6 className="mb-25">Saturday: 9.00AM - 6.00PM</h6>
               <h6>Sunday: Closed</h6>

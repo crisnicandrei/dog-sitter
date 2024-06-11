@@ -55,10 +55,10 @@ function Home1Service() {
             <div className="section-title1 text-center">
               <span>
                 <img src="assets/images/icon/section-vec-l1.svg" alt="" />
-                Services
+                Servicii
                 <img src="assets/images/icon/section-vec-r1.svg" alt="" />
               </span>
-              <h2>Experience our worship</h2>
+              <h2>Descopera serviciile noastre.</h2>
             </div>
           </div>
         </div>
@@ -117,12 +117,12 @@ function Home1Service() {
                     alt=""
                   />
                   <div className="icon">
-                    <img src="assets/images/icon/grooming2.svg" alt="" />
+                    <img src="assets/images/icon/training.svg" alt="" />
                   </div>
                   <div className="content">
                     <h3>
                       <Link legacyBehavior href="/service-details">
-                        <a> Grooming</a>
+                        <a> Dresaj</a>
                       </Link>
                     </h3>
                     <p>
@@ -152,35 +152,6 @@ function Home1Service() {
                     <h3>
                       <Link legacyBehavior href="/service-details">
                         <a> Boarding</a>
-                      </Link>
-                    </h3>
-                    <p>
-                      Pellentesque maximus augue orciquista ut aliquet risus In
-                      hac habitasse.
-                    </p>
-                  </div>
-                  <Link legacyBehavior href="/service-details">
-                    <a className="more-btn">
-                      More Details
-                      <img src="assets/images/icon/btn-arrow1.svg" alt="" />
-                    </a>
-                  </Link>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <div className="services-card1 four">
-                  <img
-                    className="services-card-vec"
-                    src="assets/images/bg/services-card-vec.png"
-                    alt=""
-                  />
-                  <div className="icon">
-                    <img src="assets/images/icon/veterinary2.svg" alt="" />
-                  </div>
-                  <div className="content">
-                    <h3>
-                      <Link legacyBehavior href="/service-details">
-                        <a>veterinary</a>
                       </Link>
                     </h3>
                     <p>

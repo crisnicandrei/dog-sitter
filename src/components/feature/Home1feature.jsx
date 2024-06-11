@@ -9,35 +9,6 @@ function Home1feature() {
             <div className="feature-left">
               <div className="single-card mb-45">
                 <div className="icon">
-                  <img src="assets/images/icon/badge1.svg" alt="" />
-                </div>
-                <div className="content">
-                  <h4>ID Badged</h4>
-                  <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                  </p>
-                </div>
-              </div>
-              <div className="single-card">
-                <div className="icon">
-                  <img src="assets/images/icon/checked1.svg" alt="" />
-                </div>
-                <div className="content">
-                  <h4>DBS Checked</h4>
-                  <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="freture-title">
-              <h2>
-                Your Pets Are <span>100% Safe</span> at Our Care.
-              </h2>
-            </div>
-            <div className="feature-right">
-              <div className="single-card mb-45">
-                <div className="icon">
                   <img src="assets/images/icon/insured1.svg" alt="" />
                 </div>
                 <div className="content">
@@ -47,6 +18,13 @@ function Home1feature() {
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="freture-title">
+              <h2>
+                <span>Cainele</span> tau e pe maini bune.
+              </h2>
+            </div>
+            <div className="feature-right">
               <div className="single-card">
                 <div className="icon">
                   <img src="assets/images/icon/fast-aid1.svg" alt="" />

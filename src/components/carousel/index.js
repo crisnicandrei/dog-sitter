@@ -4,19 +4,22 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ImageCarousel = () => {
   return (
-    <Carousel showThumbs={false} autoPlay infiniteLoop>
+    <Carousel showThumbs={true} autoPlay infiniteLoop>
       <div>
-        <img src="/assets/images/image1.jpeg" alt="Image 1" />
-        <p className="legend">Image 1</p>
-      </div>
-      {/* <div>
-        <img src="/images/image2.jpg" alt="Image 2" />
-        <p className="legend">Image 2</p>
+        <img src="/assets/images/image3.jpeg" alt="Image 1" />
       </div>
       <div>
-        <img src="/images/image3.jpg" alt="Image 3" />
-        <p className="legend">Image 3</p> */}
-      {/* </div> */}
+        <img src="/assets/images/image4.jpeg" alt="Image 2" />
+      </div>
+      <div>
+        <img src="/assets/images/image5.jpeg" alt="Image 3" />
+      </div>
+      <div>
+        <img src="/assets/images/image6.jpeg" alt="Image 3" />
+      </div>
+      <div className="image-7">
+        <img src="/assets/images/image7.jpeg" alt="Image 3" />
+      </div>
     </Carousel>
   );
 };

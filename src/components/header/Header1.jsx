@@ -77,7 +77,7 @@ function Header1() {
               </div>
               <div className="opening-time text-center">
                 <p>
-                  Opening Hours
+                  Orar:
                   <br />
                   <span>Mon - Sat 9.00 - 19.00</span>
                 </p>
@@ -109,6 +109,7 @@ function Header1() {
                   alt="image"
                   className="img-fluid"
                   src="assets/images/header1-logo.svg"
+                  style={{ maxWidth: "150px" }}
                 />
               </a>
             </Link>
@@ -125,7 +126,11 @@ function Header1() {
                 <Link legacyBehavior href="/">
                   <a>
                     {" "}
-                    <img alt="image" src="assets/images/header1-logo.svg" />
+                    <img
+                      alt="image"
+                      src="assets/images/header1-logo.svg"
+                      style={{ maxWidth: "150px" }}
+                    />
                   </a>
                 </Link>
               </div>

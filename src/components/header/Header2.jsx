@@ -72,7 +72,8 @@ function Header2() {
               <img
                 alt="image"
                 className="img-fluid"
-                src="assets/images/header2-logo.svg"
+                src="assets/images/logo.svg"
+                style={{ maxWidth: "150px" }}
               />
             </a>
           </Link>
@@ -86,7 +87,11 @@ function Header2() {
             <div className="mobile-logo-wrap">
               <Link legacyBehavior href="/">
                 <a>
-                  <img alt="image" src="assets/images/header2-logo.svg" />
+                  <img
+                    alt="image"
+                    src="assets/images/logo.svg"
+                    style={{ maxWidth: "150px" }}
+                  />
                 </a>
               </Link>
             </div>
@@ -172,14 +177,27 @@ function Header2() {
                           : ""
                       }
                     >
-                      Campanie de sterilizare
+                      Partener: Foster
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/campanie-de-sterilizare">
+                    <a
+                      className={
+                        currentRoute === "/campanie-de-sterilizare"
+                          ? "active"
+                          : ""
+                      }
+                    >
+                      Sterilizare
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/salveaza">
                     <a className={currentRoute === "/salveaza" ? "active" : ""}>
-                      Salvează
+                      Adopta
                     </a>
                   </Link>
                 </li>
@@ -214,7 +232,21 @@ function Header2() {
                 <li>
                   <Link legacyBehavior href="/impozit">
                     <a className={currentRoute === "/impozit" ? "active" : ""}>
-                      Impozit
+                      Redirectioneaza 3.5
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/doneaza">
+                    <a className={currentRoute === "/impozit" ? "active" : ""}>
+                      Doneaza
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link legacyBehavior href="/sponsorizeaza">
+                    <a className={currentRoute === "/impozit" ? "active" : ""}>
+                      Sponsorizeaza
                     </a>
                   </Link>
                 </li>
@@ -225,7 +257,7 @@ function Header2() {
                         currentRoute === "/ajutor-direct" ? "active" : ""
                       }
                     >
-                      Ajutor direct
+                      Doneaza timp: devino voluntar
                     </a>
                   </Link>
                 </li>

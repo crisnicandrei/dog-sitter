@@ -12,7 +12,7 @@ function ChooseUs() {
                 Why Choose Us
                 <img src="assets/images/icon/section-vec-r1.svg" alt="" />
               </span>
-              <h2>we provide the best care services.</h2>
+              <h2>Asiguram cele mai bune servicii.</h2>
             </div>
             <div className="choose-content">
               <p>

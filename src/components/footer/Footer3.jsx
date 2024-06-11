@@ -9,7 +9,11 @@ function Footer3() {
           <div className="col-lg-5 col-md-12">
             <div className="footer-widget">
               <div className="footer-icon">
-                {/* <img src="assets/images/header2-logo.svg" alt="" /> */}
+                <img
+                  src="assets/images/logo.svg"
+                  style={{ maxWidth: "150px" }}
+                  alt=""
+                />
               </div>
               <div className="widget-title">
                 <h2>
