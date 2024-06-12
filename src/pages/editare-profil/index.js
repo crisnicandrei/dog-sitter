@@ -39,8 +39,6 @@ const validationSchema = yup.object().shape({
 });
 
 function editProfilePage() {
-  const [appointments, setAppointments] = useState([]);
-
   const { loading } = useProtectedRoute();
   const { updateUser, user } = useContext(AuthContext);
 
@@ -67,52 +65,23 @@ function editProfilePage() {
       phone,
     };
 
-    console.log("INTRAM *N UNU");
     updateUser(updatedUserObject);
   };
 
-  const onAppointmentDeleted = (e) => {
-    const updatedAppointments = appointments.filter(
-      (appointment) => appointment !== e.appointmentData
-    );
-
-    const updatedUser = {
-      ...user,
-      appointments: updatedAppointments,
-    };
-
-    updateUser(updatedUser);
-  };
-
-  const onAppointmentAdded = (e) => {
-    const { appointmentData } = e;
-
-    console.log("THE USER IN THE APPOINTMEND AD IS:", user);
-    const appointmentsArray = user.appointments
-      ? [...user.appointments, appointmentData]
-      : [appointmentData];
-
-    const updatedUser = {
-      ...user,
-      appointments: appointmentsArray,
-    };
-
-    updateUser(updatedUser);
+  const onAppointmentsChanges = () => {
+    const structedUserClone = structuredClone(user);
+    updateUser(structedUserClone);
   };
 
   useEffect(() => {
     if (user) {
-      const { displayName, description, phone, appointments } = user;
+      const { displayName, description, phone } = user;
       const [firstName, lastName] = displayName.split(" ");
 
       setValue("firstName", firstName);
       setValue("lastName", lastName);
       setValue("phone", phone);
       setValue("description", description);
-
-      if (appointments) {
-        setAppointments(appointments);
-      }
     }
   }, [user, setValue]);
 
@@ -239,14 +208,15 @@ function editProfilePage() {
 
                 <Scheduler
                   timeZone="America/Los_Angeles"
-                  dataSource={appointments}
+                  dataSource={user.appointments || []}
                   views={views}
                   defaultCurrentView="day"
                   defaultCurrentDate={currentDate}
                   height={730}
                   startDayHour={9}
-                  onAppointmentDeleted={onAppointmentDeleted}
-                  onAppointmentAdded={onAppointmentAdded}
+                  onAppointmentDeleted={onAppointmentsChanges}
+                  onAppointmentAdded={onAppointmentsChanges}
+                  onAppointmentUpdated={onAppointmentsChanges}
                 />
               </div>
               <div className="col-xl-10 col-lg-10 col-md-10 mt-5">
