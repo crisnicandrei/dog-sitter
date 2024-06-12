@@ -105,8 +105,8 @@ function editProfilePage() {
       setValue("lastName", lastName);
       setValue("phone", user.phone);
       setValue("description", user.description);
-      if (user.appointments) {
-        setAppointments(user.appointments);
+      if (user.appointmentsArray) {
+        setAppointments(user.appointmentsArray);
       }
     }
   }, [user, setValue]);
@@ -117,7 +117,7 @@ function editProfilePage() {
     );
     const updatedUser = {
       ...user,
-      appointments: updatedAppointments,
+      appointmentsArray: updatedAppointments,
     };
     updateUser(updatedUser);
   };
