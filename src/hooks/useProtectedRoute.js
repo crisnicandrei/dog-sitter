@@ -5,11 +5,12 @@ import { AuthContext } from "../context/AuthContext";
 
 const useProtectedRoute = () => {
   const { user, loading } = useContext(AuthContext);
+
   const router = useRouter();
 
   useEffect(() => {
     if (!loading && !user) {
-      router.push("/login");
+      router.push("/autentificare");
     }
   }, [loading, user, router]);
 

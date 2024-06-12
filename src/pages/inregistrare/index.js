@@ -1,5 +1,6 @@
 // ** Next Imports
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 // ** React Imports
 import React from "react";
@@ -46,6 +47,7 @@ const validationSchema = yup.object().shape({
 });
 
 function signUpPage() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -58,9 +60,8 @@ function signUpPage() {
   const onSubmit = (formData) => {
     const { firstName, lastName, email, password } = formData;
     const name = firstName + " " + lastName;
-    console.log("Form data:", name, email, password);
 
-    registerWithEmailAndPassword(name, email, password);
+    registerWithEmailAndPassword(name, email, password, router);
   };
 
   const handleLoginWithGoogle = () => {

@@ -8,15 +8,15 @@ import Layout from "../../layout/Layout";
 import Map from "../../components/map";
 import useProtectedRoute from "../../hooks/useProtectedRoute";
 
+// ** Components imports
+import Spinner from "../../components/common/Spinner";
+
 function Profile() {
   const { loading, user } = useProtectedRoute();
-  if (loading) {
-    return <p>Loading...</p>;
+  if (loading || !user) {
+    return <Spinner />;
   }
 
-  if (!user) {
-    return null;
-  }
   return (
     <Layout>
       <div className="blog-details-pages pt-80 mb-120">

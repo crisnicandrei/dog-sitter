@@ -18,34 +18,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import useProtectedRoute from "../../hooks/useProtectedRoute";
 
-const data = [
-  {
-    text: "Website Re-Design Plan",
-    startDate: new Date("2021-04-26T16:30:00.000Z"),
-    endDate: new Date("2021-04-26T18:30:00.000Z"),
-  },
-  {
-    text: "Book Flights to San Fran for Sales Trip",
-    startDate: new Date("2021-04-26T19:00:00.000Z"),
-    endDate: new Date("2021-04-26T20:00:00.000Z"),
-    allDay: true,
-  },
-  {
-    text: "Install New Router in Dev Room",
-    startDate: new Date("2021-04-26T21:30:00.000Z"),
-    endDate: new Date("2021-04-26T22:30:00.000Z"),
-  },
-  {
-    text: "Approve Personal Computer Upgrade Plan",
-    startDate: new Date("2021-04-27T17:00:00.000Z"),
-    endDate: new Date("2021-04-27T18:00:00.000Z"),
-  },
-  {
-    text: "Final Budget Review",
-    startDate: new Date("2021-04-27T19:00:00.000Z"),
-    endDate: new Date("2021-04-27T20:35:00.000Z"),
-  },
-];
+// ** Components imports
+import Spinner from "../../components/common/Spinner";
 
 const currentDate = new Date();
 const views = ["day", "week", "workWeek", "month"];
@@ -65,6 +39,13 @@ const validationSchema = yup.object().shape({
 });
 
 function editProfilePage() {
+  const [appointments, setAppointments] = useState([]);
+
+  const { loading } = useProtectedRoute();
+  const { updateUser, user } = useContext(AuthContext);
+
+  const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
+
   const {
     register,
     handleSubmit,
@@ -75,12 +56,65 @@ function editProfilePage() {
     resolver: yupResolver(validationSchema),
   });
 
-  const { loading } = useProtectedRoute();
-  const { updateUser, user } = useContext(AuthContext);
+  const onSubmit = (data) => {
+    const { firstName, lastName, description, phone } = data;
 
-  const [appointments, setAppointments] = useState([]);
+    const displayName = `${firstName} ${lastName}`;
+    const updatedUserObject = {
+      ...user,
+      displayName,
+      description,
+      phone,
+    };
 
-  const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
+    console.log("INTRAM *N UNU");
+    updateUser(updatedUserObject);
+  };
+
+  const onAppointmentDeleted = (e) => {
+    const updatedAppointments = appointments.filter(
+      (appointment) => appointment !== e.appointmentData
+    );
+
+    const updatedUser = {
+      ...user,
+      appointments: updatedAppointments,
+    };
+
+    updateUser(updatedUser);
+  };
+
+  const onAppointmentAdded = (e) => {
+    const { appointmentData } = e;
+
+    console.log("THE USER IN THE APPOINTMEND AD IS:", user);
+    const appointmentsArray = user.appointments
+      ? [...user.appointments, appointmentData]
+      : [appointmentData];
+
+    const updatedUser = {
+      ...user,
+      appointments: appointmentsArray,
+    };
+
+    updateUser(updatedUser);
+  };
+
+  useEffect(() => {
+    if (user) {
+      const { displayName, description, phone, appointments } = user;
+      const [firstName, lastName] = displayName.split(" ");
+
+      setValue("firstName", firstName);
+      setValue("lastName", lastName);
+      setValue("phone", phone);
+      setValue("description", description);
+
+      if (appointments) {
+        setAppointments(appointments);
+      }
+    }
+  }, [user, setValue]);
 
   const files = acceptedFiles.map((file) => (
     <li key={file.path}>
@@ -88,61 +122,8 @@ function editProfilePage() {
     </li>
   ));
 
-  const onSubmit = (data) => {
-    const name = `${data.firstName} ${data.lastName}`;
-    updateUser({
-      ...user,
-      name,
-      description: data.description,
-      phone: data.phone,
-    });
-  };
-
-  useEffect(() => {
-    if (user) {
-      const [firstName, lastName] = user.name.split(" ");
-      setValue("firstName", firstName);
-      setValue("lastName", lastName);
-      setValue("phone", user.phone);
-      setValue("description", user.description);
-      if (user.appointmentsArray) {
-        setAppointments(user.appointmentsArray);
-      }
-    }
-  }, [user, setValue]);
-
-  const onAppointmentDeleted = (e) => {
-    const updatedAppointments = appointments.filter(
-      (appointment) => appointment !== e.appointmentData
-    );
-    const updatedUser = {
-      ...user,
-      appointmentsArray: updatedAppointments,
-    };
-    updateUser(updatedUser);
-  };
-
-  const onAppointmentAdded = (e) => {
-    console.log(e.appointmentData);
-    const appointmentsArray = user.appointments
-      ? [...user.appointments, e.appointmentData]
-      : [e.appointmentData];
-    console.log(appointments);
-    const updatedUser = {
-      ...user,
-      appointmentsArray,
-    };
-
-    console.log("THE UPDATED USER IS:", updatedUser);
-    updateUser(updatedUser);
-  };
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (!user) {
-    return null;
+  if (loading || !user) {
+    return <Spinner />;
   }
 
   return (

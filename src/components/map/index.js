@@ -90,9 +90,6 @@ export default function Map({ latlong, profileEdit = false }) {
       title: "Marker",
     });
 
-    console.log(userState);
-    console.log(user);
-
     const lat = location.lat();
     const lng = location.lng();
 
@@ -109,7 +106,16 @@ export default function Map({ latlong, profileEdit = false }) {
   return (
     <div>
       <div className="form-inner">
-        {profileEdit ? <input ref={placeAuthCompleteRef} type="text" /> : ""}
+        {profileEdit ? (
+          <input
+            ref={placeAuthCompleteRef}
+            type="text"
+            className="form-control mb-3"
+            placeholder="Enter location"
+          />
+        ) : (
+          ""
+        )}
       </div>
       {isLoaded ? (
         <div style={{ height: "600px" }} ref={mapRef} />

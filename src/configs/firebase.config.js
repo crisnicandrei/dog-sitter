@@ -25,13 +25,13 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBaU6-ysP-siDXMZumLWuys_7leDMSL4VM",
-  authDomain: "dog-care-e55ea.firebaseapp.com",
-  projectId: "dog-care-e55ea",
-  storageBucket: "dog-care-e55ea.appspot.com",
-  messagingSenderId: "387916965285",
-  appId: "1:387916965285:web:ffca57f7c3cc976b9ef44c",
-  measurementId: "G-QWTGZ2ZJPG",
+  apiKey: "AIzaSyDGFYpQzvZlCUUPMAzXdpI2VP5_minfP0I",
+  authDomain: "dogo-5257c.firebaseapp.com",
+  projectId: "dogo-5257c",
+  storageBucket: "dogo-5257c.appspot.com",
+  messagingSenderId: "919690930167",
+  appId: "1:919690930167:web:fc321d5ae85222eb34f0f2",
+  measurementId: "G-JDPTQPCDG4",
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -43,7 +43,6 @@ const googleProvider = new GoogleAuthProvider();
 const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
-    console.log(res);
     const user = res.user;
 
     const userData = {
@@ -60,7 +59,7 @@ const signInWithGoogle = async () => {
     if (docs.docs.length === 0) {
       await addDoc(collection(db, "users"), {
         uid: user.uid,
-        name: user.displayName,
+        displayName: user.displayName,
         authProvider: "google",
         email: user.email,
         isSuperAdmin: false,
@@ -75,10 +74,14 @@ const signInWithGoogle = async () => {
   }
 };
 
-const registerWithEmailAndPassword = async (name, email, password) => {
+const registerWithEmailAndPassword = async (name, email, password, router) => {
   try {
-    const res = await createUserWithEmailAndPassword(auth, email, password);
-    const user = res.user;
+    const userResponse = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const { user } = userResponse;
 
     const userData = {
       token: user.accessToken,
@@ -88,7 +91,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
     };
 
     localStorage.setItem("user", JSON.stringify(userData));
-    console.log("THE USER IS:", user);
+
     await addDoc(collection(db, "users"), {
       uid: user.uid,
       displayName: name,
@@ -96,8 +99,9 @@ const registerWithEmailAndPassword = async (name, email, password) => {
       email,
       isSuperAdmin: false,
     });
+
+    router.push("/editare-profil");
   } catch (err) {
-    console.error(err);
     alert(err.message);
   }
 };
@@ -140,17 +144,23 @@ const getUserInfoUsingUiid = async (uid) => {
   }
 };
 
-const updateProfile = async (data) => {
+const updateProfile = async (updatedUserData) => {
   try {
-    const q = query(collection(db, "users"), where("uid", "==", data.uid));
+    const q = query(
+      collection(db, "users"),
+      where("uid", "==", updatedUserData.uid)
+    );
     const querySnapshot = await getDocs(q);
+
     if (querySnapshot.empty) {
       console.error("No matching documents.");
       return;
     }
+
     const userDoc = querySnapshot.docs[0];
     const userRef = doc(db, "users", userDoc.id);
-    await updateDoc(userRef, data);
+
+    await updateDoc(userRef, updatedUserData);
   } catch (error) {
     console.error("Error updating user profile:", error);
   }
