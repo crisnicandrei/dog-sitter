@@ -41,7 +41,7 @@ const validationSchema = yup.object().shape({
 });
 
 function loginPage() {
-  const { login } = useContext(AuthContext);
+  const { login, signInAndRegisterUsingGoogle } = useContext(AuthContext);
   const router = useRouter();
 
   const {
@@ -65,8 +65,7 @@ function loginPage() {
 
   const handleLoginWithGoogle = async () => {
     try {
-      await signInWithGoogle();
-      router.push("/profil");
+      await signInAndRegisterUsingGoogle();
     } catch (error) {
       alert("A aparut o problema");
     }

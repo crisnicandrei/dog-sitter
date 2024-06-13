@@ -71,6 +71,7 @@ export default function Map({ latlong, profileEdit = false }) {
         setSelectedPlace(place.formatted_address);
 
         const position = place.geometry?.location;
+
         if (position) {
           setMarker(position, place.name);
         }

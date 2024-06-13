@@ -21,7 +21,10 @@ const defaultProvider = {
   setLoading: () => Boolean,
   login: () => Promise.resolve(),
   logout: () => Promise.resolve(),
-  //   register: () => Promise.resolve(),
+  register: () => Promise.resolve(),
+  signInAndRegisterUsingGoogle: () => Promise.resolve(),
+  updateUser: () => Promise.resolve(),
+  logoutUser: () => Promise.resolve(),
 };
 
 const AuthContext = createContext(defaultProvider);
@@ -30,6 +33,50 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [loginError, setLoginError] = useState(false);
+
+  const signInAndRegisterUsingGoogle = async () => {
+    const { uid } = await signInWithGoogle();
+
+    const userData = await getUserInfoUsingUiid(uid);
+
+    if (userData && userData.appointments) {
+      userData.appointments = userData.appointments.map((appointment) => {
+        return {
+          ...appointment,
+          startDate: new Date(appointment.startDate.seconds * 1000),
+          endDate: new Date(appointment.endDate.seconds * 1000),
+        };
+      });
+    }
+
+    setUser(userData);
+
+    router.push("/editare-profil");
+  };
+
+  const register = async (name, email, password, router) => {
+    try {
+      const { uid } = await registerWithEmailAndPassword(name, email, password);
+
+      const userData = await getUserInfoUsingUiid(uid);
+
+      if (userData && userData.appointments) {
+        userData.appointments = userData.appointments.map((appointment) => {
+          return {
+            ...appointment,
+            startDate: new Date(appointment.startDate.seconds * 1000),
+            endDate: new Date(appointment.endDate.seconds * 1000),
+          };
+        });
+      }
+
+      setUser(userData);
+
+      router.push("/editare-profil");
+    } catch (error) {
+      console.error("Error logging in:", error);
+    }
+  };
 
   const login = async (email, password) => {
     try {
@@ -78,9 +125,17 @@ const AuthProvider = ({ children }) => {
     }
   };
 
+  const logoutUser = async () => {
+    try {
+      setUser(null);
+      localStorage.removeItem("user");
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
+
   useEffect(() => {
     setUserUsingUid();
-    console.log("AICI");
   }, [user]);
 
   //   const logout = () => {
@@ -96,20 +151,13 @@ const AuthProvider = ({ children }) => {
   //     return unsubscribe;
   //   }, [])
 
-  const logoutUser = async () => {
-    try {
-      setUser(null);
-      localStorage.removeItem("user");
-    } catch (error) {
-      console.error("Error logging out:", error);
-    }
-  };
-
   const values = {
     user,
     loading,
     loginError,
     login,
+    register,
+    signInAndRegisterUsingGoogle,
     updateUser,
     logoutUser,
   };

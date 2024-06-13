@@ -1,33 +1,67 @@
+// ** Next Imports
 import Link from "next/link";
+
+// React imports
 import React from "react";
-import petCollection from "../../data/petCollection.json";
-function ShopCardSimple() {
+
+// ** FIrebase impports
+
+import { acceptOrDeclineUserProfile } from "../../configs/firebase.config";
+
+function ShopCardSimple({ users, setRefetchUsers }) {
+  function handleAcceptOrDeclineUserProfile(uid, bolleanAcceptence) {
+    acceptOrDeclineUserProfile(uid, bolleanAcceptence);
+    setRefetchUsers((prev) => !prev);
+  }
+
   return (
     <>
-      {petCollection.map((item) => {
-        const { id, img, title } = item;
+      {users.map((item) => {
+        const { uid, displayName, description } = item;
         return (
-          <div key={id} className="col-lg-4 col-md-4 col-sm-6">
+          <div key={uid} className="col-lg-4 col-md-4 col-sm-6">
             <div className="collection-card">
               <div className="collection-img">
-                <img className="img-gluid" src={img} alt="" />
+                <img
+                  className="img-gluid "
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                  src={
+                    "https://static.vecteezy.com/system/resources/thumbnails/008/951/892/small_2x/cute-puppy-pomeranian-mixed-breed-pekingese-dog-run-on-the-grass-with-happiness-photo.jpg"
+                  }
+                  alt="User Profile Picture"
+                />
                 <div className="view-dt-btn ">
                   <div className="plus-icon" style={{ padding: "19px" }}>
                     <i className="bi bi-eye" />
                   </div>
-                  <Link legacyBehavior href="/profiluri/2">
+                  <Link legacyBehavior href={`/profil/${uid}`}>
                     <a>Vezi Detalii</a>
                   </Link>
                 </div>
 
                 <ul className="cart-icon-list">
                   <li>
-                    <a href="#">
+                    <a
+                      style={{ cursor: "pointer" }}
+                      onClick={() =>
+                        handleAcceptOrDeclineUserProfile(uid, false)
+                      }
+                    >
                       <i className="bi bi-x-lg text-white" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a
+                      style={{ cursor: "pointer" }}
+                      onClick={() =>
+                        handleAcceptOrDeclineUserProfile(uid, true)
+                      }
+                    >
                       <i className="bi bi-check-lg text-white" />
                     </a>
                   </li>
@@ -36,7 +70,7 @@ function ShopCardSimple() {
               <div className="collection-content text-center">
                 <h4>
                   <Link legacyBehavior href="/shop-details">
-                    <a>{title}</a>
+                    <a>{displayName}</a>
                   </Link>
                 </h4>
                 <p
@@ -48,14 +82,7 @@ function ShopCardSimple() {
                     textOverflow: "ellipsis",
                   }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  {description}
                 </p>
               </div>
             </div>

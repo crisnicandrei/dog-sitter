@@ -24,6 +24,16 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDGFYpQzvZlCUUPMAzXdpI2VP5_minfP0I",
+//   authDomain: "dogo-5257c.firebaseapp.com",
+//   projectId: "dogo-5257c",
+//   storageBucket: "dogo-5257c.appspot.com",
+//   messagingSenderId: "919690930167",
+//   appId: "1:919690930167:web:fc321d5ae85222eb34f0f2",
+//   measurementId: "G-JDPTQPCDG4",
+// };
+
 const firebaseConfig = {
   apiKey: "AIzaSyDGFYpQzvZlCUUPMAzXdpI2VP5_minfP0I",
   authDomain: "dogo-5257c.firebaseapp.com",
@@ -45,6 +55,8 @@ const signInWithGoogle = async () => {
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;
 
+    const { uid } = user;
+
     const userData = {
       token: user.accessToken,
       uid: user.uid,
@@ -54,7 +66,7 @@ const signInWithGoogle = async () => {
 
     localStorage.setItem("user", JSON.stringify(userData));
 
-    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const q = query(collection(db, "users"), where("uid", "==", uid));
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
       await addDoc(collection(db, "users"), {
@@ -63,11 +75,15 @@ const signInWithGoogle = async () => {
         authProvider: "google",
         email: user.email,
         isSuperAdmin: false,
+        isAccepted: false,
+        isReviewed: false,
+        appointments: [],
+        phone: "",
+        description: "",
       });
     }
-    const { email, displayName } = user;
 
-    return { email, displayName };
+    return { uid };
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -98,9 +114,14 @@ const registerWithEmailAndPassword = async (name, email, password, router) => {
       authProvider: "local",
       email,
       isSuperAdmin: false,
+      isAccepted: false,
+      isReviewed: false,
+      appointments: [],
+      phone: "",
+      description: "",
     });
 
-    router.push("/editare-profil");
+    return user;
   } catch (err) {
     alert(err.message);
   }
@@ -135,13 +156,42 @@ const getUserData = async (id) => {
   }
 };
 
+const getAllPendingUsers = async (id) => {
+  const usersQueryCollection = query(
+    collection(db, "users"),
+    where("isAccepted", "==", false)
+  );
+  try {
+    const querySnapshot = await getDocs(usersQueryCollection);
+    const data = querySnapshot.docs.map((doc) => doc.data());
+    return data;
+  } catch (error) {
+    console.error("Error getting user data:", error);
+    return null;
+  }
+};
+
+const getAllAcceptedUsers = async (id) => {
+  const usersQueryCollection = query(
+    collection(db, "users"),
+    where("isAccepted", "==", true),
+    where("isReviewed", "==", true)
+  );
+  try {
+    const querySnapshot = await getDocs(usersQueryCollection);
+    const data = querySnapshot.docs.map((doc) => doc.data());
+    return data;
+  } catch (error) {
+    console.error("Error getting user data:", error);
+    return null;
+  }
+};
+
 const getUserInfoUsingUiid = async (uid) => {
   try {
     const userData = await getUserData(uid);
     return userData;
-  } catch (err) {
-    console.log("THE ERROR FROM TOKEN IS:", err);
-  }
+  } catch (err) {}
 };
 
 const updateProfile = async (updatedUserData) => {
@@ -166,6 +216,30 @@ const updateProfile = async (updatedUserData) => {
   }
 };
 
+const acceptOrDeclineUserProfile = async (uid, bolleanAcceptence) => {
+  try {
+    const q = query(collection(db, "users"), where("uid", "==", uid));
+    const querySnapshot = await getDocs(q);
+
+    if (querySnapshot.empty) {
+      console.error("No matching documents.");
+      return;
+    }
+
+    const userDoc = querySnapshot.docs[0];
+    const userRef = doc(db, "users", userDoc.id);
+
+    await updateDoc(userRef, {
+      isReviewed: true,
+      isAccepted: bolleanAcceptence,
+    });
+
+    console.log("User profile updated successfully.");
+  } catch (error) {
+    console.error("Error updating user profile:", error);
+  }
+};
+
 export {
   auth,
   db,
@@ -174,4 +248,7 @@ export {
   registerWithEmailAndPassword,
   getUserInfoUsingUiid,
   updateProfile,
+  getAllPendingUsers,
+  getAllAcceptedUsers,
+  acceptOrDeclineUserProfile,
 };

@@ -5,17 +5,17 @@ import { useRouter } from "next/router";
 // ** React Imports
 import React from "react";
 
+// ** Context Imports
+import { useContext } from "react";
+
 // ** Layout Imports
 import Layout from "../../layout/Layout";
+import { AuthContext } from "../../context/AuthContext";
 
 // ** Third party libraries imports
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import {
-  signInWithGoogle,
-  registerWithEmailAndPassword,
-} from "../../configs/firebase.config";
 
 const defaultValues = {
   firstName: "",
@@ -48,6 +48,9 @@ const validationSchema = yup.object().shape({
 
 function signUpPage() {
   const router = useRouter();
+  const { register: registerUser, signInAndRegisterUsingGoogle } =
+    useContext(AuthContext);
+
   const {
     register,
     handleSubmit,
@@ -61,11 +64,11 @@ function signUpPage() {
     const { firstName, lastName, email, password } = formData;
     const name = firstName + " " + lastName;
 
-    registerWithEmailAndPassword(name, email, password, router);
+    registerUser(name, email, password, router);
   };
 
   const handleLoginWithGoogle = () => {
-    signInWithGoogle();
+    signInAndRegisterUsingGoogle();
   };
 
   return (

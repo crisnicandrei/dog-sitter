@@ -1,5 +1,6 @@
 // React imports
 import React, { useEffect, useState } from "react";
+
 // ** Component Imports
 import ShopCardSimple from "../../components/shop/ShopCardSimple";
 
@@ -7,19 +8,21 @@ import ShopCardSimple from "../../components/shop/ShopCardSimple";
 import Layout from "../../layout/Layout";
 
 // ** Firebase Imports
-import { getAllAcceptedUsers } from "../../configs/firebase.config";
+import { getAllPendingUsers } from "../../configs/firebase.config";
 
-function Profiles() {
-  const [users, setUsers] = useState([]);
+function Cereri() {
+  const [pendingUsers, setPendingUsers] = useState([]);
+  const [refetchUsers, setRefetchUsers] = useState(false);
 
   useEffect(() => {
-    const getAcceptedUsers = async () => {
-      const pendingUsersData = await getAllAcceptedUsers();
-      setUsers(pendingUsersData);
+    const getPendingUsers = async () => {
+      const pendingUsersData = await getAllPendingUsers();
+
+      setPendingUsers(pendingUsersData);
     };
 
-    getAcceptedUsers();
-  }, []);
+    getPendingUsers();
+  }, [refetchUsers]);
   return (
     <Layout>
       <div className="shop-page pt-50 mb-120">
@@ -30,7 +33,10 @@ function Profiles() {
             </div>
             <div className="col-lg-12">
               <div className="row g-4 justify-content-center">
-                <ShopCardSimple users={users} />
+                <ShopCardSimple
+                  users={pendingUsers}
+                  setRefetchUsers={setRefetchUsers}
+                />
               </div>
               {/* <div className="row pt-70">
                 <div className="col-lg-12 d-flex justify-content-center">
@@ -75,4 +81,4 @@ function Profiles() {
   );
 }
 
-export default Profiles;
+export default Cereri;
