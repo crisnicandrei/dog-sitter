@@ -149,6 +149,8 @@ const getUserData = async (id) => {
     querySnapshot.forEach((doc) => {
       data = doc.data();
     });
+
+    console.log("The data is:", data);
     return data;
   } catch (error) {
     console.error("Error getting user data:", error);
@@ -159,7 +161,8 @@ const getUserData = async (id) => {
 const getAllPendingUsers = async (id) => {
   const usersQueryCollection = query(
     collection(db, "users"),
-    where("isAccepted", "==", false)
+    where("isAccepted", "==", false),
+    where("isSuperAdmin", "==", false)
   );
   try {
     const querySnapshot = await getDocs(usersQueryCollection);
@@ -251,4 +254,5 @@ export {
   getAllPendingUsers,
   getAllAcceptedUsers,
   acceptOrDeclineUserProfile,
+  getUserData,
 };

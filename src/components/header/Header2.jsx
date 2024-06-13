@@ -140,7 +140,7 @@ function Header2() {
             ) : (
               <></>
             )}
-            {user?.isSuperAdmin ? (
+            {user?.isSuperAdmin && (
               <li className={currentRoute === "/profiluri" ? "active" : ""}>
                 <Link href="/profiluri" legacyBehavior>
                   <a>Profiluri</a>
@@ -150,8 +150,17 @@ function Header2() {
                   onClick={() => dispatch({ type: "home" })}
                 />
               </li>
-            ) : (
-              ""
+            )}
+            {user?.isSuperAdmin && (
+              <li className={currentRoute === "/cereri" ? "active" : ""}>
+                <Link href="/cereri" legacyBehavior>
+                  <a>Cereri</a>
+                </Link>
+                <i
+                  className="bi bi-plus dropdown-icon"
+                  onClick={() => dispatch({ type: "home" })}
+                />
+              </li>
             )}
             <li className="menu-item-has-children">
               <Link legacyBehavior href="#">

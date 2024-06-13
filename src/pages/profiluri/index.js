@@ -1,13 +1,16 @@
 // React imports
 import React, { useEffect, useState } from "react";
 // ** Component Imports
-import ShopCardSimple from "../../components/shop/ShopCardSimple";
+import ProfileCard from "../../components/shop/ProfileCard";
 
 // ** Layout imports
 import Layout from "../../layout/Layout";
 
 // ** Firebase Imports
 import { getAllAcceptedUsers } from "../../configs/firebase.config";
+
+// HOCS
+import withAdminRoute from "../../hocs/withAdminRoute";
 
 function Profiles() {
   const [users, setUsers] = useState([]);
@@ -30,7 +33,7 @@ function Profiles() {
             </div>
             <div className="col-lg-12">
               <div className="row g-4 justify-content-center">
-                <ShopCardSimple users={users} />
+                <ProfileCard users={users} />
               </div>
               {/* <div className="row pt-70">
                 <div className="col-lg-12 d-flex justify-content-center">
@@ -75,4 +78,4 @@ function Profiles() {
   );
 }
 
-export default Profiles;
+export default withAdminRoute(Profiles);

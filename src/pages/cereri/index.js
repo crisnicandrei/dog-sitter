@@ -10,6 +10,9 @@ import Layout from "../../layout/Layout";
 // ** Firebase Imports
 import { getAllPendingUsers } from "../../configs/firebase.config";
 
+// HOCS
+import withAdminRoute from "../../hocs/withAdminRoute";
+
 function Cereri() {
   const [pendingUsers, setPendingUsers] = useState([]);
   const [refetchUsers, setRefetchUsers] = useState(false);
@@ -23,13 +26,14 @@ function Cereri() {
 
     getPendingUsers();
   }, [refetchUsers]);
+
   return (
     <Layout>
       <div className="shop-page pt-50 mb-120">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h1 className="mb-30">Profiluri:</h1>
+              <h1 className="mb-30">Profilurile care au facut cerere:</h1>
             </div>
             <div className="col-lg-12">
               <div className="row g-4 justify-content-center">
@@ -81,4 +85,4 @@ function Cereri() {
   );
 }
 
-export default Cereri;
+export default withAdminRoute(Cereri);
