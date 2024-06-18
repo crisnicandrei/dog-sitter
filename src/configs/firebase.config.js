@@ -35,13 +35,13 @@ import {
 // };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDGFYpQzvZlCUUPMAzXdpI2VP5_minfP0I",
-  authDomain: "dogo-5257c.firebaseapp.com",
-  projectId: "dogo-5257c",
-  storageBucket: "dogo-5257c.appspot.com",
-  messagingSenderId: "919690930167",
-  appId: "1:919690930167:web:fc321d5ae85222eb34f0f2",
-  measurementId: "G-JDPTQPCDG4",
+  apiKey: "AIzaSyBaU6-ysP-siDXMZumLWuys_7leDMSL4VM",
+  authDomain: "dog-care-e55ea.firebaseapp.com",
+  projectId: "dog-care-e55ea",
+  storageBucket: "dog-care-e55ea.appspot.com",
+  messagingSenderId: "387916965285",
+  appId: "1:387916965285:web:ffca57f7c3cc976b9ef44c",
+  measurementId: "G-QWTGZ2ZJPG",
 };
 
 const firebaseApp = initializeApp(firebaseConfig);

@@ -1,163 +1,135 @@
 // ** Next Imports
-import Link from "next/link";
+import { useRouter } from "next/router";
 // ** React Imports
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
-import Map from "../../components/map";
-import useProtectedRoute from "../../hooks/useProtectedRoute";
 
-// ** Components imports
-import Spinner from "../../components/common/Spinner";
+// ** Third party libraries imports
+import Scheduler from "devextreme-react/scheduler";
+
+import { AuthContext } from "../../context/AuthContext";
+
+const currentDate = new Date();
+const views = ["day", "week", "workWeek", "month"];
 
 function Profile() {
-  const { loading, user } = useProtectedRoute();
-  if (loading || !user) {
-    return <Spinner />;
-  }
+  const { user } = useContext(AuthContext);
 
   return (
     <Layout>
-      <div className="blog-details-pages pt-80 mb-120">
-        <div className="container">
-          <div className="row g-lg-4 gy-5 justify-content-center mb-70">
-            <div className="col-lg-8">
-              <div className="blog-details-wrap mb-120">
-                <h2 className="post-title">{user ? user.name : ""}</h2>
-                <div className="post-content">
-                  <p>{user ? user.description : ""}</p>
-                  <blockquote>
-                    <p>
-                      <sup>
-                        <img
-                          src="assets/images/icon/quage-icon-top.svg"
-                          alt="image"
+      {user && (
+        <div className="blog-details-pages pt-80 mb-120">
+          <div className="container">
+            <div className="row g-4 align-items-center mb-40 pt-10">
+              <div className="col-lg-6">
+                <h1 style={{ color: "black" }}>Nume: {user.displayName}</h1>
+                <h4 style={{ color: "black" }}>Telefon: {user.phone}</h4>
+
+                <p>Descriere: {user.description}</p>
+                <p></p>
+              </div>
+              <div className="col-lg-6">
+                <img
+                  className="img-fluid"
+                  src="../assets/images/blog/blog-dt-img2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="row mb-120">
+              <div className="col-lg-12">
+                <div
+                  className="nav nav2 nav  nav-pills mb-20"
+                  id="v-pills-tab2"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  <button
+                    className="nav-link active mr-10"
+                    id="v-pills-home-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-home"
+                    aria-selected="false"
+                  >
+                    Calendar
+                  </button>
+                  <button
+                    className="nav-link"
+                    id="v-pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-profile"
+                    aria-selected="true"
+                  >
+                    Hartă
+                  </button>
+                </div>
+                <div
+                  className="tab-content tab-content2"
+                  id="v-pills-tabContent2"
+                >
+                  <div
+                    className="tab-pane fade active show"
+                    id="v-pills-home"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-home-tab"
+                  >
+                    <div className="description">
+                      <div className="col-xl-10 col-lg-10 col-md-10 mt-100">
+                        <h1>Orar</h1>
+
+                        <Scheduler
+                          timeZone="America/Los_Angeles"
+                          dataSource={user.appointments || []}
+                          views={views}
+                          defaultCurrentView="day"
+                          defaultCurrentDate={currentDate}
+                          height={730}
+                          startDayHour={9}
+                          editing={{
+                            allowAdding: false,
+                            allowDeleting: false,
+                            allowDragging: false,
+                            allowResizing: false,
+                            allowUpdating: false,
+                          }}
+                          // onAppointmentDeleted={onAppointmentsChanges}
+                          // onAppointmentAdded={onAppointmentsChanges}
+                          // onAppointmentUpdated={onAppointmentsChanges}
                         />
-                      </sup>{" "}
-                      Integer quis libero semper, interdum odio non, consequat
-                      sem. Qui woner pretium, quamtenti utendi lacinianti
-                      ultricies, est urna cursus purus, ut tristique purusenali
-                      pretium, quam ut laciniaun est urna{" "}
-                      <sub>
-                        <img
-                          src="assets/images/icon/quage-icon-btm.svg"
-                          alt="image"
-                        />
-                      </sub>
-                    </p>
-                    <cite>Ezekiel Miles</cite>
-                  </blockquote>
-                  <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                    id. Maecenas eu lorem quisesdoi massal molestie vulputate in
-                    sitagi amet diam. Cras eu odio sit amet ipsum cursus for
-                    that gone pellentesquea. thisaton Vestibulum ut aliquet
-                    risus. In hac habitasse plateajoa dictumst. Nuncet posuere
-                    scelerisque justo in accumsan.Pellentesque maximus augue
-                    orci, quis congue purus iaculison id. Maecenas eu lorem
-                    quisesdoi massal molestie vulputate in sitagi amet diam.
-                    Cras eu odio sit amet ipsum
-                  </p>
-                  <div className="row g-4 align-items-center mb-10 pt-10">
-                    <div className="col-lg-6">
-                      <h2>Luctus justo quis feugiat</h2>
-                      <p>
-                        Pellentesque maximus augue orci, quis congue purus
-                        iaculison id. Maecenas eu lorem quisesdoi massal
-                        molestie vulputate in sitagi amet diam. Cras eu odio sit
-                        amet ipsum cursus for thata gone pellentesquea. thisaton
-                        Vestibulum ut aliquet risus. Inagi hac habitasse
-                        plateajoa dictumst. Nuncet posuere scelerisque justo in
-                        accumsan.Pellentesque maximus augue orci, quisento
-                        congue purus iaculison id. Maecenas eu lorem quisesdoi
-                        ameti
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="tab-pane fade"
+                    id="v-pills-profile"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-profile-tab"
+                  >
+                    <div className="description">
+                      <p className="para-2 mb-3">
+                        Choosing a pet care service, it is important to do your
+                        research and select a reputable provider that has
+                        experience and a good track record. You should also
+                        discuss your pet's needs and any special instructions
+                        with the provider to ensure that your pet will receive
+                        the best possible care.
                       </p>
                     </div>
-                    <div className="col-lg-6">
-                      <img
-                        className="img-fluid"
-                        src="assets/images/blog/blog-dt-img2.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <h2>
-                    Luctus justo quis feugiat lacus orcha ornare auguelon
-                    Integer gon form together nicelon.
-                  </h2>
-                  <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                    id. Maecenas eu lorem quisesdoi massal molestie vulputate in
-                    sitagi amet diam. Cras eu odio sit amet ipsum cursus for
-                    that gone pellentesquea. thisaton Vestibulum ut aliquet
-                    risus. In hac habitasse plateajoa dictumst. Nuncet posuere
-                    scelerisque justo in accumsan.Pellentesque maximus augue
-                    orci, quis congue purus iaculison id. Maecenas eu lorem
-                    quisesdoi massal molestie vulputate in sitagi amet diam.
-                    Cras eu odio sit amet ipsum cursus for that gone
-                    pellentesquea. thisaton Vestibulum ut aliquet risus. In hac
-                    habitasse plateajoa dictumst. Nuncet posuere scelerisque
-                    justo in accumsan.
-                  </p>
-                </div>
-                <Map />
-                <div className="blog-tag-social-area">
-                  <div className="bolg-tag">
-                    <ul>
-                      <li>
-                        <Link legacyBehavior href="/blog-grid">
-                          <a>#Pet Care</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link legacyBehavior href="/blog-grid">
-                          <a>#Dog Walking</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link legacyBehavior href="/blog-grid">
-                          <a>#Medical Care</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link legacyBehavior href="/blog-grid">
-                          <a>#Pet Bording</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="social-area">
-                    <span>Share:</span>
-                    <ul className="social-link d-flex align-items-center">
-                      <li>
-                        <a href="https://www.facebook.com/">
-                          <i className="bx bxl-facebook" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com/">
-                          <i className="bx bxl-twitter" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.pinterest.com/">
-                          <i className="bx bxl-pinterest-alt" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/">
-                          <i className="bx bxl-instagram" />
-                        </a>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </Layout>
   );
 }

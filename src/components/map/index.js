@@ -53,8 +53,27 @@ export default function Map({ latlong, profileEdit = false }) {
         }
       );
 
+      console.log(gAutoComplete);
+
       setMap(gMap);
       setAutoComplete(gAutoComplete);
+
+      console.log(latlong);
+
+      if (latlong) {
+        setMarker(
+          new google.maps.LatLng(latlong.lat, latlong.lng),
+          "Initial Location"
+        );
+      }
+
+      // if (gAutoComplete) {
+      //   const place = gAutoComplete.getPlace();
+      //   const position = place.geometry?.location;
+      //   if (position) {
+      //     setMarker(position, place.name);
+      //   }
+      // }
     }
   }, [isLoaded]);
 
@@ -65,6 +84,7 @@ export default function Map({ latlong, profileEdit = false }) {
   }, [user]);
 
   useEffect(() => {
+    console.log(autoComplete);
     if (autoComplete) {
       autoComplete.addListener("place_changed", () => {
         const place = autoComplete.getPlace();
@@ -73,16 +93,17 @@ export default function Map({ latlong, profileEdit = false }) {
         const position = place.geometry?.location;
 
         if (position) {
-          setMarker(position, place.name);
+          setMarker(position, place.name, true);
         }
       });
     }
   }, [autoComplete, userState]);
 
-  const setMarker = (location, name) => {
+  const setMarker = (location, name, update = false) => {
     if (!map) {
       return;
     }
+
     map.setCenter(location);
 
     const marker = new google.maps.Marker({
@@ -94,7 +115,11 @@ export default function Map({ latlong, profileEdit = false }) {
     const lat = location.lat();
     const lng = location.lng();
 
-    updateUser({ ...user, coords: { lat, lng } });
+    console.log(lat, lng);
+
+    if (update) {
+      updateUser({ ...user, coords: { lat, lng } });
+    }
 
     const infoCard = new google.maps.InfoWindow({
       position: location,
