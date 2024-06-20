@@ -1,8 +1,7 @@
 // ** Next Imports
-import Link from "next/link";
 
 // ** React Imports
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useContext } from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
@@ -14,7 +13,6 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { useDropzone } from "react-dropzone";
 import Scheduler from "devextreme-react/scheduler";
-import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import useProtectedRoute from "../../hooks/useProtectedRoute";
 
@@ -40,9 +38,21 @@ const validationSchema = yup.object().shape({
 
 function editProfilePage() {
   const { loading } = useProtectedRoute();
-  const { updateUser, user } = useContext(AuthContext);
+  const { updateUser, user, uploadImage } = useContext(AuthContext);
+  const [url, setUrl] = useState("");
 
-  const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
+  const onDrop = useCallback(async (files) => {
+    console.log(files);
+    // Do something with the files
+    const imageUrl = await uploadImage(files[0]);
+    console.log(imageUrl);
+    console.log(user);
+    setUrl(imageUrl);
+  }, []);
+
+  const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
+    onDrop,
+  });
 
   const {
     register,
@@ -90,6 +100,19 @@ function editProfilePage() {
       {file.path} - {file.size} bytes
     </li>
   ));
+
+  const uploadFile = (e) => {
+    const file = e.target.files[0];
+    console.log(file);
+  };
+
+  useEffect(() => {
+    if (url) {
+      console.log(url);
+      console.log(user);
+      updateUser({ ...user, profileImage: url });
+    }
+  }, [url]);
 
   if (loading || !user) {
     return <Spinner />;
@@ -185,7 +208,7 @@ function editProfilePage() {
                               cursor: "pointer",
                             }}
                           >
-                            <input {...getInputProps()} />
+                            <input onChange={uploadFile} {...getInputProps()} />
                             <p>
                               Drag 'n' drop some files here, or click to select
                               files

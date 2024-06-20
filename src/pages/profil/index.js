@@ -31,11 +31,7 @@ function Profile() {
                 <p></p>
               </div>
               <div className="col-lg-6">
-                <img
-                  className="img-fluid"
-                  src="../assets/images/blog/blog-dt-img2.png"
-                  alt=""
-                />
+                <img className="img-fluid" src={user.profileImage} alt="" />
               </div>
             </div>
             <div className="row mb-120">

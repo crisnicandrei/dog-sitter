@@ -10,8 +10,10 @@ import {
   registerWithEmailAndPassword,
   getUserInfoUsingUiid,
   updateProfile,
+  uploadImageToFirebase,
 } from "../configs/firebase.config";
 import { set } from "date-fns";
+import { async } from "@firebase/util";
 
 // ** Defaults
 const defaultProvider = {
@@ -151,6 +153,14 @@ const AuthProvider = ({ children }) => {
   //     return unsubscribe;
   //   }, [])
 
+  const uploadImage = async (file) => {
+    try {
+      const downloadURL = await uploadImageToFirebase(file);
+      // console.log(downloadURL);
+      return downloadURL;
+    } catch (error) {}
+  };
+
   const values = {
     user,
     loading,
@@ -160,6 +170,7 @@ const AuthProvider = ({ children }) => {
     signInAndRegisterUsingGoogle,
     updateUser,
     logoutUser,
+    uploadImage,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;

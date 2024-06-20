@@ -24,6 +24,8 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
+import { ref, uploadBytes, getStorage, getDownloadURL } from "firebase/storage";
+
 // const firebaseConfig = {
 //   apiKey: "AIzaSyDGFYpQzvZlCUUPMAzXdpI2VP5_minfP0I",
 //   authDomain: "dogo-5257c.firebaseapp.com",
@@ -35,6 +37,7 @@ import {
 // };
 
 const firebaseConfig = {
+  storageBucket: "gs://dog-care-e55ea.appspot.com",
   apiKey: "AIzaSyBaU6-ysP-siDXMZumLWuys_7leDMSL4VM",
   authDomain: "dog-care-e55ea.firebaseapp.com",
   projectId: "dog-care-e55ea",
@@ -47,6 +50,30 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
+const storage = getStorage(firebaseApp);
+
+async function uploadImageToFirebase(file) {
+  // Create a storage reference
+  const storageRef = ref(storage, "images/" + file.name);
+
+  // Upload the file to the storage reference
+  const snapshot = await uploadBytes(storageRef, file);
+
+  // Get the download URL
+  const downloadURL = await getDownloadURL(snapshot.ref);
+
+  return downloadURL;
+}
+
+async function saveImageURLToFirestore(imageURL) {
+  // Create a reference to the Firestore document
+  const docRef = doc(firestore, "images", "your_document_id");
+
+  // Set the image URL in Firestore
+  await setDoc(docRef, {
+    url: imageURL,
+  });
+}
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -255,4 +282,5 @@ export {
   getAllAcceptedUsers,
   acceptOrDeclineUserProfile,
   getUserData,
+  uploadImageToFirebase,
 };
