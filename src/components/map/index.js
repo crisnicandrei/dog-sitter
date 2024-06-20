@@ -53,27 +53,8 @@ export default function Map({ latlong, profileEdit = false }) {
         }
       );
 
-      console.log(gAutoComplete);
-
       setMap(gMap);
       setAutoComplete(gAutoComplete);
-
-      console.log(latlong);
-
-      if (latlong) {
-        setMarker(
-          new google.maps.LatLng(latlong.lat, latlong.lng),
-          "Initial Location"
-        );
-      }
-
-      // if (gAutoComplete) {
-      //   const place = gAutoComplete.getPlace();
-      //   const position = place.geometry?.location;
-      //   if (position) {
-      //     setMarker(position, place.name);
-      //   }
-      // }
     }
   }, [isLoaded]);
 
@@ -115,10 +96,8 @@ export default function Map({ latlong, profileEdit = false }) {
     const lat = location.lat();
     const lng = location.lng();
 
-    console.log(lat, lng);
-
     if (update) {
-      updateUser({ ...user, coords: { lat, lng } });
+      updateUser({ ...user, coords: { lat, lng }, city: name.toLowerCase() });
     }
 
     const infoCard = new google.maps.InfoWindow({

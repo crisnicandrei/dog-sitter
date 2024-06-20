@@ -40,7 +40,7 @@ function Banner1() {
       </div>
       <div className="d-flex justify-content-center">
         <div className="reservation-btn m-2 p-2">
-          <Link legacyBehavior href="/contact">
+          <Link legacyBehavior href="/gaseste-sitter">
             <a className="primary-btn1 m-2 p-2">Gaseste sitter</a>
           </Link>
         </div>

@@ -270,6 +270,25 @@ const acceptOrDeclineUserProfile = async (uid, bolleanAcceptence) => {
   }
 };
 
+const getUsersByCity = async (city) => {
+  console.log(city);
+
+  try {
+    const usersQueryCollection = query(
+      collection(db, "users"),
+      where("city", "==", city),
+      where("isAccepted", "==", true),
+      where("isReviewed", "==", true)
+    );
+    const querySnapshot = await getDocs(usersQueryCollection);
+    const data = querySnapshot.docs.map((doc) => doc.data());
+    return data;
+  } catch (error) {
+    console.error("Error getting user data:", error);
+    return null;
+  }
+};
+
 export {
   auth,
   db,
@@ -283,4 +302,5 @@ export {
   acceptOrDeclineUserProfile,
   getUserData,
   uploadImageToFirebase,
+  getUsersByCity,
 };
