@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import Morphext from "../morphext/Morphext";
 
 function Banner1() {
-  const phrases = ["Dog .", "Cat ."];
   return (
     <div className="hero-style-1">
       <div className="container-fluid">
@@ -19,10 +17,6 @@ function Banner1() {
                       <li>Loialitate</li>
                     </ul>
                   </div>
-                  <h1>
-                    Cainele tau
-                    <br /> e pe maini bune
-                  </h1>
                 </div>
               </div>
               <div className="col-xxl-6 col-xl-7 d-flex align-items-center justify-content-md-start justify-content-center">
@@ -41,14 +35,32 @@ function Banner1() {
       <div className="d-flex justify-content-center">
         <div className="reservation-btn m-2 p-2">
           <Link legacyBehavior href="/gaseste-sitter">
-            <a className="primary-btn1 m-2 p-2">Gaseste sitter</a>
+            <a style={{ padding: "20px 100px" }} className="primary-btn1 m-2">
+              Gaseste sitter
+            </a>
           </Link>
+        </div>
+        <div className="header-logo m-3">
+          <img
+            alt="image"
+            className="img-fluid"
+            src="assets/images/logo.svg"
+            style={{ maxWidth: "150px" }}
+          />
         </div>
         <div className="reservation-btn m-2 p-2">
           <Link legacyBehavior href="/contact">
-            <a className="primary-btn1 ">Devino sitter</a>
+            <a className="primary-btn1 m-2" style={{ padding: "20px 100px" }}>
+              Devino sitter
+            </a>
           </Link>
         </div>
+      </div>
+      <div
+        className="d-flex justify-content-center banner-content"
+        style={{ maxWidth: "100%" }}
+      >
+        <h1>Cainele tau e pe maini bune</h1>
       </div>
     </div>
   );

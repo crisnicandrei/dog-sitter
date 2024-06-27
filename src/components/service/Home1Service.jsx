@@ -81,6 +81,37 @@ function Home1Service() {
           <Swiper {...serviceSlider} className="swiper home1-services-slider">
             <div className="swiper-wrapper">
               <SwiperSlide className="swiper-slide">
+                <div className="services-card1 two">
+                  <img
+                    className="services-card-vec"
+                    src="assets/images/bg/services-card-vec.png"
+                    alt=""
+                  />
+                  <div className="icon">
+                    <img src="assets/images/icon/daycare-center2.svg" alt="" />
+                  </div>
+                  <div className="content">
+                    <h3>
+                      <Link legacyBehavior href="/service-details">
+                        <a>Pet Sitter</a>
+                      </Link>
+                    </h3>
+                    <p>
+                      Te duci acasă la blănos conform înțelegerii prealabile și
+                      programului stabilit ca să îl ajuți să nu se simtă singur
+                      și îl ajuți cu rutina zilnică când ai lui sunt plecați de
+                      acasă.
+                    </p>
+                  </div>
+                  <Link legacyBehavior href="/service-details">
+                    <a className="more-btn">
+                      Click sa aflii
+                      <img src="assets/images/icon/btn-arrow1.svg" alt="" />
+                    </a>
+                  </Link>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="swiper-slide">
                 <div className="services-card1">
                   <img
                     className="services-card-vec"
@@ -93,17 +124,20 @@ function Home1Service() {
                   <div className="content">
                     <h3>
                       <Link legacyBehavior href="/service-details">
-                        <a>Daycare</a>
+                        <a>Doggy Daycare</a>
                       </Link>
                     </h3>
                     <p>
-                      Pellentesque maximus augue orciquista ut aliquet risus In
-                      hac habitasse.
+                      Fii doamna /domnul educator de la grădiniță. Ajută-l pe
+                      blănos să nu rămână singur în casa când părinții lui sunt
+                      plecați la job. Ei ți-l aduc dimineața la grădi, la tine
+                      acasă și seara vin să îl ia de la tine el fiind liniștit
+                      și bucuros ca ai fost alături de el toată ziua.
                     </p>
                   </div>
                   <Link legacyBehavior href="/service-details">
                     <a className="more-btn">
-                      More Details
+                      Click sa aflii
                       <img src="assets/images/icon/btn-arrow1.svg" alt="" />
                     </a>
                   </Link>
@@ -122,17 +156,18 @@ function Home1Service() {
                   <div className="content">
                     <h3>
                       <Link legacyBehavior href="/service-details">
-                        <a> Dresaj</a>
+                        <a> Pet Walker</a>
                       </Link>
                     </h3>
                     <p>
-                      Pellentesque maximus augue orciquista ut aliquet risus In
-                      hac habitasse.
+                      Te duci la blănos acasă și faci o plimbare prin cartierul
+                      lui ajutând-l să își facă cota de mișcare fizică atunci
+                      când părinții lui nu au timp sau sunt comozi.
                     </p>
                   </div>
                   <Link legacyBehavior href="/service-details">
                     <a className="more-btn">
-                      More Details
+                      Click sa aflii
                       <img src="assets/images/icon/btn-arrow1.svg" alt="" />
                     </a>
                   </Link>
@@ -151,17 +186,17 @@ function Home1Service() {
                   <div className="content">
                     <h3>
                       <Link legacyBehavior href="/service-details">
-                        <a> Boarding</a>
+                        <a>Dog Boarding</a>
                       </Link>
                     </h3>
                     <p>
-                      Pellentesque maximus augue orciquista ut aliquet risus In
-                      hac habitasse.
+                      Blănosul altuia stă peste noapte la tine acasă și e tratat
+                      ca un oapete de seamă, ca un membru al familiei
                     </p>
                   </div>
                   <Link legacyBehavior href="/service-details">
                     <a className="more-btn">
-                      More Details
+                      Click sa aflii
                       <img src="assets/images/icon/btn-arrow1.svg" alt="" />
                     </a>
                   </Link>

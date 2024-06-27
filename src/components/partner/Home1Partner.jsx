@@ -9,17 +9,32 @@ function Home1Partner() {
             <div className="partner-left">
               <div className="section-title1">
                 <span>Here Our Partner Connceted With Us</span>
-                <h2>Our Trusted Partner </h2>
+                <h2>Our Trusted Partners </h2>
               </div>
               <div className="author-name-expariance">
                 <div className="author-name">
                   <div className="img">
-                    <img src="assets/images/bg/founder-img.png" alt="" />
+                    <img
+                      style={{ width: "200px", height: "200px" }}
+                      src="assets/images/partener1.jpeg"
+                      alt=""
+                    />
                   </div>
-                  <div className="name-deg">
+                  <div className="img">
+                    <img
+                      style={{
+                        width: "200px",
+                        height: "200px",
+                        borderRadius: 0,
+                      }}
+                      src="assets/images/partener2.png"
+                      alt=""
+                    />
+                  </div>
+                  {/* <div className="name-deg">
                     <span>Founder</span>
                     <h4>Kash Preston</h4>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="expariance">
                   <img src="assets/images/icon/expriance.svg" alt="" />

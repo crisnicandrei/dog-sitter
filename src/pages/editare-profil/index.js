@@ -9,7 +9,7 @@ import Map from "../../components/map";
 
 // ** Third party libraries imports
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import * as yup from "yup";
 import { useDropzone } from "react-dropzone";
 import Scheduler from "devextreme-react/scheduler";
@@ -29,11 +29,31 @@ const defaultValues = {
   description: "",
 };
 
+const options = [
+  {
+    value: "boarding",
+    text: "Dog Boarding",
+  },
+  {
+    value: "walking",
+    text: "Dog Walking",
+  },
+  {
+    value: "daycare",
+    text: "Dog Daycare",
+  },
+  {
+    value: "sitting",
+    text: "Dog Sitting",
+  },
+];
+
 const validationSchema = yup.object().shape({
   firstName: yup.string().required("Prenumele este obligatoriu."),
   lastName: yup.string().required("Numele este obligatoriu."),
   phone: yup.string().required("Telefonul este obligatoriu."),
   description: yup.string().required("Descrierea este obligatorie."),
+  services: yup.array().min(1, "Cel putin un serviciu este obligatoriu"),
 });
 
 function editProfilePage() {
@@ -42,11 +62,7 @@ function editProfilePage() {
   const [url, setUrl] = useState("");
 
   const onDrop = useCallback(async (files) => {
-    console.log(files);
-    // Do something with the files
     const imageUrl = await uploadImage(files[0]);
-    console.log(imageUrl);
-    console.log(user);
     setUrl(imageUrl);
   }, []);
 
@@ -59,13 +75,14 @@ function editProfilePage() {
     handleSubmit,
     formState: { errors },
     setValue,
+    control,
   } = useForm({
     defaultValues,
     resolver: yupResolver(validationSchema),
   });
 
   const onSubmit = (data) => {
-    const { firstName, lastName, description, phone } = data;
+    const { firstName, lastName, description, phone, services } = data;
 
     const displayName = `${firstName} ${lastName}`;
     const updatedUserObject = {
@@ -85,13 +102,14 @@ function editProfilePage() {
 
   useEffect(() => {
     if (user) {
-      const { displayName, description, phone } = user;
+      const { displayName, description, phone, services } = user;
       const [firstName, lastName] = displayName.split(" ");
 
       setValue("firstName", firstName);
       setValue("lastName", lastName);
       setValue("phone", phone);
       setValue("description", description);
+      setValue("services", services);
     }
   }, [user, setValue]);
 
@@ -192,6 +210,47 @@ function editProfilePage() {
                           {errors.description && (
                             <p className="text-danger">
                               {errors.description.message}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="col-12">
+                        {/* <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                          <label>Services *</label>
+                          {options.map((option, index) => (
+                            <div className="form-group" key={index}>
+                              <input
+                                type="checkbox"
+                                value={option.value}
+                                {...register(`services.${index}`)}
+                              />
+                              {option.text}
+                            </div>
+                          ))}
+                          {errors.services && (
+                            <p className="text-danger">
+                              {errors.services.message}
+                            </p>
+                          )}
+                        </div> */}
+
+                        {/* </div> */}
+                        <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                          {options.map((option, index) => (
+                            <div className="form-group" key={index}>
+                              <input
+                                type="checkbox"
+                                value={option.value}
+                                id={option.value}
+                                {...register(`services.${index}`)}
+                              />
+                              <label htmlFor="html">{option.text}</label>
+                            </div>
+                          ))}
+                          {errors.termsAndConditions && (
+                            <p className="text-danger">
+                              {errors.termsAndConditions.message}
                             </p>
                           )}
                         </div>
