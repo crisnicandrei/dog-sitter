@@ -26,26 +26,26 @@ import {
 
 import { ref, uploadBytes, getStorage, getDownloadURL } from "firebase/storage";
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDGFYpQzvZlCUUPMAzXdpI2VP5_minfP0I",
-//   authDomain: "dogo-5257c.firebaseapp.com",
-//   projectId: "dogo-5257c",
-//   storageBucket: "dogo-5257c.appspot.com",
-//   messagingSenderId: "919690930167",
-//   appId: "1:919690930167:web:fc321d5ae85222eb34f0f2",
-//   measurementId: "G-JDPTQPCDG4",
-// };
-
 const firebaseConfig = {
-  storageBucket: "gs://dog-care-e55ea.appspot.com",
-  apiKey: "AIzaSyBaU6-ysP-siDXMZumLWuys_7leDMSL4VM",
-  authDomain: "dog-care-e55ea.firebaseapp.com",
-  projectId: "dog-care-e55ea",
-  storageBucket: "dog-care-e55ea.appspot.com",
-  messagingSenderId: "387916965285",
-  appId: "1:387916965285:web:ffca57f7c3cc976b9ef44c",
-  measurementId: "G-QWTGZ2ZJPG",
+  apiKey: "AIzaSyDJXjGqJsqdbnji-YQPtsm5GvHQzxmtwCg",
+  authDomain: "dogoproject-bb3cb.firebaseapp.com",
+  projectId: "dogoproject-bb3cb",
+  storageBucket: "dogoproject-bb3cb.appspot.com",
+  messagingSenderId: "511020674216",
+  appId: "1:511020674216:web:60ba794c99da1c0f33269d",
+  measurementId: "G-QGTW5CZHHG",
 };
+
+// const firebaseConfig = {
+//   storageBucket: "gs://dog-care-e55ea.appspot.com",
+//   apiKey: "AIzaSyBaU6-ysP-siDXMZumLWuys_7leDMSL4VM",
+//   authDomain: "dog-care-e55ea.firebaseapp.com",
+//   projectId: "dog-care-e55ea",
+//   storageBucket: "dog-care-e55ea.appspot.com",
+//   messagingSenderId: "387916965285",
+//   appId: "1:387916965285:web:ffca57f7c3cc976b9ef44c",
+//   measurementId: "G-QWTGZ2ZJPG",
+// };
 
 const firebaseApp = initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);
@@ -107,6 +107,10 @@ const signInWithGoogle = async () => {
         appointments: [],
         phone: "",
         description: "",
+        boarding: false,
+        walking: false,
+        daycare: false,
+        sitting: false,
       });
     }
 
@@ -146,6 +150,10 @@ const registerWithEmailAndPassword = async (name, email, password, router) => {
       appointments: [],
       phone: "",
       description: "",
+      boarding: false,
+      walking: false,
+      daycare: false,
+      sitting: false,
     });
 
     return user;
@@ -177,7 +185,6 @@ const getUserData = async (id) => {
       data = doc.data();
     });
 
-    console.log("The data is:", data);
     return data;
   } catch (error) {
     console.error("Error getting user data:", error);

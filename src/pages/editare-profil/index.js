@@ -27,34 +27,32 @@ const defaultValues = {
   lastName: "",
   phone: "",
   description: "",
+  boarding: false,
+  walking: false,
+  daycare: false,
+  sitting: false,
 };
 
-const options = [
-  {
-    value: "boarding",
-    text: "Dog Boarding",
-  },
-  {
-    value: "walking",
-    text: "Dog Walking",
-  },
-  {
-    value: "daycare",
-    text: "Dog Daycare",
-  },
-  {
-    value: "sitting",
-    text: "Dog Sitting",
-  },
-];
-
-const validationSchema = yup.object().shape({
-  firstName: yup.string().required("Prenumele este obligatoriu."),
-  lastName: yup.string().required("Numele este obligatoriu."),
-  phone: yup.string().required("Telefonul este obligatoriu."),
-  description: yup.string().required("Descrierea este obligatorie."),
-  services: yup.array().min(1, "Cel putin un serviciu este obligatoriu"),
-});
+const validationSchema = yup
+  .object()
+  .shape({
+    firstName: yup.string().required("Prenumele este obligatoriu."),
+    lastName: yup.string().required("Numele este obligatoriu."),
+    phone: yup.string().required("Telefonul este obligatoriu."),
+    description: yup.string().required("Descrierea este obligatorie."),
+    boarding: yup.boolean(),
+    walking: yup.boolean(),
+    daycare: yup.boolean(),
+    sitting: yup.boolean(),
+  })
+  .test({
+    name: "at-least-one-service",
+    test: function (value) {
+      const { boarding, walking, daycare, sitting } = value;
+      return boarding || walking || daycare || sitting;
+    },
+    message: "Cel putin un serviciu trebuie sa fie selectat.",
+  });
 
 function editProfilePage() {
   const { loading } = useProtectedRoute();
@@ -82,7 +80,16 @@ function editProfilePage() {
   });
 
   const onSubmit = (data) => {
-    const { firstName, lastName, description, phone, services } = data;
+    const {
+      firstName,
+      lastName,
+      description,
+      phone,
+      boarding,
+      walking,
+      daycare,
+      sitting,
+    } = data;
 
     const displayName = `${firstName} ${lastName}`;
     const updatedUserObject = {
@@ -90,6 +97,10 @@ function editProfilePage() {
       displayName,
       description,
       phone,
+      boarding,
+      walking,
+      daycare,
+      sitting,
     };
 
     updateUser(updatedUserObject);
@@ -102,14 +113,25 @@ function editProfilePage() {
 
   useEffect(() => {
     if (user) {
-      const { displayName, description, phone, services } = user;
+      const {
+        displayName,
+        description,
+        phone,
+        boarding,
+        walking,
+        daycare,
+        sitting,
+      } = user;
       const [firstName, lastName] = displayName.split(" ");
 
       setValue("firstName", firstName);
       setValue("lastName", lastName);
       setValue("phone", phone);
       setValue("description", description);
-      setValue("services", services);
+      setValue("boarding", boarding);
+      setValue("walking", walking);
+      setValue("daycare", daycare);
+      setValue("sitting", sitting);
     }
   }, [user, setValue]);
 
@@ -215,46 +237,64 @@ function editProfilePage() {
                         </div>
                       </div>
 
-                      <div className="col-12">
-                        {/* <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
-                          <label>Services *</label>
-                          {options.map((option, index) => (
-                            <div className="form-group" key={index}>
+                      <div className="row">
+                        <div className="col-6">
+                          <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                            <div className="form-group">
                               <input
                                 type="checkbox"
-                                value={option.value}
-                                {...register(`services.${index}`)}
+                                id="boarding"
+                                {...register("boarding")}
                               />
-                              {option.text}
+                              <label htmlFor="boarding">Dog Boarding</label>
                             </div>
-                          ))}
-                          {errors.services && (
-                            <p className="text-danger">
-                              {errors.services.message}
-                            </p>
-                          )}
-                        </div> */}
-
-                        {/* </div> */}
-                        <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
-                          {options.map((option, index) => (
-                            <div className="form-group" key={index}>
+                          </div>
+                        </div>
+                        <div className="col-6">
+                          <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                            <div className="form-group">
                               <input
                                 type="checkbox"
-                                value={option.value}
-                                id={option.value}
-                                {...register(`services.${index}`)}
+                                id="walking"
+                                {...register("walking")}
                               />
-                              <label htmlFor="html">{option.text}</label>
+                              <label htmlFor="walking">Dog Walking</label>
                             </div>
-                          ))}
-                          {errors.termsAndConditions && (
-                            <p className="text-danger">
-                              {errors.termsAndConditions.message}
-                            </p>
-                          )}
+                          </div>
                         </div>
                       </div>
+                      <div className="row">
+                        <div className="col-6">
+                          <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                            <div className="form-group">
+                              <input
+                                type="checkbox"
+                                id="daycare"
+                                {...register("daycare")}
+                              />
+                              <label htmlFor="daycare">Dog Daycare</label>
+                              {errors[""] && (
+                                <p className="text-danger">
+                                  {errors[""].message}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-6">
+                          <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                            <div className="form-group">
+                              <input
+                                type="checkbox"
+                                id="sitting"
+                                {...register("sitting")}
+                              />
+                              <label htmlFor="sitting">Dog Sitting</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                       <div className="col-12">
                         <div className="form-inner">
                           <label>File Upload *</label>

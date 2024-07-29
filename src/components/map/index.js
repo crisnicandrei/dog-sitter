@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Loader, Marker } from "@googlemaps/js-api-loader";
 import { useJsApiLoader } from "@react-google-maps/api";
-import { set } from "date-fns";
 import { AuthContext } from "../../context/AuthContext";
 
 const libs = ["core", "maps", "places", "marker"];
@@ -17,11 +15,8 @@ const buildMapInfoCard = (title, body) =>
 export default function Map({ latlong, profileEdit = false }) {
   const mapRef = useRef(null);
   const placeAuthCompleteRef = useRef(null);
-  const [selectedPlace, setSelectedPlace] = useState(null);
-  const [map, setMap] = useState(null);
-  const [autoComplete, setAutoComplete] = useState(null);
+
   const { user, updateUser } = useContext(AuthContext);
-  const [userState, setUserState] = useState(null);
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyC2Q3EuM1N37s_5AZSDhKlZc_Z-PZoyfxM",
@@ -29,7 +24,7 @@ export default function Map({ latlong, profileEdit = false }) {
   });
 
   useEffect(() => {
-    if (isLoaded) {
+    if (isLoaded && mapRef.current) {
       const mapOptions = {
         center: latlong || { lat: 44.4268, lng: 26.1025 },
         zoom: 17,
@@ -46,59 +41,48 @@ export default function Map({ latlong, profileEdit = false }) {
         placeAuthCompleteRef.current,
         {
           bounds: romania,
-          fields: ["formatted_address", "geometry", "name"],
+          fields: [
+            "formatted_address",
+            "address_components",
+            "geometry",
+            "name",
+          ],
           componentRestrictions: {
             country: ["ro"],
           },
         }
       );
 
-      setMap(gMap);
-      setAutoComplete(gAutoComplete);
-    }
-  }, [isLoaded]);
-
-  useEffect(() => {
-    if (user) {
-      setUserState(user);
-    }
-  }, [user]);
-
-  useEffect(() => {
-    console.log(autoComplete);
-    if (autoComplete) {
-      autoComplete.addListener("place_changed", () => {
-        const place = autoComplete.getPlace();
-        setSelectedPlace(place.formatted_address);
-
-        const position = place.geometry?.location;
-
-        if (position) {
-          setMarker(position, place.name, true);
+      gAutoComplete.addListener("place_changed", () => {
+        const place = gAutoComplete.getPlace();
+        if (place.address_components && place.geometry) {
+          const town = place.address_components.find((component) =>
+            component.types.includes("locality")
+          );
+          const position = place.geometry.location;
+          if (town && position) {
+            const lat = position.lat();
+            const lng = position.lng();
+            updateUser({ ...user, city: town.long_name, coords: { lat, lng } });
+            setMarker(position, gMap, place.name);
+          } else {
+            console.log("Town or position not found in the place details.");
+          }
         }
       });
     }
-  }, [autoComplete, userState]);
+  }, [isLoaded, mapRef]);
 
-  const setMarker = (location, name, update = false) => {
-    if (!map) {
-      return;
-    }
+  const setMarker = (location, map, name) => {
+    console.log("THE MARKER IS:", location, map, name);
 
-    map.setCenter(location);
+    if (!map) return;
 
     const marker = new google.maps.Marker({
       position: location,
       map: map,
       title: "Marker",
     });
-
-    const lat = location.lat();
-    const lng = location.lng();
-
-    if (update) {
-      updateUser({ ...user, coords: { lat, lng }, city: name.toLowerCase() });
-    }
 
     const infoCard = new google.maps.InfoWindow({
       position: location,
@@ -108,18 +92,17 @@ export default function Map({ latlong, profileEdit = false }) {
 
     infoCard.open({ map, anchor: marker });
   };
+
   return (
     <div>
       <div className="form-inner">
-        {profileEdit ? (
+        {profileEdit && (
           <input
             ref={placeAuthCompleteRef}
             type="text"
             className="form-control mb-3"
             placeholder="Enter location"
           />
-        ) : (
-          ""
         )}
       </div>
       {isLoaded ? (

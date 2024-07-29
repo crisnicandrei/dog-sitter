@@ -1,10 +1,17 @@
+// ** React Imports
+import { useState } from "react";
+
+// ** Third party Imports
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import Layout from "../../layout/Layout";
-import { AuthContext } from "../../context/AuthContext";
+
+// ** Component Imports
 import ProfileCard from "../../components/shop/ProfileCard";
+import Layout from "../../layout/Layout";
+
+// ** Firebase Imports
+import { getAllAcceptedUsers } from "../../configs/firebase.config";
 
 const defaultValues = {
   city: "",
@@ -15,8 +22,6 @@ const validationSchema = yup.object().shape({
 });
 
 function GasesteSitter() {
-  const { fetchSitters } = useContext(AuthContext);
-
   const {
     register,
     handleSubmit,
@@ -29,13 +34,37 @@ function GasesteSitter() {
   const [sitters, setSitters] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  function removeDiacriticsAndLowercase(str) {
+    return str
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  }
+
   const onSubmit = async (formData) => {
     const { city } = formData;
+
+    const normalizeCity = (city) => removeDiacriticsAndLowercase(city);
+
     try {
       setLoading(true);
-      const sittersRes = await fetchSitters(city);
-      setSitters(sittersRes);
-    } catch (error) {}
+
+      const sittersRes = await getAllAcceptedUsers(city);
+      const normalizedCity = normalizeCity(city);
+
+      const filteredSittersByTown = sittersRes.filter(
+        ({ city: sitterCity }) => {
+          const normalizedSitterCity = normalizeCity(sitterCity);
+          return normalizedSitterCity === normalizedCity;
+        }
+      );
+
+      setSitters(filteredSittersByTown);
+    } catch (error) {
+      console.log("THE ERROR IS:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
