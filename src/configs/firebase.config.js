@@ -277,13 +277,15 @@ const acceptOrDeclineUserProfile = async (uid, bolleanAcceptence) => {
   }
 };
 
-const getUsersByCity = async (city) => {
-  console.log(city);
-
+const getUsersByCity = async (city, boarding, daycare, sitting, walking) => {
   try {
     const usersQueryCollection = query(
       collection(db, "users"),
       where("city", "==", city),
+      where("boarding", "==", boarding),
+      where("daycare", "==", daycare),
+      where("sitting", "==", sitting),
+      where("sitting", "==", walking),
       where("isAccepted", "==", true),
       where("isReviewed", "==", true)
     );

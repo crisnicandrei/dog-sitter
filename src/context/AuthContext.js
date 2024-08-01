@@ -11,7 +11,6 @@ import {
   getUserInfoUsingUiid,
   updateProfile,
   uploadImageToFirebase,
-  getUsersByCity,
 } from "../configs/firebase.config";
 import { set } from "date-fns";
 import { async } from "@firebase/util";
@@ -28,7 +27,6 @@ const defaultProvider = {
   signInAndRegisterUsingGoogle: () => Promise.resolve(),
   updateUser: () => Promise.resolve(),
   logoutUser: () => Promise.resolve(),
-  getUsersByCity: () => Promise.resolve(),
 };
 
 const AuthContext = createContext(defaultProvider);
@@ -150,17 +148,6 @@ const AuthProvider = ({ children }) => {
     } catch (error) {}
   };
 
-  const fetchSitters = async (city) => {
-    console.log("here");
-    try {
-      const sitters = await getUsersByCity(city);
-      console.log(sitters);
-      return sitters;
-    } catch (error) {
-      console.error("Error getting sitters:", error);
-    }
-  };
-
   const values = {
     user,
     loading,
@@ -171,7 +158,6 @@ const AuthProvider = ({ children }) => {
     updateUser,
     logoutUser,
     uploadImage,
-    fetchSitters,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;

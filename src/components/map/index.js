@@ -1,8 +1,16 @@
 "use client";
-
+// ** React Imports
 import React, { useContext, useEffect, useRef, useState } from "react";
+
+// ** Third party libraries imports
 import { useJsApiLoader } from "@react-google-maps/api";
+
+// ** Context import
 import { AuthContext } from "../../context/AuthContext";
+
+// ** Utils iImports
+
+import { removeDiacriticsAndLowercase } from "../../utils";
 
 const libs = ["core", "maps", "places", "marker"];
 
@@ -63,7 +71,10 @@ export default function Map({ latlong, profileEdit = false }) {
           if (town && position) {
             const lat = position.lat();
             const lng = position.lng();
-            updateUser({ ...user, city: town.long_name, coords: { lat, lng } });
+
+            const normalizeCity = removeDiacriticsAndLowercase(town.long_name);
+
+            updateUser({ ...user, city: normalizeCity, coords: { lat, lng } });
             setMarker(position, gMap, place.name);
           } else {
             console.log("Town or position not found in the place details.");

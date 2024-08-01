@@ -11,14 +11,29 @@ import ProfileCard from "../../components/shop/ProfileCard";
 import Layout from "../../layout/Layout";
 
 // ** Firebase Imports
-import { getAllAcceptedUsers } from "../../configs/firebase.config";
+import {
+  getAllAcceptedUsers,
+  getUsersByCity,
+} from "../../configs/firebase.config";
+
+// ** Utils Imports
+
+import { removeDiacriticsAndLowercase } from "../../utils";
 
 const defaultValues = {
   city: "",
+  boarding: false,
+  walking: false,
+  daycare: false,
+  sitting: false,
 };
 
 const validationSchema = yup.object().shape({
   city: yup.string().required("Orasul este obligatoriu."),
+  boarding: yup.boolean(),
+  walking: yup.boolean(),
+  daycare: yup.boolean(),
+  sitting: yup.boolean(),
 });
 
 function GasesteSitter() {
@@ -34,32 +49,23 @@ function GasesteSitter() {
   const [sitters, setSitters] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  function removeDiacriticsAndLowercase(str) {
-    return str
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase();
-  }
-
   const onSubmit = async (formData) => {
-    const { city } = formData;
+    const { city, boarding, daycare, sitting, walking } = formData;
 
-    const normalizeCity = (city) => removeDiacriticsAndLowercase(city);
+    const normalizeCity = removeDiacriticsAndLowercase(city);
 
     try {
       setLoading(true);
 
-      const sittersRes = await getAllAcceptedUsers(city);
-      const normalizedCity = normalizeCity(city);
-
-      const filteredSittersByTown = sittersRes.filter(
-        ({ city: sitterCity }) => {
-          const normalizedSitterCity = normalizeCity(sitterCity);
-          return normalizedSitterCity === normalizedCity;
-        }
+      const sittersRes = await getUsersByCity(
+        normalizeCity,
+        boarding,
+        daycare,
+        sitting,
+        walking
       );
 
-      setSitters(filteredSittersByTown);
+      setSitters(sittersRes);
     } catch (error) {
       console.log("THE ERROR IS:", error);
     } finally {
@@ -91,6 +97,59 @@ function GasesteSitter() {
                         {errors.city && (
                           <p className="text-danger">{errors.city.message}</p>
                         )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="row">
+                    <div className="col-6">
+                      <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                        <div className="form-group">
+                          <input
+                            type="checkbox"
+                            id="boarding"
+                            {...register("boarding")}
+                          />
+                          <label htmlFor="boarding">Dog Boarding</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                        <div className="form-group">
+                          <input
+                            type="checkbox"
+                            id="walking"
+                            {...register("walking")}
+                          />
+                          <label htmlFor="walking">Dog Walking</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-6">
+                      <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                        <div className="form-group">
+                          <input
+                            type="checkbox"
+                            id="daycare"
+                            {...register("daycare")}
+                          />
+                          <label htmlFor="daycare">Dog Daycare</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                        <div className="form-group">
+                          <input
+                            type="checkbox"
+                            id="sitting"
+                            {...register("sitting")}
+                          />
+                          <label htmlFor="sitting">Dog Sitting</label>
+                        </div>
                       </div>
                     </div>
                   </div>
