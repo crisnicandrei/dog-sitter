@@ -1,7 +1,10 @@
 import Link from "next/link";
 import React from "react";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 
 function Banner1() {
+  const { user } = useContext(AuthContext);
   return (
     <div className="hero-style-1">
       <div className="container-fluid">
@@ -49,7 +52,10 @@ function Banner1() {
           />
         </div>
         <div className="reservation-btn m-2 p-2">
-          <Link legacyBehavior href="/contact">
+          <Link
+            legacyBehavior
+            href={user ? "/editare-profil" : "/autentificare"}
+          >
             <a className="primary-btn1 m-2" style={{ padding: "20px 100px" }}>
               Devino sitter
             </a>
@@ -57,10 +63,15 @@ function Banner1() {
         </div>
       </div>
       <div
-        className="d-flex justify-content-center banner-content"
+        className="d-flex justify-content-center banner-content row"
         style={{ maxWidth: "100%" }}
       >
-        <h1>Cainele tau e pe maini bune</h1>
+        <h1 className="text-center">Cainele tau e pe maini bune</h1>
+        <p className="text-center">
+          Primii 100 inscrisi in comunitatea noastra vor beneficia GRATUIT de un
+          mini-curs video (9 episoade) despre mersul in lesa, in valoare de 800
+          RON.{" "}
+        </p>
       </div>
     </div>
   );

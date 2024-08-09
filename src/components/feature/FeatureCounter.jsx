@@ -34,13 +34,13 @@ function FeatureCounter() {
                   <h3 className="odometer">
                     <div id="my-element">
                       {startCounting ? (
-                        <CountUp start={0} end={100} duration={3} />
+                        <CountUp start={0} end={0} duration={3} />
                       ) : (
                         <></>
                       )}
                     </div>
                   </h3>
-                  <span>+</span>
+                  {/* <span>+</span> */}
                 </div>
                 <p>Client Served</p>
               </div>
@@ -56,13 +56,13 @@ function FeatureCounter() {
                   <h3 className="odometer">
                     <div id="my-element">
                       {startCounting ? (
-                        <CountUp start={0} end={700} duration={3} />
+                        <CountUp start={0} end={0} duration={3} />
                       ) : (
                         <></>
                       )}
                     </div>
                   </h3>
-                  <span>+</span>
+                  {/* <span>+</span> */}
                 </div>
                 <p>Served animals</p>
               </div>
@@ -78,7 +78,7 @@ function FeatureCounter() {
                   <h3 className="odometer">
                     <div id="my-element">
                       {startCounting ? (
-                        <CountUp start={0} end={1000} duration={3} />
+                        <CountUp start={0} end={0} duration={3} />
                       ) : (
                         <></>
                       )}
@@ -99,7 +99,7 @@ function FeatureCounter() {
                   <h3 className="odometer">
                     <div id="my-element">
                       {startCounting ? (
-                        <CountUp start={0} end={2} duration={3} />
+                        <CountUp start={0} end={0} duration={3} />
                       ) : (
                         <></>
                       )}

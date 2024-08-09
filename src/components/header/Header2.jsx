@@ -203,13 +203,13 @@ function Header2() {
                     </a>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link legacyBehavior href="/salveaza">
                     <a className={currentRoute === "/salveaza" ? "active" : ""}>
                       Adopta
                     </a>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link legacyBehavior href="/adopta-virtual">
                     <a
@@ -259,7 +259,7 @@ function Header2() {
                     </a>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link legacyBehavior href="/ajutor-direct">
                     <a
                       className={
@@ -269,7 +269,7 @@ function Header2() {
                       Doneaza timp: devino voluntar
                     </a>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </li>
             <li className="menu-item-has-children">
@@ -288,9 +288,11 @@ function Header2() {
                 }
               >
                 <li>
-                  <Link legacyBehavior href="/comunitate">
+                  <Link legacyBehavior href="/editare-profil">
                     <a
-                      className={currentRoute === "/comunitate" ? "active" : ""}
+                      className={
+                        currentRoute === "/editare-profil" ? "active" : ""
+                      }
                     >
                       Intră în comunitate
                     </a>

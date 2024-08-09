@@ -8,11 +8,21 @@ function Home1Partner() {
           <div className="col-xl-5">
             <div className="partner-left">
               <div className="section-title1">
-                <span>Here Our Partner Connceted With Us</span>
                 <h2>Our Trusted Partners </h2>
               </div>
               <div className="author-name-expariance">
                 <div className="author-name">
+                  <div className="img">
+                    <img
+                      style={{
+                        width: "200px",
+                        height: "200px",
+                        borderRadius: 0,
+                      }}
+                      src="assets/images/partener4.jpeg"
+                      alt=""
+                    />
+                  </div>
                   <div className="img">
                     <img
                       style={{ width: "200px", height: "200px" }}
@@ -27,10 +37,22 @@ function Home1Partner() {
                         height: "200px",
                         borderRadius: 0,
                       }}
-                      src="assets/images/partener2.png"
+                      src="assets/images/partener2.jpeg"
                       alt=""
                     />
                   </div>
+                  <div className="img">
+                    <img
+                      style={{
+                        width: "200px",
+                        height: "200px",
+                        borderRadius: 0,
+                      }}
+                      src="assets/images/partener3.jpeg"
+                      alt=""
+                    />
+                  </div>
+
                   {/* <div className="name-deg">
                     <span>Founder</span>
                     <h4>Kash Preston</h4>
@@ -38,50 +60,6 @@ function Home1Partner() {
                 </div>
                 <div className="expariance">
                   <img src="assets/images/icon/expriance.svg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-7">
-            <div className="row justify-content-center">
-              <div className="col-lg-3 col-md-3 col-sm-4 col-6 d-flex justify-content-center">
-                <div className="partner-img">
-                  <img src="assets/images/icon/partner/envato.svg" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-3 col-sm-4 col-6 d-flex justify-content-center">
-                <div className="partner-img">
-                  <img src="assets/images/icon/partner/xidex.svg" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-3 col-sm-4 col-6 d-flex justify-content-center">
-                <div className="partner-img">
-                  <img src="assets/images/icon/partner/arrow.svg" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-3 col-sm-4 col-6 d-flex justify-content-center">
-                <div className="partner-img">
-                  <img src="assets/images/icon/partner/ozgeo.svg" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-3 col-sm-4 col-6 d-flex justify-content-center">
-                <div className="partner-img">
-                  <img src="assets/images/icon/partner/avianca.svg" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-3 col-sm-4 col-6 d-flex justify-content-center">
-                <div className="partner-img">
-                  <img src="assets/images/icon/partner/shopee.svg" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-3 col-sm-4 col-6 d-flex justify-content-center">
-                <div className="partner-img">
-                  <img src="assets/images/icon/partner/olinski.svg" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-3 col-sm-4 col-6 d-flex justify-content-center">
-                <div className="partner-img">
-                  <img src="assets/images/icon/partner/air-prime.svg" alt="" />
                 </div>
               </div>
             </div>

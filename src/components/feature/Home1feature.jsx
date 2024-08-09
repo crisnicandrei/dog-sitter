@@ -12,10 +12,7 @@ function Home1feature() {
                   <img src="assets/images/icon/insured1.svg" alt="" />
                 </div>
                 <div className="content">
-                  <h4>Fully Insured</h4>
-                  <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                  </p>
+                  <h4>Verified sitters</h4>
                 </div>
               </div>
             </div>

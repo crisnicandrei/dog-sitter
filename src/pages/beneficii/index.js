@@ -14,149 +14,39 @@ function Beneficii() {
           <div className="row g-lg-4 gy-5 justify-content-center mb-70">
             <div className="col-lg-8">
               <div className="blog-details-wrap mb-120">
-                <h2 className="post-title">
-                  Luctus justo quis feugiat lacus orcha ornare auguelon Integer
-                  gon form together nicelon.
-                </h2>
+                <h2 className="post-title">Beneficii.</h2>
                 <div className="post-content">
                   <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                    id. Maecenas eu lorem quisesdoi massal molestie vulputate in
-                    sitagi amet diam. Cras eu odio sit amet ipsum cursus for
-                    that gone pellentesquea. thisaton Vestibulum ut aliquet
-                    risus. In hac habitasse plateajoa dictumst. Nuncet posuere
-                    scelerisque justo in accumsan.Pellentesque maximus augue
-                    orci, quis congue purus iaculison id. Maecenas eu lorem
-                    quisesdoi massal molestie vulputate in sitagi amet diam.
-                    Cras eu odio sit amet ipsum cursus for that gone
-                    pellentesquea. thisaton Vestibulum ut aliquet risus. In hac
-                    habitasse plateajoa dictumst. Nuncet posuere scelerisque
-                    justo in accumsan.
+                    Platforma Azorel Hotel prin echipa noastră și uneltele
+                    on-line puse la dispoziția ta , îți oferă libertatea de a
+                    monetiza legal plăcerea de a fi alături și a ajuta blănoșii
+                    care au nevoie de atenția si dragostea ta pentru animalele
+                    de companie.
                   </p>
-                  <blockquote>
-                    <p>
-                      <sup>
-                        <img
-                          src="assets/images/icon/quage-icon-top.svg"
-                          alt="image"
-                        />
-                      </sup>{" "}
-                      Integer quis libero semper, interdum odio non, consequat
-                      sem. Qui woner pretium, quamtenti utendi lacinianti
-                      ultricies, est urna cursus purus, ut tristique purusenali
-                      pretium, quam ut laciniaun est urna{" "}
-                      <sub>
-                        <img
-                          src="assets/images/icon/quage-icon-btm.svg"
-                          alt="image"
-                        />
-                      </sub>
-                    </p>
-                    <cite>Ezekiel Miles</cite>
-                  </blockquote>
                   <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                    id. Maecenas eu lorem quisesdoi massal molestie vulputate in
-                    sitagi amet diam. Cras eu odio sit amet ipsum cursus for
-                    that gone pellentesquea. thisaton Vestibulum ut aliquet
-                    risus. In hac habitasse plateajoa dictumst. Nuncet posuere
-                    scelerisque justo in accumsan.Pellentesque maximus augue
-                    orci, quis congue purus iaculison id. Maecenas eu lorem
-                    quisesdoi massal molestie vulputate in sitagi amet diam.
-                    Cras eu odio sit amet ipsum
+                    Indiferent că te înscrii pe platformă ca petsitter,
+                    dogwalker, pet boarding, doggy day care, sau ce poți tu
+                    oferi din timpul tău si atenția ta, direcționată pentru
+                    bunăstarea animalelor de companie, va fi recompensată cu
+                    vârf și îndesat pe toate planurile. Financiar, emoțional și
+                    legal.
                   </p>
-                  <div className="row g-4 align-items-center mb-10 pt-10">
-                    <div className="col-lg-6">
-                      <h2>Luctus justo quis feugiat</h2>
-                      <p>
-                        Pellentesque maximus augue orci, quis congue purus
-                        iaculison id. Maecenas eu lorem quisesdoi massal
-                        molestie vulputate in sitagi amet diam. Cras eu odio sit
-                        amet ipsum cursus for thata gone pellentesquea. thisaton
-                        Vestibulum ut aliquet risus. Inagi hac habitasse
-                        plateajoa dictumst. Nuncet posuere scelerisque justo in
-                        accumsan.Pellentesque maximus augue orci, quisento
-                        congue purus iaculison id. Maecenas eu lorem quisesdoi
-                        ameti
-                      </p>
-                    </div>
-                    <div className="col-lg-6">
-                      <img
-                        className="img-fluid"
-                        src="assets/images/blog/blog-dt-img2.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <h2>
-                    Luctus justo quis feugiat lacus orcha ornare auguelon
-                    Integer gon form together nicelon.
-                  </h2>
                   <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                    id. Maecenas eu lorem quisesdoi massal molestie vulputate in
-                    sitagi amet diam. Cras eu odio sit amet ipsum cursus for
-                    that gone pellentesquea. thisaton Vestibulum ut aliquet
-                    risus. In hac habitasse plateajoa dictumst. Nuncet posuere
-                    scelerisque justo in accumsan.Pellentesque maximus augue
-                    orci, quis congue purus iaculison id. Maecenas eu lorem
-                    quisesdoi massal molestie vulputate in sitagi amet diam.
-                    Cras eu odio sit amet ipsum cursus for that gone
-                    pellentesquea. thisaton Vestibulum ut aliquet risus. In hac
-                    habitasse plateajoa dictumst. Nuncet posuere scelerisque
-                    justo in accumsan.
+                    Cu ajutorul echipei noastre poți acum să te simți împlinit,
+                    să ajuți și să monetizezi din confortul casei tale buna ta
+                    intenție față de prietenul cel mai bun al omului - câinele.
+                    Trăiește experiența remarcabilă de conexiune om-animal cu
+                    ajutorul nostru.
                   </p>
-                </div>
-                <div className="blog-tag-social-area">
-                  <div className="bolg-tag">
-                    <ul>
-                      <li>
-                        <Link legacyBehavior href="/blog-grid">
-                          <a>#Pet Care</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link legacyBehavior href="/blog-grid">
-                          <a>#Dog Walking</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link legacyBehavior href="/blog-grid">
-                          <a>#Medical Care</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link legacyBehavior href="/blog-grid">
-                          <a>#Pet Bording</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="social-area">
-                    <span>Share:</span>
-                    <ul className="social-link d-flex align-items-center">
-                      <li>
-                        <a href="https://www.facebook.com/">
-                          <i className="bx bxl-facebook" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com/">
-                          <i className="bx bxl-twitter" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.pinterest.com/">
-                          <i className="bx bxl-pinterest-alt" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/">
-                          <i className="bx bxl-instagram" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <p>
+                    Platforma Azorel Hotel îți oferă posibilitatea de a monetiza
+                    legal grija și dragostea pentru animalele de companie, prin
+                    diverse servicii precum petsitting, dogwalking, sau pet
+                    boarding. Vei fi recompensat atât financiar, cât și
+                    emoțional, beneficiind de sprijinul echipei noastre. Poți
+                    ajuta animalele și să câștigi bani din confortul casei tale,
+                    trăind o conexiune remarcabilă cu acestea.
+                  </p>
                 </div>
               </div>
             </div>

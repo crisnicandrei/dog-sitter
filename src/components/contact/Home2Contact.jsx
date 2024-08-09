@@ -72,7 +72,7 @@ function Home2Contact() {
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       >
-                        01. In et finibus lectus. Donec scelerisque tortor?
+                        01. In et finibus lectus. Donec dddscelerisque tortor?
                       </button>
                     </h2>
                     <div

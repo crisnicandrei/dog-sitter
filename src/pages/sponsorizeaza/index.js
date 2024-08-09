@@ -14,24 +14,38 @@ function Profile() {
           <div className="row g-lg-4 gy-5 justify-content-center mb-70">
             <div className="col-lg-8">
               <div className="blog-details-wrap mb-120">
-                <h2 className="post-title">
-                  Voluntarii nu au mai mult timp liber decât alți oameni, doar
-                  mai mult suflet 🙂
-                </h2>
+                <h2 className="post-title">Împreună putem face mai mult.</h2>
                 <div className="post-content">
-                  <p>Donează timp 🙂 Vino și drăgălește un #blănos salvat.</p>
                   <p>
-                    Câinele, cel mai bun prieten al omului, așteaptă poate chiar
-                    ani de zile un cămin, dar în fiecare zi așteaptă un masaj,
-                    ceva atât de banal ca o plimbare, poate și biscuiți :) în
-                    general așteaptă iubire - dar când ai mulți în grijă nu
-                    ajung toți la rând atât de mult timp cât ar merita. Aici
-                    intervine voluntarul :)
+                    Ne poți ajuta să ajutăm! Redirecționează gratuit 20% din
+                    impozitul firmei tale!* *poți opta pentru orice procent până
+                    în 20%, astfel poți împărți, dacă dorești, la mai multe
+                    asociații
                   </p>
                   <p>
-                    Dedicat și cu inima deschisă, oferind timpul său și chiar
-                    mai mult! o parte din sine pentru o cauză nobilă.
-                    #FapteBuneÎmpreună
+                    POȚI redirecționa 20% din impozitul pe profit sau pe venit
+                    în funcție de felul de plătitor de impozit. Chiar și dacă ai
+                    PFA poți redirecționa.
+                    <a href="https://drive.google.com/file/d/1s8rXrB7EhVDsM4rzxqRHHrkhO0aoGM_h/view?usp=sharing">
+                      Contractul
+                    </a>{" "}
+                    il trimiteti la noi pe adresa asociatia.furrytales@gmail.com
+                  </p>
+                  <p>
+                    În plus, conform Ordinului 1679/2022, dacă în anul trecut nu
+                    ați făcut deloc sponsorizări deductibile sau prin
+                    sponsorizările efectuate nu ați atins plafonul maxim
+                    stabilit prin lege (20% din impozitul pe profit dar nu mai
+                    mult de 0,75% din cifra de afaceri, respectiv maxim 20% din
+                    impozitul pe venit, pentru microîntreprinderi) aveți
+                    posibilitatea de a depune, până la data de 25 decembrie
+                    2024, la ANAF, Declarația 177, prin care solicitați ca
+                    diferența de sponsorizare până la plafonul maxim, rămasă
+                    nealocată, să fie redirecționată către proiectele asociaţiei
+                    FURRYTALES{" "}
+                    <a href="https://static.anaf.ro/static/10/Anaf/formulare/177_OPANAF_1679_2022.pdf">
+                      Declarația 177
+                    </a>
                   </p>
                 </div>
                 <div className="blog-tag-social-area">

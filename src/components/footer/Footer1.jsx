@@ -17,10 +17,7 @@ function Footer1() {
                 </div>
                 <div className="hotline-info">
                   <h6 className="mb-10">
-                    <a href="tel:+8801761111456">+880 176 1111 456</a>
-                  </h6>
-                  <h6>
-                    <a href="tel:+8801701111000">+880 170 1111 000</a>
+                    <a href="tel:+40786366923">+40786366923</a>
                   </h6>
                 </div>
               </div>
@@ -30,10 +27,9 @@ function Footer1() {
                 </div>
                 <div className="email-info">
                   <h6 className="mb-10">
-                    <a href="mailto:info@example.com">info@example.com</a>
-                  </h6>
-                  <h6>
-                    <a href="mailto:info@support.com">info@support.com</a>
+                    <a href="mailto:claudia.dana.marcu@gmail.com">
+                      claudia.dana.marcu@gmail.com
+                    </a>
                   </h6>
                 </div>
               </div>
@@ -43,10 +39,10 @@ function Footer1() {
                 </div>
                 <div className="email-info">
                   <h6 className="mb-10">
-                    <a>168/170, Avenue 01, Mirpur</a>
+                    <a>Bucovat, 368</a>
                   </h6>
                   <h6>
-                    <a>DOHS, Bangladesh</a>
+                    <a>Timis</a>
                   </h6>
                 </div>
               </div>
@@ -80,36 +76,7 @@ function Footer1() {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-sm-6 d-flex justify-content-sm-end justify-content-start order-3">
-            <div className="footer-items opening-time">
-              <h3>Orar:</h3>
-              <h6 className="mb-25">Mon - Fri: 9.00AM - 6.00PM</h6>
-              <h6 className="mb-25">Saturday: 9.00AM - 6.00PM</h6>
-              <h6>Sunday: Closed</h6>
-              <ul className="social-icons">
-                <li>
-                  <a href="https://www.facebook.com/">
-                    <i className="bx bxl-facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/">
-                    <i className="bx bxl-twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.pinterest.com/">
-                    <i className="bx bxl-pinterest-alt" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/">
-                    <i className="bx bxl-instagram" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <div className="col-lg-3 col-sm-6 d-flex justify-content-sm-end justify-content-start order-3"></div>
         </div>
         <div className="row border-top">
           <div className="col-lg-6">
@@ -126,7 +93,9 @@ function Footer1() {
                 <a href="#">Privacy Policy</a>
               </li>
               <li>
-                <a href="#">Terms &amp; Conditions</a>
+                <Link legacyBehavior href="/termeni">
+                  <a>Terms &amp; Conditions</a>
+                </Link>
               </li>
               <li>
                 <a href="#">Services</a>

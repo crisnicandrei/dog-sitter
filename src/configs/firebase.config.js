@@ -26,26 +26,26 @@ import {
 
 import { ref, uploadBytes, getStorage, getDownloadURL } from "firebase/storage";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDJXjGqJsqdbnji-YQPtsm5GvHQzxmtwCg",
-  authDomain: "dogoproject-bb3cb.firebaseapp.com",
-  projectId: "dogoproject-bb3cb",
-  storageBucket: "dogoproject-bb3cb.appspot.com",
-  messagingSenderId: "511020674216",
-  appId: "1:511020674216:web:60ba794c99da1c0f33269d",
-  measurementId: "G-QGTW5CZHHG",
-};
-
 // const firebaseConfig = {
-//   storageBucket: "gs://dog-care-e55ea.appspot.com",
-//   apiKey: "AIzaSyBaU6-ysP-siDXMZumLWuys_7leDMSL4VM",
-//   authDomain: "dog-care-e55ea.firebaseapp.com",
-//   projectId: "dog-care-e55ea",
-//   storageBucket: "dog-care-e55ea.appspot.com",
-//   messagingSenderId: "387916965285",
-//   appId: "1:387916965285:web:ffca57f7c3cc976b9ef44c",
-//   measurementId: "G-QWTGZ2ZJPG",
+//   apiKey: "AIzaSyDJXjGqJsqdbnji-YQPtsm5GvHQzxmtwCg",
+//   authDomain: "dogoproject-bb3cb.firebaseapp.com",
+//   projectId: "dogoproject-bb3cb",
+//   storageBucket: "dogoproject-bb3cb.appspot.com",
+//   messagingSenderId: "511020674216",
+//   appId: "1:511020674216:web:60ba794c99da1c0f33269d",p
+//   measurementId: "G-QGTW5CZHHG",
 // };
+
+const firebaseConfig = {
+  storageBucket: "gs://dog-care-e55ea.appspot.com",
+  apiKey: "AIzaSyBaU6-ysP-siDXMZumLWuys_7leDMSL4VM",
+  authDomain: "dog-care-e55ea.firebaseapp.com",
+  projectId: "dog-care-e55ea",
+  storageBucket: "dog-care-e55ea.appspot.com",
+  messagingSenderId: "387916965285",
+  appId: "1:387916965285:web:ffca57f7c3cc976b9ef44c",
+  measurementId: "G-QWTGZ2ZJPG",
+};
 
 const firebaseApp = initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);
@@ -277,15 +277,13 @@ const acceptOrDeclineUserProfile = async (uid, bolleanAcceptence) => {
   }
 };
 
-const getUsersByCity = async (city, boarding, daycare, sitting, walking) => {
+const getUsersByCity = async (city) => {
+  console.log(city);
+
   try {
     const usersQueryCollection = query(
       collection(db, "users"),
       where("city", "==", city),
-      where("boarding", "==", boarding),
-      where("daycare", "==", daycare),
-      where("sitting", "==", sitting),
-      where("sitting", "==", walking),
       where("isAccepted", "==", true),
       where("isReviewed", "==", true)
     );

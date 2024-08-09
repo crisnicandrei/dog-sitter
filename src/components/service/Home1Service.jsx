@@ -156,7 +156,7 @@ function Home1Service() {
                   <div className="content">
                     <h3>
                       <Link legacyBehavior href="/service-details">
-                        <a> Pet Walker</a>
+                        <a> Dog Walker</a>
                       </Link>
                     </h3>
                     <p>
