@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:prod": "env $(cat .env.prod | xargs) npm run build",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
