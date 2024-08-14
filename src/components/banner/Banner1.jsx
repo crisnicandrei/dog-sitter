@@ -35,7 +35,7 @@ function Banner1() {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center flex-column flex-sm-row">
         <div className="reservation-btn m-2 p-2">
           <Link legacyBehavior href="/gaseste-sitter">
             <a style={{ padding: "20px 100px" }} className="primary-btn1 m-2">

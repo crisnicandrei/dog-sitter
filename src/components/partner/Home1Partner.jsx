@@ -10,7 +10,7 @@ function Home1Partner() {
               <div className="section-title1">
                 <h2>Our Trusted Partners </h2>
               </div>
-              <div className="author-name-expariance">
+              <div className="author-name-expariance d-flex">
                 <div className="author-name">
                   <div className="img">
                     <img
