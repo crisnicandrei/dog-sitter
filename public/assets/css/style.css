@@ -4351,10 +4351,9 @@ a.ui-button:active,
 =======================================*/
 .h1-feature-area {
   background-image: linear-gradient(
-      rgba(0, 29, 35, 0.75),
-      rgba(0, 29, 35, 0.75)
-    ),
-    url(../images/bg/feature-bg.png);
+    rgba(0, 29, 35, 0.75),
+    rgba(0, 29, 35, 0.75)
+  );
   background-size: cover;
   background-repeat: no-repeat;
   padding: 90px 0 180px;

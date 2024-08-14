@@ -12,7 +12,7 @@ function Home1feature() {
                   <img src="assets/images/icon/insured1.svg" alt="" />
                 </div>
                 <div className="content">
-                  <h4>Verified sitters</h4>
+                  <h4>Verified Sitters</h4>
                 </div>
               </div>
             </div>
@@ -23,9 +23,7 @@ function Home1feature() {
             </div>
             <div className="feature-right">
               <div className="single-card">
-                <div className="icon">
-                  <img src="assets/images/icon/fast-aid1.svg" alt="" />
-                </div>
+                <div className="icon"></div>
                 <div className="content">
                   <h4>Pet First-Aid Trained</h4>
                   <p>

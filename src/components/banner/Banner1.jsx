@@ -47,7 +47,7 @@ function Banner1() {
           <img
             alt="image"
             className="img-fluid"
-            src="assets/logo.svg"
+            src="/assets/images/logo.svg"
             style={{ maxWidth: "150px" }}
           />
         </div>

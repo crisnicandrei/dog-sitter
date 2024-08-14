@@ -1,5 +1,8 @@
 import React from "react";
 
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 function ChooseUs() {
   return (
     <div className="h1-choose-area mb-120">
@@ -57,6 +60,13 @@ function ChooseUs() {
                         Pellentesque maximus augue orci, quisl congue purus
                         iaculison
                       </p>
+                      <Link
+                        style={{ color: "#f46f30" }}
+                        legacyBehavior
+                        href="/trusted-team"
+                      >
+                        <a>See more</a>
+                      </Link>
                     </div>
                   </div>
                 </li>
@@ -71,6 +81,13 @@ function ChooseUs() {
                         Pellentesque maximus augue orci, quisl congue purus
                         iaculison
                       </p>
+                      <Link
+                        style={{ color: "#f46f30" }}
+                        legacyBehavior
+                        href="/peace-of-mind"
+                      >
+                        <a>See more</a>
+                      </Link>
                     </div>
                   </div>
                 </li>
