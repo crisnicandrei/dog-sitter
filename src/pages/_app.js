@@ -18,7 +18,10 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Câinele tău îi pe mâini bune!" />
-        <meta name="keywords" content="Next.js, SEO, Example" />
+        <meta
+          name="keywords"
+          content="Azorel Hotel, plimba cainele, cazeaza cainele, lasa in grija cainele, caine"
+        />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Azorel Hotel" />
