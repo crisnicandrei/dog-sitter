@@ -11,7 +11,7 @@ function Home1Partner() {
                 <h2>Our Trusted Partners </h2>
               </div>
               <div className="author-name-expariance d-flex">
-                <div className="author-name">
+                <div className="author-name d-flex">
                   <div className="img">
                     <img
                       style={{

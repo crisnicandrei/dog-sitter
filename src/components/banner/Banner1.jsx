@@ -26,7 +26,7 @@ function Banner1() {
                 <div className="banner-img">
                   <img
                     className="img-fluid"
-                    src="assets/images/image2.jpeg"
+                    src="/assets/images/image2.jpeg"
                     alt=""
                   />
                 </div>
@@ -36,22 +36,22 @@ function Banner1() {
         </div>
       </div>
       <div className="d-flex justify-content-center flex-column flex-sm-row">
-        <div className="reservation-btn m-2 p-2">
+        <div className="reservation-btn m-2 p-2 d-flex justify-content-center">
           <Link legacyBehavior href="/gaseste-sitter">
             <a style={{ padding: "20px 100px" }} className="primary-btn1 m-2">
               Gaseste sitter
             </a>
           </Link>
         </div>
-        <div className="header-logo m-3">
+        <div className="header-logo m-3 d-s-none d-flex justify-content-center">
           <img
             alt="image"
             className="img-fluid"
-            src="/assets/images/logo.svg"
+            src="/assets/images/icon/dog.svg"
             style={{ maxWidth: "150px" }}
           />
         </div>
-        <div className="reservation-btn m-2 p-2">
+        <div className="reservation-btn m-2 p-2 d-flex justify-content-center">
           <Link
             legacyBehavior
             href={user ? "/editare-profil" : "/autentificare"}

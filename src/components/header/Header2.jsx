@@ -163,48 +163,7 @@ function Header2() {
               </li>
             )}
             <li className="menu-item-has-children">
-              <Link legacyBehavior href="#">
-                <a>Implicare Socială</a>
-              </Link>
-              <i
-                className="bi bi-plus dropdown-icon"
-                onClick={() => dispatch({ type: "shop" })}
-              />
-              <ul
-                className={
-                  state.activeMenu === "shop"
-                    ? "sub-menu  d-block"
-                    : "sub-menu d-xl-block d-none"
-                }
-              >
-                <li>
-                  <Link legacyBehavior href="/campanie-de-sterilizare">
-                    <a
-                      className={
-                        currentRoute === "/campanie-de-sterilizare"
-                          ? "active"
-                          : ""
-                      }
-                    >
-                      Sterilizare
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/adopta-virtual">
-                    <a
-                      className={
-                        currentRoute === "/adopta-virtual" ? "active" : ""
-                      }
-                    >
-                      Adoptă Virtual
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-item-has-children">
-              <Link legacyBehavior href="#">
+              <Link legacyBehavior href="/doneaza">
                 <a>Donează</a>
               </Link>
               <i

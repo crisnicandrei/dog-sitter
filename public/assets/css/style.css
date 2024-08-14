@@ -4263,7 +4263,7 @@ a.ui-button:active,
   }
 }
 .h1-story-area::before {
-  content: url(../images/bg/frem-02.png);
+  content: url(../images/bg/frem-01.png);
   position: absolute;
   left: 0;
   bottom: 0;
