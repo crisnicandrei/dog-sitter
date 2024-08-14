@@ -26,7 +26,9 @@ function FeatureCounter() {
         <div className="row justify-content-center g-md-4 gy-5">
           <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="counter-single client">
-              <div className="counter-icon"></div>
+              <div className="counter-icon">
+                <img src="/assets/images/icon/client.svg " alt="image" />
+              </div>
               <div className="coundown">
                 <div className="d-flex align-items-center gap-2">
                   <h3 className="odometer">
@@ -40,7 +42,7 @@ function FeatureCounter() {
                   </h3>
                   {/* <span>+</span> */}
                 </div>
-                <p>Client Served</p>
+                <p>Clients Served</p>
               </div>
             </div>
           </div>

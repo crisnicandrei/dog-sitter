@@ -89,7 +89,7 @@ function Header2() {
                 <a>
                   <img
                     alt="image"
-                    src="assets/images/logo.svg"
+                    src="/assets/images/logo.svg"
                     style={{ maxWidth: "150px" }}
                   />
                 </a>

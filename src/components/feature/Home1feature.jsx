@@ -23,7 +23,9 @@ function Home1feature() {
             </div>
             <div className="feature-right">
               <div className="single-card">
-                <div className="icon"></div>
+                <div className="icon">
+                  <img src="/assets/images/icon/fast-aid1.svg" alt="" />
+                </div>
                 <div className="content">
                   <h4>Pet First-Aid Trained</h4>
                   <p>

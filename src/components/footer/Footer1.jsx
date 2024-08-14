@@ -13,7 +13,7 @@ function Footer1() {
               <h3>Contacts</h3>
               <div className="hotline mb-30">
                 <div className="hotline-icon">
-                  <img src="assets/images/icon/phone-icon.svg" alt="" />
+                  <img src="/assets/images/icon/phone-icon.svg" alt="" />
                 </div>
                 <div className="hotline-info">
                   <h6 className="mb-10">
@@ -23,7 +23,7 @@ function Footer1() {
               </div>
               <div className="email mb-30">
                 <div className="email-icon">
-                  <img src="assets/images/icon/envelope.svg" alt="" />
+                  <img src="/assets/images/icon/envelope.svg" alt="" />
                 </div>
                 <div className="email-info">
                   <h6 className="mb-10">
@@ -35,7 +35,7 @@ function Footer1() {
               </div>
               <div className="email">
                 <div className="email-icon">
-                  <img src="assets/images/icon/location.svg" alt="" />
+                  <img src="/assets/images/icon/location.svg" alt="" />
                 </div>
                 <div className="email-info">
                   <h6 className="mb-10">

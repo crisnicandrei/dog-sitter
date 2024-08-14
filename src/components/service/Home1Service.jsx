@@ -54,9 +54,9 @@ function Home1Service() {
           <div className="col-lg-12 d-flex justify-content-center">
             <div className="section-title1 text-center">
               <span>
-                <img src="assets/images/icon/section-vec-l1.svg" alt="" />
+                <img src="/assets/images/icon/section-vec-l1.svg" alt="" />
                 Servicii
-                <img src="assets/images/icon/section-vec-r1.svg" alt="" />
+                <img src="/assets/images/icon/section-vec-r1.svg" alt="" />
               </span>
               <h2>Descopera serviciile noastre.</h2>
             </div>
@@ -84,11 +84,11 @@ function Home1Service() {
                 <div className="services-card1 two">
                   <img
                     className="services-card-vec"
-                    src="assets/images/bg/services-card-vec.png"
+                    src="/assets/images/bg/services-card-vec.png"
                     alt=""
                   />
                   <div className="icon">
-                    <img src="assets/images/icon/daycare-center2.svg" alt="" />
+                    <img src="/assets/images/icon/daycare-center2.svg" alt="" />
                   </div>
                   <div className="content">
                     <h3>
@@ -106,7 +106,7 @@ function Home1Service() {
                   <Link legacyBehavior href="/service-details">
                     <a className="more-btn">
                       Click sa aflii
-                      <img src="assets/images/icon/btn-arrow1.svg" alt="" />
+                      <img src="/assets/images/icon/btn-arrow1.svg" alt="" />
                     </a>
                   </Link>
                 </div>
@@ -115,11 +115,11 @@ function Home1Service() {
                 <div className="services-card1">
                   <img
                     className="services-card-vec"
-                    src="assets/images/bg/services-card-vec.png"
+                    src="/assets/images/bg/services-card-vec.png"
                     alt=""
                   />
                   <div className="icon">
-                    <img src="assets/images/icon/daycare-center2.svg" alt="" />
+                    <img src="/assets/images/icon/daycare-center2.svg" alt="" />
                   </div>
                   <div className="content">
                     <h3>
@@ -138,7 +138,7 @@ function Home1Service() {
                   <Link legacyBehavior href="/service-details">
                     <a className="more-btn">
                       Click sa aflii
-                      <img src="assets/images/icon/btn-arrow1.svg" alt="" />
+                      <img src="/assets/images/icon/btn-arrow1.svg" alt="" />
                     </a>
                   </Link>
                 </div>
@@ -147,11 +147,11 @@ function Home1Service() {
                 <div className="services-card1 two">
                   <img
                     className="services-card-vec"
-                    src="assets/images/bg/services-card-vec.png"
+                    src="/assets/images/bg/services-card-vec.png"
                     alt=""
                   />
                   <div className="icon">
-                    <img src="assets/images/icon/training.svg" alt="" />
+                    <img src="/assets/images/icon/training.svg" alt="" />
                   </div>
                   <div className="content">
                     <h3>
@@ -168,7 +168,7 @@ function Home1Service() {
                   <Link legacyBehavior href="/service-details">
                     <a className="more-btn">
                       Click sa aflii
-                      <img src="assets/images/icon/btn-arrow1.svg" alt="" />
+                      <img src="/assets/images/icon/btn-arrow1.svg" alt="" />
                     </a>
                   </Link>
                 </div>
@@ -177,11 +177,11 @@ function Home1Service() {
                 <div className="services-card1 three">
                   <img
                     className="services-card-vec"
-                    src="assets/images/bg/services-card-vec.png"
+                    src="/assets/images/bg/services-card-vec.png"
                     alt=""
                   />
                   <div className="icon">
-                    <img src="assets/images/icon/boarding2.svg" alt="" />
+                    <img src="/assets/images/icon/boarding2.svg" alt="" />
                   </div>
                   <div className="content">
                     <h3>
@@ -197,7 +197,7 @@ function Home1Service() {
                   <Link legacyBehavior href="/service-details">
                     <a className="more-btn">
                       Click sa aflii
-                      <img src="assets/images/icon/btn-arrow1.svg" alt="" />
+                      <img src="/assets/images/icon/btn-arrow1.svg" alt="" />
                     </a>
                   </Link>
                 </div>

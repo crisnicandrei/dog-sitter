@@ -19,14 +19,14 @@ function Home1Partner() {
                         height: "200px",
                         borderRadius: 0,
                       }}
-                      src="assets/images/partener4.jpeg"
+                      src="/assets/images/partener4.jpeg"
                       alt=""
                     />
                   </div>
                   <div className="img">
                     <img
                       style={{ width: "200px", height: "200px" }}
-                      src="assets/images/partener1.jpeg"
+                      src="/assets/images/partener1.jpeg"
                       alt=""
                     />
                   </div>
@@ -37,7 +37,7 @@ function Home1Partner() {
                         height: "200px",
                         borderRadius: 0,
                       }}
-                      src="assets/images/partener2.jpeg"
+                      src="/assets/images/partener2.jpeg"
                       alt=""
                     />
                   </div>
@@ -48,15 +48,10 @@ function Home1Partner() {
                         height: "200px",
                         borderRadius: 0,
                       }}
-                      src="assets/images/partener3.jpeg"
+                      src="/assets/images/partener3.jpeg"
                       alt=""
                     />
                   </div>
-
-                  {/* <div className="name-deg">
-                    <span>Founder</span>
-                    <h4>Kash Preston</h4>
-                  </div> */}
                 </div>
                 <div className="expariance">
                   <img src="assets/images/icon/expriance.svg" alt="" />
