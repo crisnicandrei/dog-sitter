@@ -89,7 +89,7 @@ function Home1About() {
             <div className="story-img">
               <img
                 className="img-fluid"
-                src="assets/images/bg/story-img1.png"
+                src="assets/images/poza2.jpeg"
                 alt=""
               />
             </div>

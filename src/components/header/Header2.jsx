@@ -72,7 +72,7 @@ function Header2() {
               <img
                 alt="image"
                 className="img-fluid"
-                src="assets/images/logo.svg"
+                src="/assets/images/logo.svg"
                 style={{ maxWidth: "150px" }}
               />
             </a>
@@ -186,30 +186,10 @@ function Header2() {
                           : ""
                       }
                     >
-                      Partener: Foster
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/campanie-de-sterilizare">
-                    <a
-                      className={
-                        currentRoute === "/campanie-de-sterilizare"
-                          ? "active"
-                          : ""
-                      }
-                    >
                       Sterilizare
                     </a>
                   </Link>
                 </li>
-                {/* <li>
-                  <Link legacyBehavior href="/salveaza">
-                    <a className={currentRoute === "/salveaza" ? "active" : ""}>
-                      Adopta
-                    </a>
-                  </Link>
-                </li> */}
                 <li>
                   <Link legacyBehavior href="/adopta-virtual">
                     <a
@@ -246,30 +226,12 @@ function Header2() {
                   </Link>
                 </li>
                 <li>
-                  <Link legacyBehavior href="/doneaza">
-                    <a className={currentRoute === "/impozit" ? "active" : ""}>
-                      Doneaza
-                    </a>
-                  </Link>
-                </li>
-                <li>
                   <Link legacyBehavior href="/sponsorizeaza">
                     <a className={currentRoute === "/impozit" ? "active" : ""}>
                       Sponsorizeaza
                     </a>
                   </Link>
                 </li>
-                {/* <li>
-                  <Link legacyBehavior href="/ajutor-direct">
-                    <a
-                      className={
-                        currentRoute === "/ajutor-direct" ? "active" : ""
-                      }
-                    >
-                      Doneaza timp: devino voluntar
-                    </a>
-                  </Link>
-                </li> */}
               </ul>
             </li>
             <li className="menu-item-has-children">
@@ -302,13 +264,6 @@ function Header2() {
                   <Link legacyBehavior href="/training">
                     <a className={currentRoute === "/training" ? "active" : ""}>
                       Training
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/partener">
-                    <a className={currentRoute === "/partener" ? "active" : ""}>
-                      Partener
                     </a>
                   </Link>
                 </li>

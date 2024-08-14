@@ -38,7 +38,7 @@ function ChooseUs() {
               </div>
               <img
                 className="img-fluid"
-                src="assets/images/bg/choose-img.png"
+                src="assets/images/pupi.jpeg"
                 alt="choose-img"
               />
             </div>

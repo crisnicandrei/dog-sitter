@@ -103,7 +103,7 @@ function Header3() {
                 <img
                   alt="image"
                   className="img-fluid"
-                  src="assets/images/logo.svg"
+                  src="assets/logo.svg"
                   style={{ maxWidth: "150px" }}
                 />
               </a>
@@ -123,7 +123,7 @@ function Header3() {
                     {" "}
                     <img
                       alt="image"
-                      src="assets/images/logo.svg"
+                      src="assets/logo.svg"
                       style={{ maxWidth: "150px" }}
                     />
                   </a>
