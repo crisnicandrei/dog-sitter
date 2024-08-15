@@ -10,8 +10,8 @@ function Home1Partner() {
               <div className="section-title1">
                 <h2>Our Trusted Partners </h2>
               </div>
-              <div className="author-name-expariance d-flex">
-                <div className="author-name d-flex">
+              <div className="author-name-expariance d-flex justify-content-center justify-content-lg-between">
+                <div className="author-name d-flex flex-column flex-lg-row">
                   <div className="img">
                     <img
                       style={{
@@ -52,9 +52,6 @@ function Home1Partner() {
                       alt=""
                     />
                   </div>
-                </div>
-                <div className="expariance">
-                  <img src="assets/images/icon/expriance.svg" alt="" />
                 </div>
               </div>
             </div>
