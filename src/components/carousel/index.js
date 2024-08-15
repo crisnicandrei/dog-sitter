@@ -11,14 +11,12 @@ const ImageCarousel = () => {
       <div>
         <img src="/assets/images/image4.jpeg" alt="Image 2" />
       </div>
-      <div>
-        <img src="/assets/images/image5.jpeg" alt="Image 3" />
-      </div>
+
       <div>
         <img src="/assets/images/image6.jpeg" alt="Image 3" />
       </div>
-      <div className="image-7">
-        <img src="/assets/images/image7.jpeg" alt="Image 3" />
+      <div>
+        <img src="/assets/images/image9.jpeg" alt="Image 3" />
       </div>
     </Carousel>
   );

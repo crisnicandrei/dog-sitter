@@ -36,14 +36,14 @@ function Banner1() {
         </div>
       </div>
       <div className="d-flex justify-content-center flex-column flex-sm-row">
-        <div className="reservation-btn m-2 p-2 d-flex justify-content-center">
+        <div className="reservation-btn m-2 p-lg-2 p-1 d-flex justify-content-center text-center">
           <Link legacyBehavior href="/gaseste-sitter">
             <a style={{ padding: "20px 100px" }} className="primary-btn1 m-2">
               Gaseste sitter
             </a>
           </Link>
         </div>
-        <div className="header-logo m-3 d-s-none d-flex justify-content-center">
+        <div className="header-logo m-3 d-none d-md-block d-flex justify-content-center">
           <img
             alt="image"
             className="img-fluid"
@@ -51,7 +51,7 @@ function Banner1() {
             style={{ maxWidth: "150px" }}
           />
         </div>
-        <div className="reservation-btn m-2 p-2 d-flex justify-content-center">
+        <div className="reservation-btn m-2 p-lg-2 p-1 d-flex justify-content-center">
           <Link
             legacyBehavior
             href={user ? "/editare-profil" : "/autentificare"}
