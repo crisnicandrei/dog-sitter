@@ -11,9 +11,9 @@ function ChooseUs() {
           <div className="col-lg-5">
             <div className="section-title1">
               <span>
-                <img src="assets/images/icon/section-vec-l1.svg" alt="" />
+                <img src="/assets/images/icon/section-vec-l1.svg" alt="" />
                 Why Choose Us
-                <img src="assets/images/icon/section-vec-r1.svg" alt="" />
+                <img src="/assets/images/icon/section-vec-r1.svg" alt="" />
               </span>
               <h2>Asiguram cele mai bune servicii.</h2>
             </div>
@@ -28,20 +28,12 @@ function ChooseUs() {
           </div>
           <div className="col-lg-5 col-md-8">
             <div className="choose-img">
-              <div className="batch">
-                <img src="assets/images/icon/choose-star.svg" alt="" />
-                <span>
-                  100% Safe
-                  <br />
-                  Your Pet
-                </span>
-              </div>
               <div className="choose-vector">
-                <img src="assets/images/icon/choose-vector.svg" alt="" />
+                <img src="/assets/images/icon/choose-vector.svg" alt="" />
               </div>
               <img
                 className="img-fluid"
-                src="assets/images/pupi.jpeg"
+                src="/assets/images/pupi.jpeg"
                 alt="choose-img"
               />
             </div>
@@ -52,7 +44,7 @@ function ChooseUs() {
                 <li>
                   <div className="single-choose-card">
                     <div className="icon">
-                      <img src="assets/images/icon/team.svg" alt="" />
+                      <img src="/assets/images/icon/team.svg" alt="" />
                     </div>
                     <div className="content">
                       <h4>Trusted Team</h4>
@@ -73,7 +65,7 @@ function ChooseUs() {
                 <li>
                   <div className="single-choose-card">
                     <div className="icon">
-                      <img src="assets/images/icon/mind.svg" alt="" />
+                      <img src="/assets/images/icon/mind.svg" alt="" />
                     </div>
                     <div className="content">
                       <h4>Peace of mind</h4>
