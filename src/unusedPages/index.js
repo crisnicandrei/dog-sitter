@@ -24,7 +24,7 @@ export default function Home() {
       <Home1Service />
       <Home1About />
       <Home1feature />
-      <FeatureCounter />
+      {/* <FeatureCounter /> */}
       <ChooseUs />
       <Home1Partner />
       <Home1PricePlan />
