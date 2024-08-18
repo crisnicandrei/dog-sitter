@@ -51,7 +51,7 @@ function Footer1() {
           <div className="col-lg-6 d-flex align-items-center order-lg-2 order-1 justify-content-sm-center justify-content-start">
             <div className="footer-items">
               <h2>
-                want <span>to keep</span>
+                {/* want <span>to keep</span> */}
                 <br />
                 your pet in, <span>our center</span>?
               </h2>
@@ -62,10 +62,10 @@ function Footer1() {
                     : "book-btn"
                 }
               >
-                <Link legacyBehavior href="/contact">
+                <Link legacyBehavior href="/gaseste-sitter">
                   <a
                     className={
-                      currentRouter === "/index2"
+                      currentRouter === "/gaseste-sitter"
                         ? "primary-btn2"
                         : "primary-btn1"
                     }
