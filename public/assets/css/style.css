@@ -40,7 +40,7 @@ Template Name: Scooby - Petcare HTML Template
 :root {
   --primary-color2: #ff6b55;
   --primary-color3: #f46f30;
-  --gradient-color: linear-gradient(90deg, #f86ca7 0%, #ff7f18 100%);
+  --gradient-color: rgb(46, 103, 209);
   --title-color1: #001d23;
   --title-color2: #253d4e;
   --text-color1: #8a8a8a;

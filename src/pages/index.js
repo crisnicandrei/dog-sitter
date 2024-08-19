@@ -18,12 +18,12 @@ export default function Home() {
       <Banner1 />
       <Home1Service />
       <Home1About />
-      <Home1feature />
       {/* <FeatureCounter /> */}
       <ChooseUs />
       <Home1Partner />
       {/* <Home1Testimonial /> */}
-      <Home1Team />
+      {/* <Home1Team /> */}
+      <Home1feature />
       <Footer1 />
     </>
   );

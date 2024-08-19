@@ -2,6 +2,8 @@ import Link from "next/link";
 import React from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faDog } from "@fortawesome/free-solid-svg-icons";
 
 function Banner1() {
   const { user } = useContext(AuthContext);
@@ -35,12 +37,20 @@ function Banner1() {
           </div>
         </div>
       </div>
+
       <div className="d-flex justify-content-center flex-column flex-sm-row">
         <div className="reservation-btn m-2 p-lg-2 p-1 d-flex justify-content-center text-center">
           <Link legacyBehavior href="/gaseste-sitter">
-            <a style={{ padding: "20px 100px" }} className="primary-btn1 m-2">
-              Gaseste sitter
-            </a>
+            <>
+              <a style={{ padding: "20px 100px" }} className="primary-btn1 m-2">
+                Gaseste sitter
+                <FontAwesomeIcon
+                  icon={faDog}
+                  className="fas fa-check"
+                  style={{ color: "white", marginLeft: "10px" }}
+                ></FontAwesomeIcon>
+              </a>
+            </>
           </Link>
         </div>
         <div className="header-logo m-3 d-none d-md-block d-flex justify-content-center">
@@ -58,6 +68,11 @@ function Banner1() {
           >
             <a className="primary-btn1 m-2" style={{ padding: "20px 100px" }}>
               Devino sitter
+              <FontAwesomeIcon
+                icon={faDoorOpen}
+                className="fas fa-check"
+                style={{ color: "white", marginLeft: "10px" }}
+              ></FontAwesomeIcon>
             </a>
           </Link>
         </div>

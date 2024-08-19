@@ -23,7 +23,6 @@ export default function Home() {
       <VideoBanner1 />
       <Home1Service />
       <Home1About />
-      <Home1feature />
       {/* <FeatureCounter /> */}
       <ChooseUs />
       <Home1Partner />
@@ -33,6 +32,7 @@ export default function Home() {
       <Home1Newslatter />
       <Home1Blog />
       <Home1Gallary />
+      <Home1feature />
       <Footer1 />
     </>
   );

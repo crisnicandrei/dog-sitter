@@ -180,14 +180,14 @@ function Header2() {
                 <li>
                   <Link legacyBehavior href="/impozit">
                     <a className={currentRoute === "/impozit" ? "active" : ""}>
-                      Redirectioneaza 3.5
+                      Redirecționează 3.5
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link legacyBehavior href="/sponsorizeaza">
                     <a className={currentRoute === "/impozit" ? "active" : ""}>
-                      Sponsorizeaza
+                      Sponsorizează
                     </a>
                   </Link>
                 </li>
@@ -237,6 +237,32 @@ function Header2() {
                 </li>
               </ul>
             </li>
+            {!user && (
+              <>
+                <li className="menu-item">
+                  <Link legacyBehavior href="/autentificare">
+                    <a
+                      className={
+                        currentRoute === "/autentificare" ? "active" : ""
+                      }
+                    >
+                      Autentificare
+                    </a>
+                  </Link>
+                </li>
+                <li className="menu-item">
+                  <Link legacyBehavior href="/inregistrare">
+                    <a
+                      className={
+                        currentRoute === "/inregistrare" ? "active" : ""
+                      }
+                    >
+                      Inregistrare
+                    </a>
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <div className="nav-right d-flex jsutify-content-end align-items-center">
