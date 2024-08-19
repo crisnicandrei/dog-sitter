@@ -45,7 +45,7 @@ function Banner1() {
               <a style={{ padding: "20px 100px" }} className="primary-btn1 m-2">
                 Gaseste sitter
                 <FontAwesomeIcon
-                  icon={faDog}
+                  icon={faSearch}
                   className="fas fa-check"
                   style={{ color: "white", marginLeft: "10px" }}
                 ></FontAwesomeIcon>
@@ -69,7 +69,7 @@ function Banner1() {
             <a className="primary-btn1 m-2" style={{ padding: "20px 100px" }}>
               Devino sitter
               <FontAwesomeIcon
-                icon={faDoorOpen}
+                icon={faDog}
                 className="fas fa-check"
                 style={{ color: "white", marginLeft: "10px" }}
               ></FontAwesomeIcon>
