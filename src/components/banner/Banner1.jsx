@@ -81,7 +81,7 @@ function Banner1() {
         className="d-flex justify-content-center banner-content row"
         style={{ maxWidth: "100%" }}
       >
-        <h1 className="text-center">Cainele tau e pe maini bune</h1>
+        <h1 className="text-center">Câinele tău e pe mâini bune</h1>
         <p className="text-center">
           Primii 100 inscrisi in comunitatea noastra vor beneficia GRATUIT de un
           mini-curs video (9 episoade) despre mersul in lesa, in valoare de 800

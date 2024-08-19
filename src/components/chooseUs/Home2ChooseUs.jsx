@@ -66,7 +66,7 @@ function Home2ChooseUs() {
           <div className="col-lg-3 col-md-4 col-sm-6 col-10">
             <div className="single-card">
               <div className="icon">
-                <img src="assets/images/icon/care2.svg" alt="" />
+                <img src="/assets/images/icon/care2.svg" alt="" />
               </div>
               <div className="content">
                 <h4>Personalized care</h4>
@@ -79,20 +79,7 @@ function Home2ChooseUs() {
           <div className="col-lg-3 col-md-4 col-sm-6 col-10">
             <div className="single-card">
               <div className="icon">
-                <img src="assets/images/icon/team2.svg" alt="" />
-              </div>
-              <div className="content">
-                <h4>Trusted Team</h4>
-                <p>
-                  Pellentesque maximus augue orci, quis congue purus iaculison
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 col-sm-6 col-10">
-            <div className="single-card">
-              <div className="icon">
-                <img src="assets/images/icon/mind2.svg" alt="" />
+                <img src="/assets/images/icon/mind2.svg" alt="" />
               </div>
               <div className="content">
                 <h4>Peace of mind</h4>
@@ -105,7 +92,7 @@ function Home2ChooseUs() {
           <div className="col-lg-3 col-md-4 col-sm-6 col-10">
             <div className="single-card">
               <div className="icon">
-                <img src="assets/images/icon/mind2.svg" alt="" />
+                <img src="/assets/images/icon/mind2.svg" alt="" />
               </div>
               <div className="content">
                 <h4>Nice Environment</h4>
@@ -124,32 +111,32 @@ function Home2ChooseUs() {
               <div className="swiper-wrapper">
                 <SwiperSlide className="swiper-slide">
                   <div className="partner-logo">
-                    <img src="assets/images/icon/partner/envato.svg" alt="" />
+                    <img src="/assets/images/icon/partner/envato.svg" alt="" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="partner-logo">
-                    <img src="assets/images/icon/partner/xidex.svg" alt="" />
+                    <img src="/assets/images/icon/partner/xidex.svg" alt="" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="partner-logo">
-                    <img src="assets/images/icon/partner/arrow.svg" alt="" />
+                    <img src="/assets/images/icon/partner/arrow.svg" alt="" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="partner-logo">
-                    <img src="assets/images/icon/partner/ozgeo.svg" alt="" />
+                    <img src="/assets/images/icon/partner/ozgeo.svg" alt="" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="partner-logo">
-                    <img src="assets/images/icon/partner/avianca.svg" alt="" />
+                    <img src="/assets/images/icon/partner/avianca.svg" alt="" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
                   <div className="partner-logo">
-                    <img src="assets/images/icon/partner/olinski.svg" alt="" />
+                    <img src="/assets/images/icon/partner/olinski.svg" alt="" />
                   </div>
                 </SwiperSlide>
               </div>

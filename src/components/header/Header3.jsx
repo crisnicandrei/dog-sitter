@@ -103,10 +103,18 @@ function Header3() {
                 <img
                   alt="image"
                   className="img-fluid"
-                  src="assets/logo.svg"
+                  src="assets/images/logo.svg"
                   style={{ maxWidth: "150px" }}
                 />
               </a>
+            </Link>
+            <Link
+              style={{ color: "black" }}
+              href="https://www.facebook.com/Pensiune.Dresaj.Dog.Coaching.DogLove?locale=ro_RO"
+            >
+              <span style={{ color: "black" }}>
+                <b style={{ color: "black" }}>Câinele tau e pe maini bune</b>
+              </span>
             </Link>
           </div>
           <div
@@ -123,10 +131,20 @@ function Header3() {
                     {" "}
                     <img
                       alt="image"
-                      src="assets/logo.svg"
+                      src="assets/images/logo.svg"
                       style={{ maxWidth: "150px" }}
                     />
                   </a>
+                </Link>
+                <Link
+                  style={{ color: "black" }}
+                  href="https://www.facebook.com/Pensiune.Dresaj.Dog.Coaching.DogLove?locale=ro_RO"
+                >
+                  <span style={{ color: "black" }}>
+                    <b style={{ color: "black" }}>
+                      Câinele tau e pe maini bune
+                    </b>
+                  </span>
                 </Link>
               </div>
               <div className="menu-close-btn">

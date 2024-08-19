@@ -108,7 +108,7 @@ function Header1() {
                 <img
                   alt="image"
                   className="img-fluid"
-                  src="assets/images/header1-logo.svg"
+                  src="assets/images/hdeader1-logo.svg"
                   style={{ maxWidth: "150px" }}
                 />
               </a>

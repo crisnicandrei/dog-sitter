@@ -44,27 +44,6 @@ function ChooseUs() {
                 <li>
                   <div className="single-choose-card">
                     <div className="icon">
-                      <img src="/assets/images/icon/team.svg" alt="" />
-                    </div>
-                    <div className="content">
-                      <h4>Trusted Team</h4>
-                      <p>
-                        Pellentesque maximus augue orci, quisl congue purus
-                        iaculison
-                      </p>
-                      <Link
-                        style={{ color: "#f46f30" }}
-                        legacyBehavior
-                        href="/trusted-team"
-                      >
-                        <a>See more</a>
-                      </Link>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="single-choose-card">
-                    <div className="icon">
                       <img src="/assets/images/icon/mind.svg" alt="" />
                     </div>
                     <div className="content">

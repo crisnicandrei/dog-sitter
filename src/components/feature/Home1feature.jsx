@@ -18,7 +18,7 @@ function Home1feature() {
             </div>
             <div className="freture-title">
               <h2>
-                <span>Cainele</span> tau e pe maini bune.
+                <span>Câinele </span> tău e pe mâini bune
               </h2>
             </div>
             <div className="feature-right">

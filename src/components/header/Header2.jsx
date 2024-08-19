@@ -66,7 +66,10 @@ function Header2() {
       }
     >
       <div className="container-fluid d-flex justify-content-between align-items-center">
-        <div className="header-logo">
+        <div
+          className="header-logo d-flex flex-column"
+          style={{ width: "200px" }}
+        >
           <Link legacyBehavior href="/">
             <a>
               <img
@@ -77,6 +80,11 @@ function Header2() {
               />
             </a>
           </Link>
+          <Link href="https://www.facebook.com/Pensiune.Dresaj.Dog.Coaching.DogLove?locale=ro_RO">
+            <span>
+              <b style={{ color: "black" }}>Câinele tau e pe maini bune</b>
+            </span>
+          </Link>
         </div>
         <div
           className={
@@ -84,7 +92,7 @@ function Header2() {
           }
         >
           <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
-            <div className="mobile-logo-wrap">
+            <div className="mobile-logo-wrap d-flex flex-column">
               <Link legacyBehavior href="/">
                 <a>
                   <img
@@ -93,6 +101,11 @@ function Header2() {
                     style={{ maxWidth: "150px" }}
                   />
                 </a>
+              </Link>
+              <Link href="https://www.facebook.com/Pensiune.Dresaj.Dog.Coaching.DogLove?locale=ro_RO">
+                <span>
+                  <b style={{ color: "black" }}>Câinele tau e pe maini bune</b>
+                </span>
               </Link>
             </div>
             <div className="menu-close-btn">
