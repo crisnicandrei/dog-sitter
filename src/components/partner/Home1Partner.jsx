@@ -19,14 +19,25 @@ function Home1Partner() {
                         height: "200px",
                         borderRadius: 0,
                       }}
-                      src="/assets/images/partener4.jpeg"
-                      alt=""
+                      src="/assets/images/partener4.png"
+                      alt="Dog Camp Logo"
                     />
                   </div>
                   <div className="img">
                     <img
                       style={{ width: "200px", height: "200px" }}
-                      src="/assets/images/partener1.jpeg"
+                      src="/assets/images/partener1.png"
+                      alt="Logo Partener"
+                    />
+                  </div>
+                  <div className="img">
+                    <img
+                      style={{
+                        width: "200px",
+                        height: "200px",
+                        borderRadius: 0,
+                      }}
+                      src="/assets/images/partener2.png"
                       alt=""
                     />
                   </div>
@@ -37,18 +48,7 @@ function Home1Partner() {
                         height: "200px",
                         borderRadius: 0,
                       }}
-                      src="/assets/images/partener2.jpeg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="img">
-                    <img
-                      style={{
-                        width: "200px",
-                        height: "200px",
-                        borderRadius: 0,
-                      }}
-                      src="/assets/images/partener3.jpeg"
+                      src="/assets/images/partener3.png"
                       alt=""
                     />
                   </div>
