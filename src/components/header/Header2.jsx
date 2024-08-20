@@ -67,8 +67,8 @@ function Header2() {
     >
       <div className="container-fluid d-flex justify-content-between align-items-center">
         <div
-          className="header-logo d-flex flex-column"
-          style={{ width: "200px" }}
+          className="header-logo d-flex flex-row align-items-center"
+          style={{ width: "300px" }}
         >
           <Link legacyBehavior href="/">
             <a>
@@ -80,9 +80,14 @@ function Header2() {
               />
             </a>
           </Link>
-          <Link href="https://www.facebook.com/Pensiune.Dresaj.Dog.Coaching.DogLove?locale=ro_RO">
+          <Link
+            className="d-lg-none"
+            href="https://www.facebook.com/Pensiune.Dresaj.Dog.Coaching.DogLove?locale=ro_RO"
+          >
             <span>
-              <b style={{ color: "black" }}>Câinele tau e pe maini bune</b>
+              <b style={{ fontSize: "13px", color: "black" }}>
+                Câinele tau e pe maini bune
+              </b>
             </span>
           </Link>
         </div>
