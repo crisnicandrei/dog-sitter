@@ -10,14 +10,21 @@ import Home1Partner from "../components/partner/Home1Partner";
 import Home1Service from "../components/service/Home1Service";
 import Home1Team from "../components/team/Home1Team";
 import Home1Testimonial from "../components/testimonial/Home1Testimonial";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <Header2 />
       <Banner1 />
+      <div className="d-flex justify-content-center">
+        <img
+          style={{ width: "100%", height: "100%" }}
+          src="/assets/images/imagine-cute.jpeg"
+        ></img>
+      </div>
       <Home1Service />
-      <Home1About />
+      {/* <Home1About />/ */}
       {/* <FeatureCounter /> */}
       <ChooseUs />
       <Home1Partner />

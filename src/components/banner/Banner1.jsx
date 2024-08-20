@@ -42,8 +42,11 @@ function Banner1() {
         <div className="reservation-btn m-2 p-lg-2 p-1 d-flex justify-content-center text-center">
           <Link legacyBehavior href="/gaseste-sitter">
             <>
-              <a style={{ padding: "20px 100px" }} className="primary-btn1 m-2">
-                Gaseste sitter
+              <a
+                style={{ padding: "20px 100px" }}
+                className="primary-btn1 m-2 d-flex justify-content-center align-items-center"
+              >
+                Gaseste pet sitter
                 <FontAwesomeIcon
                   icon={faSearch}
                   className="fas fa-check"
@@ -61,12 +64,22 @@ function Banner1() {
             style={{ maxWidth: "150px" }}
           />
         </div>
+        <div className="d-sm-none">
+          <p className="text-center">
+            O platformă de house sharing pentru câini, unde iubitorii de animale
+            pot găzdui câini atunci când stăpânii lor nu pot. Alătură-te
+            comunității
+          </p>
+        </div>
         <div className="reservation-btn m-2 p-lg-2 p-1 d-flex justify-content-center">
           <Link
             legacyBehavior
             href={user ? "/editare-profil" : "/autentificare"}
           >
-            <a className="primary-btn1 m-2" style={{ padding: "20px 100px" }}>
+            <a
+              className="primary-btn1 m-2 d-flex justify-cotent-center align-items-center"
+              style={{ padding: "20px 100px" }}
+            >
               Devino sitter
               <FontAwesomeIcon
                 icon={faDog}
