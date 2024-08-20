@@ -17,8 +17,8 @@ function Banner1() {
                 <div className="banner-content ">
                   <div className="tag">
                     <ul>
-                      <li>Incredere</li>
-                      <li>Siguranta</li>
+                      <li>Încredere</li>
+                      <li>Siguranță</li>
                       <li>Loialitate</li>
                     </ul>
                   </div>
@@ -41,19 +41,17 @@ function Banner1() {
       <div className="d-flex justify-content-center flex-column flex-sm-row">
         <div className="reservation-btn m-2 p-lg-2 p-1 d-flex justify-content-center text-center">
           <Link legacyBehavior href="/gaseste-sitter">
-            <>
-              <a
-                style={{ padding: "20px 100px" }}
-                className="primary-btn1 m-2 d-flex justify-content-center align-items-center"
-              >
-                Gaseste pet sitter
-                <FontAwesomeIcon
-                  icon={faSearch}
-                  className="fas fa-check"
-                  style={{ color: "white", marginLeft: "10px" }}
-                ></FontAwesomeIcon>
-              </a>
-            </>
+            <a
+              style={{ padding: "20px 80px" }}
+              className="primary-btn1 m-2 d-flex justify-content-center align-items-center"
+            >
+              Găsește pet sitter
+              <FontAwesomeIcon
+                icon={faSearch}
+                className="fas fa-check"
+                style={{ color: "white", marginLeft: "10px" }}
+              ></FontAwesomeIcon>
+            </a>
           </Link>
         </div>
         <div className="header-logo m-3 d-none d-md-block d-flex justify-content-center">
@@ -96,8 +94,8 @@ function Banner1() {
       >
         <h1 className="text-center">Câinele tău e pe mâini bune</h1>
         <p className="text-center">
-          Primii 100 inscrisi in comunitatea noastra vor beneficia GRATUIT de un
-          mini-curs video (9 episoade) despre mersul in lesa, in valoare de 800
+          Primii 100 înscriși în comunitatea noastră vor beneficia GRATUIT de un
+          mini-curs video (9 episoade) despre mersul în lesă, în valoare de 800
           RON.{" "}
         </p>
       </div>

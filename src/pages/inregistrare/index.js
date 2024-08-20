@@ -184,7 +184,8 @@ function signUpPage() {
                               {...register("termsAndConditions")}
                             />
                             <label htmlFor="html">
-                              Sunt de acord cu &amp; Politica
+                              Sunt de acord cu <a href="/termeni">Termenii</a>{" "}
+                              &amp; <a href="/gdpr">Politica</a>
                             </label>
                             {errors.termsAndConditions && (
                               <p className="text-danger">

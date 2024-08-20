@@ -137,8 +137,8 @@ function loginPage() {
                             />
 
                             <label htmlFor="html">
-                              Sunt de acord cu{" "}
-                              <a href="#">Termenii &amp; Politica</a>
+                              Sunt de acord cu <a href="/termeni">Termenii</a>{" "}
+                              &amp; <a href="/gdpr">Politica</a>
                             </label>
                           </div>
                           <a href="#" className="forgot-pass">
@@ -170,8 +170,8 @@ function loginPage() {
                     <p>
                       Făcând clic pe butonul "înscrie-te", creezi un cont și
                       ești de acord cu
-                      <a href="#">Termenii &amp; Condițiile </a> &amp;{" "}
-                      <a href="#">Politica de Confidențialitate</a>
+                      <a href="/termeni">Termenii</a> &amp;{" "}
+                      <a href="/gdpr">Politica</a>
                     </p>
                   </div>
                 </div>

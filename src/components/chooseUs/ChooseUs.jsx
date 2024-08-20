@@ -27,17 +27,17 @@ function ChooseUs() {
                 celorlalți.
               </p>
 
-              <p>
-                În plus, este esențial să aibă o relație deschisă cu părinții
-                blănoșilor, să trimită poze și update-uri cu ce se întâmplă,
-                dacă acest lucru este cerut. Transparența și disponibilitatea
-                sunt fundamentale pentru valorile serviciilor noastre. Cu toții
-                avem telefoane smart, așa că este foarte la îndemână să ții
-                legătura în ziua de azi.
-              </p>
-
               {seeMore && (
                 <>
+                  <p>
+                    În plus, este esențial să aibă o relație deschisă cu
+                    părinții blănoșilor, să trimită poze și update-uri cu ce se
+                    întâmplă, dacă acest lucru este cerut. Transparența și
+                    disponibilitatea sunt fundamentale pentru valorile
+                    serviciilor noastre. Cu toții avem telefoane smart, așa că
+                    este foarte la îndemână să ții legătura în ziua de azi.
+                  </p>
+
                   <p>
                     Nu trebuie să-ți faci griji nici pentru datele tale
                     personale, deoarece unul dintre membrii fondatori ai

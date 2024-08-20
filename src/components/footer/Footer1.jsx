@@ -83,7 +83,9 @@ function Footer1() {
           <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center">
             <ul className="footer-btm-menu">
               <li>
-                <a href="#">Privacy Policy</a>
+                <Link legacyBehavior href="/gdpr">
+                  <a>Privacy Policy</a>
+                </Link>
               </li>
               <li>
                 <Link legacyBehavior href="/termeni">
