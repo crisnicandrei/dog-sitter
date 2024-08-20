@@ -51,7 +51,7 @@ function Footer1() {
           <div className="col-lg-6 d-flex align-items-center order-lg-2 order-1 justify-content-sm-center justify-content-start">
             <div className="footer-items">
               <h2>
-                {/* want <span>to keep</span> */}
+                want <span>to keep</span>
                 <br />
                 your pet in, <span>our center</span>?
               </h2>
@@ -79,14 +79,7 @@ function Footer1() {
           <div className="col-lg-3 col-sm-6 d-flex justify-content-sm-end justify-content-start order-3"></div>
         </div>
         <div className="row border-top">
-          <div className="col-lg-6">
-            <div className="copyright-area">
-              <p>
-                © 2023 Scooby is Proudly Powered by{" "}
-                <a href="https://www.egenslab.com/"> Egens Lab.</a>
-              </p>
-            </div>
-          </div>
+          <div className="col-lg-6"></div>
           <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center">
             <ul className="footer-btm-menu">
               <li>

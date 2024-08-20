@@ -140,13 +140,7 @@ function Footer3() {
           </div>
         </div>
         <div className="row border-top align-items-center">
-          <div className="col-lg-6">
-            <div className="copyright-area">
-              <p>
-                © 2023 Scooby is Proudly Powered by <a href="#">Egens Lab.</a>
-              </p>
-            </div>
-          </div>
+          <div className="col-lg-6"></div>
           <div className="col-lg-6 d-flex justify-content-md-end justify-content-center">
             <div className="social-area">
               <ul>
