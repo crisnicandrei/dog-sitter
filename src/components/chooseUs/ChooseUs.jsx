@@ -16,16 +16,13 @@ function ChooseUs() {
               <h2>Asiguram cele mai bune servicii.</h2>
             </div>
             <div className="choose-content">
-              <h1>
-                <em>Peace of mind!</em>
-              </h1>
               <p>
                 Membrii acestei platforme sunt iubitori de animale din oficiu,
                 vă garantez. Altfel, nu s-ar fi implicat în această comunitate
                 mare la nivel național. Totuși, pentru a fi siguri că sunt
                 responsabili, pe lângă faptul că iubesc animalele, aceștia
-                trebuie să treacă printr-un proces riguros de avizare din trei
-                surse diferite. Avem o politică bine pusă la punct pentru
+                trebuie să treacă printr-un proces riguros de verificare din
+                trei surse diferite. Avem o politică bine pusă la punct pentru
                 selecție, așa că nu oricine poate fi primit să servească nevoile
                 celorlalți.
               </p>
