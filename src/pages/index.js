@@ -23,7 +23,9 @@ export default function Home() {
           src="/assets/images/imagine-cute.jpeg"
         ></img>
       </div>
-      <Home1Service />
+      <div id="service-section">
+        <Home1Service />
+      </div>
       {/* <Home1About />/ */}
       {/* <FeatureCounter /> */}
       <ChooseUs />

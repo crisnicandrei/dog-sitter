@@ -93,10 +93,9 @@ function Footer1() {
                 </Link>
               </li>
               <li>
-                <a href="#">Services</a>
-              </li>
-              <li>
-                <a href="#">Help</a>
+                <Link href="#service-section" scroll={false}>
+                  Services
+                </Link>
               </li>
             </ul>
           </div>
