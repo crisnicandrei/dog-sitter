@@ -8,7 +8,12 @@ import { faSearch, faDog } from "@fortawesome/free-solid-svg-icons";
 function Banner1() {
   const { user } = useContext(AuthContext);
   return (
-    <div className="hero-style-1">
+    <div
+      className="hero-style-1"
+      style={{
+        paddingBottom: "50px",
+      }}
+    >
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col-lg-11">
@@ -90,7 +95,7 @@ function Banner1() {
       </div>
       <div
         className="d-flex justify-content-center banner-content row"
-        style={{ maxWidth: "100%" }}
+        style={{ maxWidth: "100%", marginTop: "16px" }}
       >
         <h1 className="text-center">Câinele tău e pe mâini bune</h1>
         <p className="text-center px-5" style={{ color: "black" }}>
