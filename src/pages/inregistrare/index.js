@@ -62,15 +62,14 @@ function signUpPage() {
 
   const sendEmail = (formData) => {
     // e.preventDefault();
-
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_USER_ID
-      )
-      .then((result) => console.log(result));
+    // emailjs
+    //   .sendForm(
+    //     process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+    //     process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+    //     form.current,
+    //     process.env.NEXT_PUBLIC_USER_ID
+    //   )
+    //   .then((result) => console.log(result));
   };
 
   const onSubmit = (formData) => {
