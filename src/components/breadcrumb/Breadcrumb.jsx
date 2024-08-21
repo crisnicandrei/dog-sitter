@@ -7,7 +7,7 @@ function Breadcrumb({ pageName = "Page Name", pageTitle = "Page Title" }) {
       <div className="breadcrumb-vec-btm">
         <img
           className="img-fluid"
-          src="assets/images/bg/inner-banner-btm-vec.png"
+          src="/assets/images/bg/inner-banner-btm-vec.png"
           alt=""
         />
       </div>
@@ -32,7 +32,7 @@ function Breadcrumb({ pageName = "Page Name", pageTitle = "Page Title" }) {
             <div className="banner-img d-lg-none d-block">
               <img
                 className="img-fluid"
-                src="assets/images/bg/inner-banner-img.png"
+                src="/assets/images/bg/inner-banner-img.png"
                 alt=""
               />
             </div>
@@ -42,13 +42,13 @@ function Breadcrumb({ pageName = "Page Name", pageTitle = "Page Title" }) {
               <div className="banner-img-bg">
                 <img
                   className="img-fluid"
-                  src="assets/images/bg/inner-banner-vec.png"
+                  src="/assets/images/bg/inner-banner-vec.png"
                   alt=""
                 />
               </div>
               <img
                 className="img-fluid"
-                src="assets/images/bg/inner-banner-img.png"
+                src="/assets/images/bg/inner-banner-img.png"
                 alt=""
               />
             </div>

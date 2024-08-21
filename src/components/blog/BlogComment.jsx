@@ -14,7 +14,7 @@ function BlogComment() {
                 <div className="c-header d-flex align-items-center justify-content-between">
                   <div className="author-area">
                     <div className="author-img">
-                      <img src="assets/images/blog/blog-author.png" alt="" />
+                      <img src="/assets/images/blog/blog-author.png" alt="" />
                     </div>
                     <div className="author-details">
                       <h5 className="mb-0">Angilano Cooper</h5>
@@ -23,7 +23,7 @@ function BlogComment() {
                   </div>
                   <div className="replay-btn">
                     <a href="#">
-                      <img src="assets/images/icon/replay-icon.svg" alt="" />{" "}
+                      <img src="/assets/images/icon/replay-icon.svg" alt="" />{" "}
                       Reply
                     </a>
                   </div>
@@ -48,7 +48,7 @@ function BlogComment() {
                       <div className="author-area">
                         <div className="author-img">
                           <img
-                            src="assets/images/blog/blog-author1.png"
+                            src="/assets/images/blog/blog-author1.png"
                             alt=""
                           />
                         </div>
@@ -62,7 +62,7 @@ function BlogComment() {
                       <div className="replay-btn">
                         <a href="#">
                           <img
-                            src="assets/images/icon/replay-icon.svg"
+                            src="/assets/images/icon/replay-icon.svg"
                             alt=""
                           />{" "}
                           Reply

@@ -57,7 +57,7 @@ function Banner2() {
                     <div className="hero-img">
                       <img
                         className="img-fluid"
-                        src="assets/images/bg/hero2-img.png"
+                        src="/assets/images/bg/hero2-img.png"
                         alt=""
                       />
                     </div>
@@ -90,7 +90,7 @@ function Banner2() {
                     <div className="hero-img">
                       <img
                         className="img-fluid"
-                        src="assets/images/bg/hero2-img-cat.png"
+                        src="/assets/images/bg/hero2-img-cat.png"
                         alt=""
                       />
                     </div>

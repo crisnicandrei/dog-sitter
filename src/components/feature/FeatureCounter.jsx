@@ -49,7 +49,7 @@ function FeatureCounter() {
           <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="counter-single animals">
               <div className="counter-icon">
-                <img src="assets/images/icon/animals.svg" alt="image" />
+                <img src="/assets/images/icon/animals.svg" alt="image" />
               </div>
               <div className="coundown">
                 <div className="d-flex align-items-center gap-12">
@@ -71,7 +71,7 @@ function FeatureCounter() {
           <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="counter-single walked">
               <div className="counter-icon">
-                <img src="assets/images/icon/walked.svg " alt="image" />
+                <img src="/assets/images/icon/walked.svg " alt="image" />
               </div>
               <div className="coundown">
                 <div className="d-flex align-items-center gap-2">
@@ -92,7 +92,7 @@ function FeatureCounter() {
           <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="counter-single years">
               <div className="counter-icon">
-                <img src="assets/images/icon/years.svg " alt="image" />
+                <img src="/assets/images/icon/years.svg " alt="image" />
               </div>
               <div className="coundown">
                 <div className="d-flex align-items-center gap-2">
