@@ -24,10 +24,10 @@ function Beneficii() {
                   <h3>1. Acceptarea Termenilor; Modificări. </h3>
                   <p>
                     Termenii și condițiile („Termenii”) reprezintă un acord
-                    legal obligatoriu între dvs. și Dog Camp România SRL, o
+                    legal obligatoriu între dvs. și Dog Camp Romania SRL, o
                     societate limitată înregistrată la ONRC sub nr.
                     J35/.../...., cu sediul social în mun. Timișoara, str. Xxxx,
-                    nr.xxx, Timiș („Dog Camp România”, „noi” și „nostru”).
+                    nr.xxx, Timiș („Doc Camp Romania”, „noi” și „nostru”).
                     Termenii guvernează utilizarea de către dumneavoastră a
                     aplicațiilor software, resurselor și serviciilor noastre
                     pentru proprietarii de animale de companie și furnizorii de
@@ -36,72 +36,72 @@ function Beneficii() {
                     servicii de îngrijire a animalelor de companie și orice alte
                     servicii sau produse legate de animalele de companie.
                     Termenii guvernează orice utilizare a Platformei Dog Camp
-                    România, indiferent dacă îl accesați de pe site-ul nostru
+                    Romania, indiferent dacă îl accesați de pe site-ul nostru
                     web la https://www.DogCamp.com (inclusiv orice subdomeniu
                     sau versiune localizată) („Site-ul”), aplicațiile noastre
                     mobile și site-urile web mobile, Aplicația Facebook,
                     ofertele noastre de asistență online sau telefonică sau
                     orice alt punct de acces pe care ți-l punem la dispoziție.
-                    Termenii și condițiile Platformei Dog Camp România, Politica
+                    Termenii și condițiile Platformei Doc Camp Romania, Politica
                     de protecție a rezervărilor și alte politici aplicabile
-                    utilizării de către dvs. a Platformei Dog Camp România sunt
+                    utilizării de către dvs. a Platformei Doc Camp Romania sunt
                     încorporate prin referință în acești Termeni și condiții.
                     ACCEPTÂND ACEȘTI TERMENI ÎN TIMPUL PROCESULUI DE
                     ÎNREGISTRARE A CONTULUI SAU ACCESÂD SAU UTILIZÂND PLATFORMA
-                    Dog Camp România FĂRĂ UN CONT, ACCEPTĂȚI ACEȘTI TERMENI.
+                    Doc Camp Romania FĂRĂ UN CONT, ACCEPTĂȚI ACEȘTI TERMENI.
                     DACĂ NU SUNTEȚI DE ACORD CU ACEȘTI TERMENI, NU TREBUIE SĂ ÎI
                     ACCEPTATI, CAZ ÎN CARE NU AVEȚI DREPTUL DE A UTILIZA
-                    PLATFORMA Dog Camp România.
+                    PLATFORMA Doc Camp Romania.
                   </p>
                   <p>
                     Înțelegeți și sunteți de acord că Termenii pot fi modificați
                     unilateral pentru a putea îmbunătății Platforma Dog Camp
-                    România și că orice astfel de modificări vor intra în
+                    Romania și că orice astfel de modificări vor intra în
                     vigoare de îndată ce sunt modificați Termenii pe Platforma
-                    Dog Camp România, cu excepția cazului în care legea
+                    Doc Camp Romania, cu excepția cazului în care legea
                     aplicabilă prevede altfel. Accesul și utilizarea în
-                    continuare a Platformei Dog Camp România după ce publicăm
+                    continuare a Platformei Doc Camp Romania după ce publicăm
                     Termenii modificați va constitui consimțământul
                     dumneavoastră de a fi legat de Termenii modificați.
                   </p>
-                  <h3>2. Platforma Dog Camp România. </h3>
+                  <h3>2. Platforma Doc Camp Romania. </h3>
                   <p>
-                    2.1 Natura Platformei Dog Camp România. Platforma Dog Camp
-                    România constă dintr-o aplicație web desktop, aplicații
+                    2.1 Natura Platformei Doc Camp Romania. Platforma Dog Camp
+                    Romania constă dintr-o aplicație web desktop, aplicații
                     mobile și alte instrumente, asistență și servicii conexe pe
                     care proprietarii de animale de companie („Deținătorii de
                     animale de companie”) și furnizorii de servicii legate de
                     animalele de companie („Furnizorii de servicii”) le pot
                     folosi pentru a găsi, comunica și interacționa unul cu
-                    celălalt. Platforma Dog Camp România include serviciile
+                    celălalt. Platforma Doc Camp Romania include serviciile
                     noastre de asistență în caz de urgență, materiale
                     educaționale pentru Furnizorii de servicii și alte servicii.
                     Noi percepem taxe pentru unele aspecte ale Platformei Dog
-                    Camp România, așa cum este descris mai jos în Secțiunea 9.
+                    Camp Romania, așa cum este descris mai jos în Secțiunea 9.
                   </p>
                   <p>
-                    2.2 Dog Camp România nu furnizează Servicii de îngrijire a
-                    animalelor de companie. Dog Camp România este un loc neutru
+                    2.2 Doc Camp Romania nu furnizează Servicii de îngrijire a
+                    animalelor de companie. Doc Camp Romania este un loc neutru
                     pentru furnizorii de servicii și pentru proprietarii de
-                    animale de companie. Dog Camp România nu este un Furnizor de
+                    animale de companie. Doc Camp Romania nu este un Furnizor de
                     servicii și, cu excepția asistenței telefonice de urgență și
                     a altor resurse și asistență descrise în mod specific în
-                    Platforma Dog Camp România, nu oferă servicii de îngrijire a
+                    Platforma Doc Camp Romania, nu oferă servicii de îngrijire a
                     animalelor de companie. Nu oferim nici o garanție cu privire
                     la calitatea îngrijirii animalelor de companie, plimbării
                     acestora, îngrijirii în casă sau alte servicii furnizate de
                     Furnizorii de servicii („Servicii de îngrijire a animalelor
                     de companie”) sau despre interacțiunile și relațiile
                     dumneavoastră cu utilizatorii. Furnizorii de servicii
-                    enumerați pe Dog Camp România nu se află sub conducerea sau
-                    controlul Dog Camp România, iar Furnizorii de servicii
+                    enumerați pe Doc Camp Romania nu se află sub conducerea sau
+                    controlul Doc Camp Romania, iar Furnizorii de servicii
                     stabilesc la propria discreție cum să furnizeze Servicii de
                     îngrijire a animalelor de companie. Deși oferim îndrumări
                     generale pe site-ul nostru Furnizorilor de servicii cu
                     privire la siguranță și îngrijirea animalelor de companie și
                     proprietarilor de animale de companie cu privire la
                     selectarea și implicarea Furnizorilor de servicii, Dog Camp
-                    România nu angajează, recomandă sau susține Furnizorii de
+                    Romania nu angajează, recomandă sau susține Furnizorii de
                     servicii sau proprietarii de animale de companie și, în
                     măsura maximă permisă de aplicabile legea, nu vom fi
                     responsabili sau răspunzători pentru performanța sau
@@ -114,18 +114,18 @@ function Beneficii() {
                     contacta un Furnizor de servicii, de a furniza servicii de
                     îngrijire a animalelor de companie sau de a interacționa în
                     alt mod cu utilizatorii prin intermediul Platformei Dog Camp
-                    România. Proprietarii de animale de companie și Furnizorii
+                    Romania. Proprietarii de animale de companie și Furnizorii
                     de servicii sunt singurii responsabili pentru luarea
                     deciziilor care sunt în interesul lor și al animalelor lor
                     de companie. De exemplu, fiecare utilizator al Platformei
-                    Dog Camp România este responsabil pentru menținerea la zi a
+                    Doc Camp Romania este responsabil pentru menținerea la zi a
                     vaccinărilor propriului animal de companie și nu vom avea
                     nicio răspundere pentru nevaccinarea animalului său de către
                     nimeni.
                   </p>
                   <p>
                     2.3 Limitarea răspunderii. Sub rezerva secțiunii 16 de mai
-                    jos, Dog Camp România nu are nicio răspundere pentru orice
+                    jos, Doc Camp Romania nu are nicio răspundere pentru orice
                     pretenții, pierderi, vătămări și/sau daune care decurg din
                     și/sau în orice fel legate de interacțiunile sau relațiile
                     dumneavoastră cu alți utilizatori și de actele și/sau
@@ -134,37 +134,37 @@ function Beneficii() {
                     și sunteți de acord că, în măsura maximă permisă de legea
                     aplicabilă, UTILIZAREA ȘI/SAU FURNIZAREA SERVICIILOR DE
                     ÎNGRIJIRE A ANIMALELOR DVS. ESTE PE UNIC ȘI EXCLUSIV RISC.
-                    (Orice obligații financiare pe care Dog Camp România le
+                    (Orice obligații financiare pe care Doc Camp Romania le
                     poate avea față de utilizatorii săi în legătură cu
                     comportamentul utilizatorului sunt limitate la obligațiile
-                    de rambursare stabilite în Garanția Dog Camp România.){" "}
+                    de rambursare stabilite în Garanția Doc Camp Romania.){" "}
                   </p>
                   <p>
                     2.4 Serviciile sunt între Proprietarii de animale de
                     companie și Furnizorii de servicii. Platforma Dog Camp
-                    România poate fi utilizat pentru a găsi și oferi Servicii de
+                    Romania poate fi utilizat pentru a găsi și oferi Servicii de
                     îngrijire a animalelor de companie și pentru a facilita
                     plata, dar toate tranzacțiile efectuate prin intermediul
-                    Platformei Dog Camp România sunt între Proprietarii de
+                    Platformei Doc Camp Romania sunt între Proprietarii de
                     animale de companie și Furnizorii de servicii. Cu excepția
                     rambursărilor limitate și a „Protecției de rezervare”
                     specificate în Secțiunea 9.6 și în Garanția Dog Camp
-                    România, sunteți de acord că Dog Camp România nu are nicio
+                    Romania, sunteți de acord că Doc Camp Romania nu are nicio
                     răspundere pentru daunele asociate cu Serviciile de
                     îngrijire a animalelor de companie (care pot include
                     vătămarea corporală sau decesul unui animal de companie) sau
                     care rezultă din orice alte tranzacții între utilizatorii
-                    Platformei Dog Camp România.{" "}
+                    Platformei Doc Camp Romania.{" "}
                   </p>
                   <p>
                     2.5 Rezervări. Proprietarii de animale de companie și
                     Furnizorii de servicii fac tranzacții între ei cu ajutorul
-                    Platformei Dog Camp România atunci când ambii sunt de acord
+                    Platformei Doc Camp Romania atunci când ambii sunt de acord
                     cu o „rezervare” care specifică taxele, perioada de timp,
                     politica de anulare și alți termeni pentru furnizarea
                     Serviciilor de îngrijire a animalelor de companie prin
                     mecanismul de rezervare furnizat pe Platforma Dog Camp
-                    România („Rezervare”). O rezervare poate fi inițiată fie de
+                    Romania („Rezervare”). O rezervare poate fi inițiată fie de
                     un Furnizor de servicii, fie de un proprietar de animale de
                     companie selectând tipul (tipurile) de Servicii de îngrijire
                     a animalelor de companie care urmează să fie furnizate și
@@ -193,15 +193,15 @@ function Beneficii() {
                     pentru serviciile pe care le oferă. Vă rugăm să vizitați
                     Centrul de ajutor pentru îndrumări despre luarea unor
                     decizii informate cu privire la alegerea Furnizorilor de
-                    servicii. Deși Dog Camp România efectuează o analiză
+                    servicii. Deși Doc Camp Romania efectuează o analiză
                     minimală a profilurilor furnizorilor de servicii, nu ne
                     asumăm nici o responsabilitate pentru eventualele daune
                     cauzate de interacțiunea dintre un Proprietar de animal de
                     companie și un Furnizor de servicii. În mod similar, Dog
-                    Camp România nu are nici un control asupra recenziilor
+                    Camp Romania nu are nici un control asupra recenziilor
                     oferite Furnizorilor de servicii de către alți proprietari
                     de animale de companie care ar putea fi disponibile prin
-                    Platforma Dog Camp România, iar nu își asumă nicio
+                    Platforma Doc Camp Romania, iar nu își asumă nicio
                     responsabilitate că astfel de recenzii sunt corecte sau
                     legitime.
                   </p>
@@ -210,13 +210,13 @@ function Beneficii() {
                     de animale de companie care contractează servicii de
                     îngrijire a animalelor de companie și nu își recupereze
                     animalul de companie după expirarea perioadei contractuale
-                    conform unei Rezervări sunt de acord că Dog Camp România
+                    conform unei Rezervări sunt de acord că Doc Camp Romania
                     (sau Furnizorul de servicii) poate, la discreția sa, să
                     dispună ca animalul de companie să fie dat în plasament, să
                     anunțe autoritățile abilitate în acest domeniu sau să
                     găsească orice altă metodă alternativă de găzduire.
                     Proprietarul de animale de companie este de acord să
-                    ramburseze Dog Camp România și/sau Furnizorul de servicii
+                    ramburseze Doc Camp Romania și/sau Furnizorul de servicii
                     pentru toate costurile și cheltuielile asociate cu astfel de
                     acțiuni. În plus, Dog Camp își rezervă în mod expres
                     dreptul, la discreția sa, de a scoate animalul de companie
@@ -225,24 +225,24 @@ function Beneficii() {
                     pentru siguranța unui animal de companie, a Furnizorului de
                     servicii sau a oricăror persoane care locuiesc cu Furnizorul
                     de servicii. Înainte de a scoate un animal de companie din
-                    îngrijirea unui Furnizor de servicii, Dog Camp România va
+                    îngrijirea unui Furnizor de servicii, Doc Camp Romania va
                     depune eforturi rezonabile în timpul orelor normale de lucru
                     pentru a contacta Proprietarul de animale de companie și/sau
                     persoana de contact de urgență a Proprietarului de animale
                     de companie (dacă este prevăzut) pentru a aranja îngrijire
-                    alternativă. În cazul în care Dog Camp România nu poate
+                    alternativă. În cazul în care Doc Camp Romania nu poate
                     contacta proprietarul animalului de companie sau contactul
-                    de urgență, Dog Camp România își va folosi cea mai bună
+                    de urgență, Doc Camp Romania își va folosi cea mai bună
                     judecată pentru a găsi îngrijire alternativă pentru animalul
                     de companie până când proprietarul animalului de companie va
                     putea să-și recupereze animalul de companie. Dacă sunteți
                     deținător de animale de companie, îi autorizați pe
                     veterinar(i) animalului dvs. de companie să elibereze
                     documentele veterinare ale animalului dvs. de companie către
-                    Dog Camp România în legătură cu orice astfel de mutare sau
+                    Doc Camp Romania în legătură cu orice astfel de mutare sau
                     reașezare a animalului dvs. de companie. În plus, sunteți
                     responsabil și sunteți de acord să plătiți toate costurile
-                    și cheltuielile suportate de Dog Camp România în legătură cu
+                    și cheltuielile suportate de Doc Camp Romania în legătură cu
                     un astfel de transfer.
                   </p>
                   <p>
@@ -254,33 +254,33 @@ function Beneficii() {
                     imediat Proprietarii de animale de companie în cazul în care
                     o astfel de îngrijire devine necesară sau, în cazul în care
                     Proprietarul de animale de companie nu este disponibil, să
-                    contacteze Dog Camp România la numărul de telefon sau la
+                    contacteze Doc Camp Romania la numărul de telefon sau la
                     adresa de e-mail. Dacă sunteți deținător de animale de
                     companie, prin prezenta permiteți Furnizorul de servicii și
-                    Dog Camp România să obțină servicii de îngrijire veterinară
+                    Doc Camp Romania să obțină servicii de îngrijire veterinară
                     pentru animalul dvs. de companie, într-o situație de
                     urgență, dacă nu puteți fi contactat pentru a vă da acordul
                     în prealabil. În acest caz, autorizați și medicul veterinar
                     al animalului dvs. de companie să elibereze documentele
                     veterinare ale animalului dvs. de companie către Dog Camp
-                    România. Dacă Furnizorul dvs. de servicii vă contactează cu
+                    Romania. Dacă Furnizorul dvs. de servicii vă contactează cu
                     o solicitare de autorizare a îngrijirii medicale pentru
                     animalul dvs. de companie și îl refuzați, Furnizorul de
-                    servicii și Dog Camp România vor fi considerate lipsite de
+                    servicii și Doc Camp Romania vor fi considerate lipsite de
                     responsabilitate pentru orice vătămare, daune sau răspundere
                     care rezultă din neacceptarea unei astfel de solicitări.
                     Proprietarii de animale de companie sunt responsabili pentru
                     costurile oricărui astfel de tratament medical pentru
                     animalele de companie și, dacă sunteți proprietar de animale
                     de companie, sunteți de acord prin prezenta ca Dog Camp
-                    România să vă debiteze cardul de credit sau altă metodă de
-                    plată pentru astfel de costuri. Dog Camp România recomandă
+                    Romania să vă debiteze cardul de credit sau altă metodă de
+                    plată pentru astfel de costuri. Doc Camp Romania recomandă
                     tuturor utilizatorilor să aibă o asigurare adecvată pentru
                     animale de companie pentru a acoperi costurile îngrijirii
                     veterinare.
                   </p>
                   <p>
-                    2.9 Servicii de consultanță. Dog Camp România poate oferi
+                    2.9 Servicii de consultanță. Doc Camp Romania poate oferi
                     proprietarilor de animale de companie și furnizorilor de
                     servicii de consultanță veterinară prin telefon, chat sau
                     e-mail de la o terță parte pentru a oferi o resursă
@@ -288,13 +288,13 @@ function Beneficii() {
                     propriile animale de companie sau animalele de companie
                     aflate în grija dumneavoastră. Aceste servicii de
                     consultanță sunt furnizate de o terță parte și nu fac parte
-                    din Platforma Dog Camp România. Dacă utilizați aceste
+                    din Platforma Doc Camp Romania. Dacă utilizați aceste
                     servicii de consultanță a unei terțe părți, terța persoană
                     este responsabilă de orice vătămări sau daune aduse în urma
                     serviciilor acesteia.
                   </p>
                   <p>
-                    2.10 Google Maps. Utilizarea platformei Dog Camp România
+                    2.10 Google Maps. Utilizarea platformei Doc Camp Romania
                     necesită utilizarea funcțiilor și a conținutului Google
                     Maps, care sunt supuse actualilor (1) Termeni și condiții
                     suplimentare Google Maps/Google Earth la
@@ -304,20 +304,20 @@ function Beneficii() {
                     Politica de confidențialitate Google la
                     https://www.google.com/policies/privacy/ (colectiv,
                     „Termenii Google”). Prin utilizarea Platformei Dog Camp
-                    România, luați la cunoștință și sunteți de acord cu Termenii
+                    Romania, luați la cunoștință și sunteți de acord cu Termenii
                     Google așa cum vi se aplică (de exemplu, în calitate de
                     „Utilizator final”). Orice utilizare neautorizată a
                     funcțiilor și conținutului Google Maps poate duce la
                     suspendarea sau rezilierea dvs. din Platforma Dog Camp
-                    România.
+                    Romania.
                   </p>
                   <h3>3. Certificarea conformității cu legea aplicabilă.</h3>
                   <p>
-                    Prin accesarea și utilizarea Platformei Dog Camp România,
+                    Prin accesarea și utilizarea Platformei Doc Camp Romania,
                     certificați că: (1) aveți cel puțin 18 ani și (2) veți
                     respecta toate legile și reglementările aplicabile în cazul
                     dvs. pentru activitățile desfășurate prin și/sau legate de
-                    Platforma Dog Camp România.
+                    Platforma Doc Camp Romania.
                   </p>
                   <ul>
                     <li>
@@ -350,28 +350,28 @@ function Beneficii() {
                     </li>
                   </ul>
                   <p>
-                    Prin prezenta acceptați că Dog Camp România are dreptul să
+                    Prin prezenta acceptați că Doc Camp Romania are dreptul să
                     se bazeze pe aceste confirmări de la dvs., nu este
                     responsabil să se asigure că toți utilizatorii au respectat
                     legile și reglementările aplicabile și nu va fi răspunzător
                     pentru nerespectarea acestora de către un alt utilizator.
                   </p>
                   <h3>
-                    4. Utilizarea Platformei Dog Camp România; Suspendarea
+                    4. Utilizarea Platformei Doc Camp Romania; Suspendarea
                     accesului la cont.
                   </h3>
                   <p>
                     4.1 Comportamentul dumneavoastră în utilizarea Platformei
-                    Dog Camp România. Când utilizați Platforma Dog Camp România,
+                    Doc Camp Romania. Când utilizați Platforma Doc Camp Romania,
                     sunteți de acord:
                   </p>
                   <ul>
                     <li>
-                      Să utilizați Platforma Dog Camp România numai într-un mod
+                      Să utilizați Platforma Doc Camp Romania numai într-un mod
                       legal și numai în scopurile prevăzute.{" "}
                     </li>
                     <li>
-                      Să nu folosiți Platforma Dog Camp România pentru a asigura
+                      Să nu folosiți Platforma Doc Camp Romania pentru a asigura
                       îngrijirea: (a) animalelor de companie exotice sau
                       periculoase în mod inerent, cum ar fi șerpi veninoși sau
                       constrictori, primate, lupi sau hibrizi de lup, pisici
@@ -384,22 +384,22 @@ function Beneficii() {
                     </li>
                     <li>
                       Să nu trimiteți viruși/alt soft de tip malware către sau
-                      prin intermediul Platformei Dog Camp România.
+                      prin intermediul Platformei Doc Camp Romania.
                     </li>
                     <li>
-                      Să nu folosiți Platforma Dog Camp România sau să se
-                      angajați alți utilizatori ai Platformei Dog Camp România,
+                      Să nu folosiți Platforma Doc Camp Romania sau să se
+                      angajați alți utilizatori ai Platformei Doc Camp Romania,
                       în scopuri care încalcă legea.
                     </li>
                     <li>
-                      Să nu utilizați Platforma Dog Camp România pentru
+                      Să nu utilizați Platforma Doc Camp Romania pentru
                       achiziționarea de servicii de la un alt utilizator, apoi
                       să contactați utilizatorul (în mod direct/indirect) pentru
-                      acele servicii în afara Platformei Dog Camp România.
+                      acele servicii în afara Platformei Doc Camp Romania.
                     </li>
                     <li>
-                      Să nu folosiți Platforma Dog Camp România în scopul de a
-                      concura cu Dog Camp România sau pentru a promova alte
+                      Să nu folosiți Platforma Doc Camp Romania în scopul de a
+                      concura cu Doc Camp Romania sau pentru a promova alte
                       produse sau servicii.
                     </li>
                     <li>
@@ -421,12 +421,12 @@ function Beneficii() {
                       neautorizate.{" "}
                     </li>
                     <li>
-                      Să utilizați Platforma Dog Camp România numai în scopurile
+                      Să utilizați Platforma Doc Camp Romania numai în scopurile
                       dvs. și să nu vă folosiți identitatea unei alte persoane.{" "}
                     </li>
                     <li>
                       Să nu transferați sau să autorizeze utilizarea contului
-                      tău pentru Platforma Dog Camp România de către nicio altă
+                      tău pentru Platforma Doc Camp Romania de către nicio altă
                       persoană sau să se angajeze în tranzacții frauduloase.
                     </li>
                     <li>
@@ -439,32 +439,32 @@ function Beneficii() {
                     </li>
                     <li>
                       Să nu furnizați informații false în profilul dvs. sau
-                      înregistrarea pe Platforma Dog Camp România sau pentru a
+                      înregistrarea pe Platforma Doc Camp Romania sau pentru a
                       crea conturi multiple sau duplicate.
                     </li>
                     <li>
                       Să nu interferați cu furnizarea sau utilizarea de către
-                      orice alt utilizator a Platformei Dog Camp România.
+                      orice alt utilizator a Platformei Doc Camp Romania.
                     </li>
                     <li>
                       Să nu solicitați numele de utilizator sau parola altui
-                      utilizator al Platformei Dog Camp România sau orice alte
+                      utilizator al Platformei Doc Camp Romania sau orice alte
                       informații personale sensibile, inclusiv detalii bancare.
                     </li>
                   </ul>
                   <p>
                     4.2 Suspendare și reziliere. Înțelegeți și sunteți de acord
                     că nu avem nicio obligație să furnizăm Platforma Dog Camp
-                    România într-o anumită locație sau teritoriu și nici să
+                    Romania într-o anumită locație sau teritoriu și nici să
                     continuăm să îl furnizăm după ce am început. Ne rezervăm
                     dreptul de a suspenda sau de a rezilia accesul dumneavoastră
-                    la Platforma Dog Camp România: (1) dacă, la discreția
+                    la Platforma Doc Camp Romania: (1) dacă, la discreția
                     noastră, comportamentul dumneavoastră pe Site sau Platforma
-                    Dog Camp România este nepotrivit, nesigur, necinstit sau
+                    Doc Camp Romania este nepotrivit, nesigur, necinstit sau
                     încalcă acești termeni; sau (2) dacă este necesar, la
-                    discreția noastră, pentru a proteja Dog Camp România,
+                    discreția noastră, pentru a proteja Doc Camp Romania,
                     utilizatorii săi, animalele de companie sau publicul. Puteți
-                    suspenda sau înceta utilizarea Platformei Dog Camp România
+                    suspenda sau înceta utilizarea Platformei Doc Camp Romania
                     în orice moment și din orice motiv. Dacă doriți să vă
                     dezactivați contul, vă rugăm să contactați Dog Camp.
                     Rețineți că, dacă aveți obligații de plată restante, acestea
@@ -474,16 +474,16 @@ function Beneficii() {
                   <h3>5. Înregistrare; Securitatea contului. </h3>
                   <p>
                     Pentru a utiliza unele aspecte ale Platformei Dog Camp
-                    România, vi se va cere să creați un nume de utilizator, o
+                    Romania, vi se va cere să creați un nume de utilizator, o
                     parolă și un profil de utilizator. Dacă alegeți să utilizați
-                    Platforma Dog Camp România, sunteți de acord să furnizați
+                    Platforma Doc Camp Romania, sunteți de acord să furnizați
                     informații exacte despre dvs. și să păstrați aceste
                     informații la zi. Sunteți de acord să nu folosiți
                     identitatea altcuiva și să nu mențineți mai mult de un cont
-                    (sau, dacă Dog Camp România vă suspendă sau închide contul,
+                    (sau, dacă Doc Camp Romania vă suspendă sau închide contul,
                     să nu vă creați conturi suplimentare). Sunteți responsabil
                     pentru păstrarea confidențialității numelui de utilizator și
-                    a parolei pentru Platforma Dog Camp România și sunteți
+                    a parolei pentru Platforma Doc Camp Romania și sunteți
                     responsabil pentru toată activitatea din contul
                     dumneavoastră. Sunteți de acord să ne notificați cu
                     promptitudine orice utilizare neautorizată a contului
@@ -492,9 +492,9 @@ function Beneficii() {
                   <h3>6. Confidențialitate. </h3>
                   <p>
                     Colectarea și utilizarea de către noi a informațiilor
-                    dumneavoastră personale în Platforma Dog Camp România sunt
+                    dumneavoastră personale în Platforma Doc Camp Romania sunt
                     descrise în Declarația noastră de confidențialitate. Prin
-                    accesarea sau utilizarea Platformei Dog Camp România,
+                    accesarea sau utilizarea Platformei Doc Camp Romania,
                     confirmați că ați citit și înțeles Declarația de
                     confidențialitate.{" "}
                   </p>
@@ -524,7 +524,7 @@ function Beneficii() {
                     să afișeze public, să reproducă, să adapteze, să modifice,
                     să transmită, să difuzeze, să pregătească lucrări derivate
                     și/sau să distribuie Conținutul Dvs. în legătură cu
-                    furnizarea și/sau promovarea Platformei Dog Camp România și
+                    furnizarea și/sau promovarea Platformei Doc Camp Romania și
                     să sublicențeze aceste drepturi către terți.{" "}
                   </p>
                   <p>
@@ -532,7 +532,7 @@ function Beneficii() {
                     personajul, asemănarea sau performanța dvs. sunt incluse în
                     oricare dintre conținutul dvs., prin prezenta renunțați la
                     dreptul dvs. de solicita despăgubiri, atât pentru Dog Camp
-                    România cât și pentru utilizatorilor săi, de orice
+                    Romania cât și pentru utilizatorilor săi, de orice
                     reclamație sau acțiune în instanță, cunoscută sau
                     necunoscută, pentru defăimare, drepturi de autor, încălcarea
                     drepturilor la confidențialitate, publicitate sau
@@ -557,7 +557,7 @@ function Beneficii() {
                     7.5 Dreptul de a șterge sau de a examina Conținutul dvs.
                     Deși nu suntem obligați să facem acest lucru, ne rezervăm
                     dreptul de a monitoriza, ecraniza, edita și/sau elimina
-                    Conținutul Dvs. din Platforma Dog Camp România. Aplicarea de
+                    Conținutul Dvs. din Platforma Doc Camp Romania. Aplicarea de
                     către noi a acestor Termeni în ceea ce privește Conținutul
                     dvs. este la discreția noastră, iar neaplicarea Termenilor
                     într-un caz nu creează o renunțare la dreptul nostru de a le
@@ -569,21 +569,21 @@ function Beneficii() {
                     de rezervă ale Conținutului dvs.
                   </p>
                   <p>
-                    7.6 Recenzii. Platforma Dog Camp România poate oferi
+                    7.6 Recenzii. Platforma Doc Camp Romania poate oferi
                     posibilitatea de a lăsa recenzii publice și/sau private ale
                     utilizatorilor sau animalelor lor de companie. Prin prezenta
                     acceptați că inclusiv recenziile private pot fi partajate cu
                     terțe părți în conformitate cu legea aplicabilă și
                     Declarația noastră de confidențialitate și că Dog Camp
-                    România nu are obligația de a păstra sau stoca pe termen
+                    Romania nu are obligația de a păstra sau stoca pe termen
                     nelimitat orice recenzii. Nu avem nicio obligație să vă
                     oferim conținutul oricăror recenzii despre dvs. trimise de
                     alți utilizatori ai Platformei Dog Camp, fie înainte sau
                     după dezactivarea contului dumneavoastră pentru Platforma
-                    Dog Camp România. Nu vom avea nicio răspundere față de dvs.
+                    Doc Camp Romania. Nu vom avea nicio răspundere față de dvs.
                     pentru orice ștergere, dezvăluire, pierdere sau modificare a
                     acestor recenzii. Ne rezervăm dreptul de a verifica, edita
-                    sau elimina aceste recenzii din Platforma Dog Camp România
+                    sau elimina aceste recenzii din Platforma Doc Camp Romania
                     în orice moment.{" "}
                   </p>
                   <h3>8. Telefon, text și comunicații mobile. </h3>
@@ -594,7 +594,7 @@ function Beneficii() {
                       </h3>
                       <p>
                         Sunteți de acord să primiți de la sau în numele Dog Camp
-                        România comunicări care conțin informații legate de
+                        Romania comunicări care conțin informații legate de
                         servicii (inclusiv notificări tehnice, actualizări,
                         alerte de securitate și mesaje de asistență și
                         administrative) și/sau mesaje de vânzări, marketing sau
@@ -609,11 +609,11 @@ function Beneficii() {
                         să furnizați acest consimțământ pentru a primi mesaje de
                         vânzare, de marketing sau de publicitate cu apelare
                         automată ca o condiție pentru a cumpăra ceva sau pentru
-                        a utiliza Platforma Dog Camp România și puteți renunța
+                        a utiliza Platforma Doc Camp Romania și puteți renunța
                         la primirea acestor mesaje în orice moment, așa cum este
                         descris în Declarația noastră de confidențialitate (deși
                         puteți continua să primiți mesaje în timp ce Dog Camp
-                        România vă procesează solicitarea).
+                        Romania vă procesează solicitarea).
                       </p>
                     </li>
                     <li>
@@ -621,7 +621,7 @@ function Beneficii() {
                       <p>
                         În cazul în care dezactivați un număr de telefon mobil
                         furnizat nouă, sunteți de acord să actualizați prompt
-                        informațiile contului dvs. Dog Camp România pentru a vă
+                        informațiile contului dvs. Doc Camp Romania pentru a vă
                         asigura că mesajele nu sunt trimise persoanei care
                         obține numărul dvs. vechi.
                       </p>
@@ -636,7 +636,7 @@ function Beneficii() {
                       <p>
                         Toate taxele, sumele deductibile și alte plăți la care
                         se face referire sau percepute prin intermediul
-                        Platformei Dog Camp România sunt listate și plătibile în
+                        Platformei Doc Camp Romania sunt listate și plătibile în
                         LEI.
                       </p>
                     </li>
@@ -653,8 +653,8 @@ function Beneficii() {
                         Furnizorul de servicii atunci când acceptați o Rezervare
                         și sunteți de acord să plătiți suma totală indicată în
                         Rezervare, care include taxele de servicii plătibile
-                        către Dog Camp România. Furnizorul de servicii, nu Dog
-                        Camp România, este responsabil pentru prestarea
+                        către Doc Camp Romania. Furnizorul de servicii, nu Dog
+                        Camp Romania, este responsabil pentru prestarea
                         serviciilor de îngrijire a animalelor de companie. Acolo
                         unde prevede legea, suma percepută va include taxele
                         aplicabile.
@@ -675,7 +675,7 @@ function Beneficii() {
                         stabilit în Rezervarea dumneavoastră. Achiziționarea
                         Serviciilor de îngrijire a animalelor de companie este o
                         tranzacție între Proprietarul de animale de companie și
-                        Furnizorul de servicii. Rolul Dog Camp România este de a
+                        Furnizorul de servicii. Rolul Doc Camp Romania este de a
                         facilita tranzacția. Vom colecta (direct sau indirect
                         printr-o terță parte autorizată) plata de la
                         proprietarul animalului de companie în momentul
@@ -697,9 +697,9 @@ function Beneficii() {
                       <h3>9.4 Taxe de servicii</h3>
                       <p>
                         Percepem taxe de operare pentru unele aspecte ale
-                        Platformei Dog Camp România. Dacă sunteți Furnizor de
+                        Platformei Doc Camp Romania. Dacă sunteți Furnizor de
                         servicii, cu excepția cazului în care se specifică
-                        altfel prin Platforma Dog Camp România, taxa noastră de
+                        altfel prin Platforma Doc Camp Romania, taxa noastră de
                         serviciu este calculată ca procent din taxele pe care
                         proprietarul de animale de companie este de acord să vă
                         plătească într-o Rezervare și este colectată din fiecare
@@ -717,7 +717,7 @@ function Beneficii() {
                         o taxă suplimentară pentru timpul suplimentar (pro rata
                         pentru fiecare zi parțială de întârziere) la tariful
                         zilnic stabilit în Rezervare. În plus, sunteți de acord
-                        să despăgubiți Dog Camp România și sunteți de acord că
+                        să despăgubiți Doc Camp Romania și sunteți de acord că
                         vă putem debita cardul de credit sau altă metodă de
                         plată pentru orice costuri și cheltuieli suplimentare pe
                         care le suportăm noi sau Furnizorul de servicii ca
@@ -732,7 +732,7 @@ function Beneficii() {
                         <li>
                           <p>
                             <strong>Protecția rezervării:</strong> Dog Camp
-                            România vă poate ajuta să găsiți Furnizori de
+                            Romania vă poate ajuta să găsiți Furnizori de
                             servicii înlocuitori atunci când Furnizorii de
                             servicii anulează Rezervările în apropierea datei de
                             începere a perioadei de servicii identificate în
@@ -752,17 +752,17 @@ function Beneficii() {
                             plătite de Proprietarul de animale de companie
                             pentru Serviciile de îngrijire a animalelor de
                             companie nefurnizate, precum și orice taxă de
-                            serviciu plătită către Dog Camp România. Dacă
+                            serviciu plătită către Doc Camp Romania. Dacă
                             sunteți Furnizor de servicii, puteți numi un
                             Furnizor de servicii înlocuitor (așa cum a fost
                             convenit de către Proprietarul de animale de
                             companie și atâta timp cât înlocuitorul are un cont
-                            activ în Platforma Dog Camp România și a fost de
+                            activ în Platforma Doc Camp Romania și a fost de
                             acord în scris să accepte o Rezervare) contactând
-                            Dog Camp România pentru a modifica Rezervarea. Dacă
+                            Doc Camp Romania pentru a modifica Rezervarea. Dacă
                             nu găsiți un înlocuitor și anulați în mod repetat
                             Rezervările acceptate fără justificare, Dog Camp
-                            România vă poate dezactiva contul.
+                            Romania vă poate dezactiva contul.
                           </p>
                         </li>
                         <li>
@@ -776,7 +776,7 @@ function Beneficii() {
                             serviciu specificată într-o rezervare, vom rambursa
                             taxele în conformitate cu politica de anulare
                             selectată de Furnizorul de servicii pentru Platforma
-                            Dog Camp România. Toți Furnizorii de servicii
+                            Doc Camp Romania. Toți Furnizorii de servicii
                             trebuie să selecteze o politică de anulare înainte
                             de a finaliza o Rezervare, astfel încât Proprietarii
                             de animale de companie să cunoască politica de
@@ -788,13 +788,13 @@ function Beneficii() {
                             <strong>Condiții generale pentru anulări:</strong>{" "}
                             Dacă doriți să anulați o Rezervare, trebuie să
                             utilizați mecanismele disponibile prin intermediul
-                            Platformei Dog Camp România pentru a face acest
+                            Platformei Doc Camp Romania pentru a face acest
                             lucru. În sensul politicilor și termenilor din
                             această Secțiune 9.6, data anulării este data la
                             care un utilizator o anulează prin intermediul
-                            Platformei Dog Camp România, indiferent de orice
+                            Platformei Doc Camp Romania, indiferent de orice
                             comunicări separate între utilizatorii din afara
-                            Platformei Dog Camp România.
+                            Platformei Doc Camp Romania.
                           </p>
                         </li>
                         <li>
@@ -803,22 +803,22 @@ function Beneficii() {
                               Litigii de plată; Plată în afara Platformei Dog
                               Camp:
                             </strong>{" "}
-                            Dog Camp România inițiază plăți către Furnizorii de
+                            Doc Camp Romania inițiază plăți către Furnizorii de
                             servicii în 48 de ore de la finalizarea serviciilor
                             contractate ca urmare a unei rezervări. Odată ce
                             aceste sume au fost plătite, orice alte dispute de
                             plată sunt între Proprietarul de animale de companie
-                            și Furnizorul de servicii, iar Dog Camp România nu
+                            și Furnizorul de servicii, iar Doc Camp Romania nu
                             are obligația de a media sau de a facilita nicio
-                            soluționare. În plus, Dog Camp România nu are nicio
+                            soluționare. În plus, Doc Camp Romania nu are nicio
                             responsabilitate sau răspundere cu privire la orice
                             bacșișuri, bonusuri sau alte plăți efectuate în
-                            afara Platformei Dog Camp România. Totodată este
+                            afara Platformei Doc Camp Romania. Totodată este
                             interzisă contractarea Furnizorilor de servicii in
                             afara platformei dacă legătura inițială a fost
                             realizată prin intermediul Platformei. În situația
                             în care sunteți descoperiți culpabili, Dog Camp
-                            România vă poate suspenda sau dezactiva contul.
+                            Romania vă poate suspenda sau dezactiva contul.
                           </p>
                         </li>
                         <li>
@@ -841,13 +841,13 @@ function Beneficii() {
                     <li>
                       <h3>9.7 Reținerea plăților</h3>
                       <p>
-                        Dacă sunteți Furnizor de servicii, Dog Camp România își
+                        Dacă sunteți Furnizor de servicii, Doc Camp Romania își
                         rezervă dreptul de a reține sumele care vi se pot plăti
                         altfel în conformitate cu Secțiunea 9.3 dacă există o
                         suspiciune rezonabilă de activitate frauduloasă care
                         implică contul dvs. sau din alte motive la fel de
-                        convingătoare care implică protecția Dog Camp România,
-                        comunitatea Dog Camp România sau drepturile terților. De
+                        convingătoare care implică protecția Doc Camp Romania,
+                        comunitatea Doc Camp Romania sau drepturile terților. De
                         asemenea, putem recomanda furnizorilor terți de servicii
                         de plată să vă restricționeze accesul la fondurile din
                         contul dvs. în circumstanțele de mai sus.
@@ -863,22 +863,22 @@ function Beneficii() {
                         și să păstrați acele informații de plată (sau o metodă
                         alternativă acceptabilă de plată) în dosarul contului
                         dvs., atâta timp cât aveți rezervări restante,
-                        confirmate. Rolul Dog Camp România este de a facilita
+                        confirmate. Rolul Doc Camp Romania este de a facilita
                         plățile de la proprietarii de animale de companie către
                         Furnizorii de servicii ca agent de plată limitat pentru
                         Furnizorul de servicii. Ne autorizați să vă debităm
                         cardul de credit sau altă metodă de plată pentru taxele
-                        pe care le suportați pentru Platforma Dog Camp România
+                        pe care le suportați pentru Platforma Doc Camp Romania
                         pe măsură ce acestea devin datorate și plătibile și să
                         debităm orice metodă de plată alternativă pe care Dog
-                        Camp România o are în evidență pentru dvs. în cazul în
+                        Camp Romania o are în evidență pentru dvs. în cazul în
                         care metoda dvs. principală de plată este expirată,
                         invalid sau nu poate fi taxat. Sunteți responsabil
                         pentru menținerea la zi a informațiilor de plată. Dacă
                         nu vă putem percepe taxe la scadență, deoarece
                         informațiile dvs. de plată nu mai sunt valabile sau dacă
                         nu primim plata dvs. la scadență, atunci înțelegeți că
-                        nici Dog Camp România, nici Furnizorul de servicii nu
+                        nici Doc Camp Romania, nici Furnizorul de servicii nu
                         vor fi răspunzători pentru orice neaplicare a
                         serviciilor asociate cu acele taxe. Cu excepția
                         cazurilor prevăzute în mod expres în acești Termeni,
@@ -890,22 +890,22 @@ function Beneficii() {
                       <h3>9.9 Taxe</h3>
                       <p>
                         Cu excepția impozitelor pe venitul și încasările brute
-                        ale Dog Camp România sau în cazul în care Dog Camp
-                        România este obligat în alt mod să colecteze taxe,
+                        ale Doc Camp Romania sau în cazul în care Dog Camp
+                        Romania este obligat în alt mod să colecteze taxe,
                         recunoașteți că sunteți singurul responsabil să plătiți
                         orice taxe aplicabile care apar ca urmare a achiziției,
                         furnizării sau utilizării serviciilor de îngrijire a
                         animalelor de companie prin intermediul Platformei Dog
-                        Camp România. Aceasta include, fără limitare, orice
+                        Camp Romania. Aceasta include, fără limitare, orice
                         formă de impozit pe vânzări, TVA sau impozit pe venit
                         pentru taxele plătite sau primite de dvs. prin
                         intermediul Platformei Dog Camp. În anumite situații,
-                        Dog Camp România poate fi obligat prin lege să colecteze
+                        Doc Camp Romania poate fi obligat prin lege să colecteze
                         și/sau să raporteze informații fiscale despre dvs.
                         Sunteți de acord să ne furnizați documentația pe care o
                         considerăm necesară pentru a ne îndeplini acele
                         obligații și, dacă nu reușiți să faceți acest lucru, Dog
-                        Camp România vă poate suspenda sau dezactiva contul până
+                        Camp Romania vă poate suspenda sau dezactiva contul până
                         când această documentație este furnizată.
                       </p>
                     </li>
@@ -914,7 +914,7 @@ function Beneficii() {
                       <p>
                         Serviciile de procesare a plăților pot fi furnizate de
                         unul sau mai mulți procesatori de plăți terți. Dog Camp
-                        România își rezervă dreptul de a schimba furnizorii de
+                        Romania își rezervă dreptul de a schimba furnizorii de
                         procesare a plăților sau de a utiliza furnizori
                         alternativi sau de rezervă, la discreția sa. Procesarea
                         plăților furnizată de Stripe este supusă Acordului
@@ -923,35 +923,35 @@ function Beneficii() {
                           https://stripe.com/legal
                         </a>
                         ) și, dacă primiți plăți prin Platforma Dog Camp
-                        România, Acordul pentru contul Stripe Connected
+                        Romania, Acordul pentru contul Stripe Connected
                         (disponibil la{" "}
                         <a href="https://stripe.com/connect-account/legal">
                           https://stripe.com/connect-account/legal
                         </a>
                         ) (colectiv, „Termenii Stripe”). Pentru a utiliza
-                        Platforma Dog Camp România pentru a primi plata, este
+                        Platforma Doc Camp Romania pentru a primi plata, este
                         posibil să vi se solicite să configurați un cont Stripe
                         și să acceptați Termenii Stripe. Autorizați Dog Camp
-                        România să obțină accesul necesar la și să efectueze
+                        Romania să obțină accesul necesar la și să efectueze
                         toate activitățile necesare (inclusiv solicitarea de
                         rambursări, acolo unde este cazul), Contul dvs. Stripe
                         Connected pentru a facilita plata aferente Serviciilor
                         de îngrijire a animalelor de companie pe care le
                         achiziționați sau furnizați. Sunteți de acord să
                         furnizați informații exacte și complete despre dvs. și
-                        despre afacerea dvs. și să autorizați Dog Camp România
+                        despre afacerea dvs. și să autorizați Doc Camp Romania
                         să le partajeze și informații despre tranzacții cu
                         Stripe în scopul de a facilita serviciile de procesare a
                         plăților furnizate de Stripe. În plus, sunteți de acord
                         că, așa cum este permis de lege și în conformitate cu
-                        acești Termeni: (a) desemnați Dog Camp România să
+                        acești Termeni: (a) desemnați Doc Camp Romania să
                         acționeze ca agent cu scopul exclusiv de a accepta
                         plăți, în numele dvs., de la proprietarii de animale de
                         companie pentru serviciile de îngrijire a animalelor de
                         companie pe care le furnizați. acestora și pentru a face
                         ca astfel de plăți să vă fie livrate; (b) orice astfel
                         de plată primită prin intermediul Platformei Dog Camp
-                        România va fi considerată plată către dumneavoastră; și
+                        Romania va fi considerată plată către dumneavoastră; și
                         (c) în cazul nelivrării unei astfel de plăți, singurul
                         dumneavoastră recurs este împotriva Dog Camp și nu veți
                         solicita plata de la proprietarii de animale de
@@ -965,9 +965,9 @@ function Beneficii() {
                   <ul>
                     <li>
                       <p>
-                        Dog Camp România efectuează o verificare minimală a
+                        Doc Camp Romania efectuează o verificare minimală a
                         identității fiecărui utilizator la momentul creării
-                        fiecărui cont. Cu toate acestea, Dog Camp România nu își
+                        fiecărui cont. Cu toate acestea, Doc Camp Romania nu își
                         asumă nici o obligație de a efectua verificări
                         obligatorii la momentul creării contului și nici nu își
                         asumă obligația de a efectua verificări periodice.
@@ -981,7 +981,7 @@ function Beneficii() {
                         </strong>{" "}
                         Cu excepția cazului în care se prevede altfel în acești
                         Termeni sau prin intermediul Platformei, Dog Camp
-                        România poate, dar nu este obligat să efectueze din nou
+                        Romania poate, dar nu este obligat să efectueze din nou
                         Verificări de fundal pentru orice Utilizator.
                       </p>
                     </li>
@@ -1060,7 +1060,7 @@ function Beneficii() {
                   <p>
                     Dacă credeți cu bună-credință că lucrarea dumneavoastră
                     protejată prin drepturi de autor a fost încălcată de
-                    conținutul postat pe Platforma Dog Camp România, vă rugăm să
+                    conținutul postat pe Platforma Doc Camp Romania, vă rugăm să
                     furnizați agentului nostru de drepturi de autor desemnat o
                     notificare scrisă care să includă toate informațiile
                     următoare:
@@ -1106,7 +1106,7 @@ function Beneficii() {
                   <h3>12. Servicii ale terților, linkuri</h3>
 
                   <p>
-                    Platforma Dog Camp România poate conține link-uri către
+                    Platforma Doc Camp Romania poate conține link-uri către
                     site-uri web sau resurse ale terților. Recunoașteți și
                     sunteți de acord că nu suntem responsabili sau răspunzători
                     pentru:
@@ -1138,7 +1138,7 @@ function Beneficii() {
                   <p>
                     PRIN PREZENTA, ÎN MĂSURA MAXIMĂ PERMISĂ DE LEGISLAȚIA
                     ROMÂNĂ, SUNTEȚI DE ACORD SĂ RENUNȚAȚI LA ORICE PRETENȚIE,
-                    DESPĂGUBIRE SAU LITIGIU ÎMPOTRIVA Dog Camp România ȘI NU
+                    DESPĂGUBIRE SAU LITIGIU ÎMPOTRIVA Doc Camp Romania ȘI NU
                     VEȚI SOLICITA CHELTUIELI DE JUDECATĂ SAU ONORARII AVOCAȚIALE
                     PENTRU ACȚIUNI ÎNTREPRINSE DE DVS. PE PLATFORMĂ PRECUM:
                   </p>
@@ -1146,12 +1146,12 @@ function Beneficii() {
                   <ul>
                     <li>
                       Tranzacții și interacțiuni, online sau offline, cu alți
-                      utilizatori ai Platformei Dog Camp România;
+                      utilizatori ai Platformei Doc Camp Romania;
                     </li>
                     <li>Încălcarea acestor Termeni;</li>
                     <li>
                       Litigii cu alți utilizatori ai Platformei Dog Camp
-                      România;
+                      Romania;
                     </li>
                     <li>
                       Denaturările, declarațiile greșite sau încălcarea
@@ -1173,71 +1173,71 @@ function Beneficii() {
 
                   <ul>
                     <li>
-                      <h3>14.1 Platforma Dog Camp România</h3>
+                      <h3>14.1 Platforma Doc Camp Romania</h3>
                       <p>
-                        Dog Camp România și licențiatorii săi păstrează toate
+                        Doc Camp Romania și licențiatorii săi păstrează toate
                         drepturile, titlurile și interesul asupra și față de
-                        Platforma Dog Camp România, tehnologia și software-ul
+                        Platforma Doc Camp Romania, tehnologia și software-ul
                         utilizat, toată documentația și conținutul electronic
-                        disponibil prin intermediul Platformei Dog Camp România
+                        disponibil prin intermediul Platformei Doc Camp Romania
                         (altul decât conținutul dvs.) și toată proprietatea
                         intelectuală și proprietatea drepturi asupra Platformei
-                        Dog Camp România și a acestor tehnologii, software,
+                        Doc Camp Romania și a acestor tehnologii, software,
                         documentație și conținut. Cu excepția drepturilor dvs.
-                        de a accesa și de a utiliza Platforma Dog Camp România,
+                        de a accesa și de a utiliza Platforma Doc Camp Romania,
                         nimic din prezenta nu vă acordă/transmite vreunul dintre
                         drepturile noastre de proprietate intelectuală. Sunteți
                         de acord că vom avea un drept perpetuu de a folosi și de
-                        a încorpora în Platforma Dog Camp România orice feedback
+                        a încorpora în Platforma Doc Camp Romania orice feedback
                         sau sugestii de îmbunătățire pe care ni le furnizați cu
-                        privire la Platforma Dog Camp România, fără nicio
+                        privire la Platforma Doc Camp Romania, fără nicio
                         obligație de compensare.
                       </p>
                     </li>
                   </ul>
 
                   <h3>
-                    15. Limitare de răspundere pentru Platforma Dog Camp România
+                    15. Limitare de răspundere pentru Platforma Doc Camp Romania
                   </h3>
 
                   <p>
                     Informațiile și materialele găsite pe Platforma Dog Camp
-                    România, inclusiv textul, graficele, informațiile, linkurile
+                    Romania, inclusiv textul, graficele, informațiile, linkurile
                     sau alte elemente, sunt furnizate „ca atare”. Recenziile,
                     profilurile, sfaturile, opiniile, declarațiile, ofertele sau
                     alte informații sau conținut puse la dispoziție prin
-                    intermediul Platformei Dog Camp România, dar nu direct de
+                    intermediul Platformei Doc Camp Romania, dar nu direct de
                     către Dog Camp, sunt ale autorilor lor, care sunt singurii
                     responsabili pentru acest conținut.
                   </p>
 
                   <p>
                     ÎN MĂSURA MAXIMĂ PERMISĂ DE LEGISLAȚIA ROMÂNĂ, Dog Camp
-                    România:
+                    Romania:
                   </p>
 
                   <ul>
                     <li>
                       NU GARANTĂ ACURATEȚIA, ADEVĂRUL SAU TOTALITATEA
                       INFORMAȚIILOR ȘI MATERIALELOR PRIVIND PLATFORMA Dog Camp
-                      România;
+                      Romania;
                     </li>
                     <li>
                       NU ÎȘI ASUMĂ RESPONSABILITATEA PENTRU ORICE OPINII,
                       SFATURI SAU DECLARAȚII FĂCUTE DE ORICE PARTE ALTA DECÂT
-                      Dog Camp România;
+                      Doc Camp Romania;
                     </li>
                     <li>
                       NU GARANTEAZĂ CĂ UTILIZAREA SERVICIILOR VA FI UNA LIPSITĂ
                       DE PERICOLE, FĂRĂ DE VIRUSURI DE COMPUTER, CONTINUĂ, FĂRĂ
                       ERORI SAU NU CORESPUNDE CERINȚELOR DVS., SAU CĂ ORICE
-                      DEFECȚIUNI ÎN PLATFORMA Dog Camp România VOR FI CORECTATE.
+                      DEFECȚIUNI ÎN PLATFORMA Doc Camp Romania VOR FI CORECTATE.
                     </li>
                     <li>
                       NU OFERIM NICIO GARANȚIE, DE NICIUN FEL, EXPLICITĂ SAU
                       IMPLICITĂ, CU PRIVIRE LA POTRIVIREA CU UN FURNIZOR DE
                       SERVICII CARE OFERĂ SERVICII DE ÎNGRIJIRE A ANIMELELOR DE
-                      CASĂ PRIN PLATFORMA Dog Camp România.
+                      CASĂ PRIN PLATFORMA Doc Camp Romania.
                     </li>
                   </ul>
 
@@ -1256,13 +1256,13 @@ function Beneficii() {
                         cheltuieli similare care apar din, sau sunt legate de
                         utilizarea sau incapacitatea de a utiliza Platforma Dog
                         Camp, inclusiv, fără limitare, daune legate de orice
-                        informații primite de la Platforma Dog Camp România,
+                        informații primite de la Platforma Doc Camp Romania,
                         eliminarea informațiilor sau revizuirii profilului dvs.
-                        (sau alte conținut) din Platforma Dog Camp România,
+                        (sau alte conținut) din Platforma Doc Camp Romania,
                         orice suspendare sau încetare a accesului dumneavoastră
-                        la Platforma Dog Camp România sau orice eșec, eroare,
+                        la Platforma Doc Camp Romania sau orice eșec, eroare,
                         omisiune, întrerupere, defect, întârziere în funcționare
-                        sau transmitere a Platformei Dog Camp România, chiar
+                        sau transmitere a Platformei Doc Camp Romania, chiar
                         dacă suntem conștienți de posibilitatea de a orice
                         astfel de daune, pierderi sau cheltuieli.
                       </p>
@@ -1271,12 +1271,12 @@ function Beneficii() {
                       <h3>16.2 Limitarea răspunderii noastre față de dvs.</h3>
                       <p>
                         CU EXCEPȚIA UNDE LEGEA APLICABILĂ PREVEDE, SUNTEȚI DE
-                        ACORD CĂ Dog Camp România NU SE FACE RESPONSABIL PENTRU
+                        ACORD CĂ Doc Camp Romania NU SE FACE RESPONSABIL PENTRU
                         NICI O PROBLEMĂ CE ARE CA SURSĂ O ACTIVITATE CE A FOST
                         CONTRACTATĂ PRIN INTERMEDIUL PLATFORMEI. ÎN EGALĂ
-                        MĂSURĂ, Dog Camp România NU VA RĂSPUNDE MAI MULT DECÂT
+                        MĂSURĂ, Doc Camp Romania NU VA RĂSPUNDE MAI MULT DECÂT
                         PRIN RESTITUIREA SUMEI DE BANI ACHITATE CĂTRE Dog Camp
-                        România DE CĂTRE PROPRIETARUL DE ANIMAL DE COMPANIE ÎN
+                        Romania DE CĂTRE PROPRIETARUL DE ANIMAL DE COMPANIE ÎN
                         VEDEREA CONTRACTĂRII SERVICIILOR UNUI FURNIZOR DE
                         SERVICII. SUMA CE VA FI RESTITUITĂ VA CONSTITUI MAXIM
                         SUMA CONTRACTATĂ PRIN REZERVARE FĂRĂ A O DEPĂȘI.
@@ -1285,20 +1285,20 @@ function Beneficii() {
                     <li>
                       <h3>
                         16.3 Nicio răspundere pentru acțiunile non-Dog Camp
-                        România
+                        Romania
                       </h3>
                       <p>
                         ÎN MĂSURA MAXIMĂ PERMISĂ DE LEGEA APLICABILĂ, Dog Camp
-                        România NU VA FI RESPONSABIL ÎN NICIO CAZ PENTRU ORICE
+                        Romania NU VA FI RESPONSABIL ÎN NICIO CAZ PENTRU ORICE
                         DAUNE, DIRECTE, INDIRECTE, GENERALE, SPECIALE,
                         COMPENSATORII ȘI/SAU CONSECUȚIALE, DERIVATE DIN SAU
                         LEGATE DE COMPORTAMENTUL DVS. SAU A ALTUI UTILIZATOR CE
-                        FOLOSEȘTE PLATFORMA Dog Camp România, INCLUSIV, DAR FĂRĂ
+                        FOLOSEȘTE PLATFORMA Doc Camp Romania, INCLUSIV, DAR FĂRĂ
                         A NE LIMITA, DAUNE ASUPRA PROPRIETĂȚII, FURT, VĂTĂMĂRI
                         CORPORALE, DECES, SUFERIREA EMOȚIONALĂ ȘI/SAU ORICE ALTĂ
                         DAUNE REZULTATE DIN INFORMAȚII SAU CONȚINUT POSTATE SAU
-                        TRANSMISE PRIN INTERMEDIUL PLATFORMEI Dog Camp România,.
-                        CU ALȚI UTILIZATORI AI PLATFORMEI Dog Camp România, FIE
+                        TRANSMISE PRIN INTERMEDIUL PLATFORMEI Doc Camp Romania,.
+                        CU ALȚI UTILIZATORI AI PLATFORMEI Doc Camp Romania, FIE
                         ONLINE SAU OFFLINE. ACEASTA INCLUDE ORICE RECLAMAȚII,
                         PIERDERI SAU PREJUDICII DERIVATE DIN COMPORTAMENTUL
                         UTILIZATORULUI CARE ÎNCERCĂ SĂ VA FRAUDE SAU SĂ VĂ
@@ -1308,9 +1308,9 @@ function Beneficii() {
                       <p>
                         DACĂ AVEȚI O NEÎNȚELEGERE CU UN FURNIZOR DE SERVICII SAU
                         CU PROPRIETAR DE ANIMAL DE CASĂ, SUNTEȚI DE ACORD SĂ
-                        EXCLUDEȚI Dog Camp România DE TOATE PRETENȚIILE SAU
+                        EXCLUDEȚI Doc Camp Romania DE TOATE PRETENȚIILE SAU
                         DAUNELE DE ORICE NATURĂ, CUNOSCUTE SAU NECUNOSCUTE. ÎN
-                        NICIUN CAZ Dog Camp România NU VA FI RESPONSABIL PENTRU
+                        NICIUN CAZ Doc Camp Romania NU VA FI RESPONSABIL PENTRU
                         CONSECINȚELE DIRECTE SAU INDIRECTE ALE UNUI PROPRIETAR
                         DE ANIMAL DE CASĂ SAU FURNIZOR DE SERVICII CE NU
                         RESPECTĂ LEGILE ȘI REGULAMENTELE APLICABILE.
@@ -1325,9 +1325,9 @@ function Beneficii() {
                       <h3>17.1</h3>
                       <p>
                         Acești Termeni și orice dispută între dvs. și Dog Camp
-                        România vor fi guvernate de legile statului Român.
+                        Romania vor fi guvernate de legile statului Român.
                         Sunteți de acord că orice pretenție sau litigiu care
-                        izvorăște între dvs. și Dog Camp România trebuie să fie
+                        izvorăște între dvs. și Doc Camp Romania trebuie să fie
                         soluționată exclusiv de instanțele competente din
                         Timișoara.
                       </p>
@@ -1351,7 +1351,7 @@ function Beneficii() {
                   <h3>18. Forță majoră</h3>
 
                   <p>
-                    Dog Camp România nu va fi răspunzător pentru nicio
+                    Doc Camp Romania nu va fi răspunzător pentru nicio
                     întârziere sau neexecutare care rezultă din cauze în afara
                     controlului său rezonabil, inclusiv, dar fără a se limita
                     la, acte de forță majoră, dezastre naturale, cutremure,
@@ -1359,7 +1359,7 @@ function Beneficii() {
                     revolte, embargouri, incendii, accidente, pandemii, boli,
                     greve sau alte dezastre similare. De asemenea, într-un
                     astfel de caz, politicile de anulare descrise în Secțiunea
-                    9.6 s-ar putea să nu se aplice, iar Dog Camp România poate,
+                    9.6 s-ar putea să nu se aplice, iar Doc Camp Romania poate,
                     la discreția sa rezonabilă, să emită rambursări în condiții
                     care diferă de politica de anulare aleasă de un Furnizor de
                     servicii.
@@ -1401,8 +1401,8 @@ function Beneficii() {
 
                   <p>
                     Pentru întrebări sau nelămuriri legate de Platforma Dog Camp
-                    România sau de acești Termeni, vă rugăm să consultați
-                    Centrul de ajutor Dog Camp România sau contactați biroul
+                    Romania sau de acești Termeni, vă rugăm să consultați
+                    Centrul de ajutor Doc Camp Romania sau contactați biroul
                     local:
                   </p>
                 </div>

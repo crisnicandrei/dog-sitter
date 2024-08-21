@@ -20,7 +20,7 @@ function Home1Partner() {
                         borderRadius: 0,
                       }}
                       src="/assets/images/partener4.png"
-                      alt="Dog Camp România Logo"
+                      alt="Doc Camp Romania Logo"
                     />
                   </div>
                   <div className="img">

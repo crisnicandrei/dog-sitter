@@ -39,7 +39,7 @@ function Home1About() {
                       cu blănoșii. Salt rapid înainte în timp. Peste zeci de ani am realizat că tot asta fac. Ajut oamenii de bine și câinii. Am lucrat 20 de ani
                       în cadrul Poliției, fiind conductor canin specializat în diferite specializări și astfel puteam să fac echipă cu câinele să ajutăm oamenii
                       fiind chiar plătit pentru asta. În același timp am înființat o pensiune canină care funcționează și acum, după atâția ani, cu mare succes. 
-                      Dog Camp România. Tabăra cățeilor, unde se pot juca liberi și unde toți sunt pe mâini bune. În plus, am înființat împreună cu soția mea Claudia un ONG-ul 
+                      Doc Camp Romania. Tabăra cățeilor, unde se pot juca liberi și unde toți sunt pe mâini bune. În plus, am înființat împreună cu soția mea Claudia un ONG-ul 
                       de salvare câini fără stăpâni sau care se află în situații neplăcute -da, chiar și în zilele de azi unii câini stau în lanț. FURRYTALES - rescriem 
                       povestea unui blănos Da, avem de muncit, dar de fapt, nici nu simt că muncesc. În plus sunt plătit legal să am grijă de câini fie cu stăpân, fie fără. 
                       Dar, totuși, există niște limite fizice. Și deși vreau să ajut cât mai mulți oameni și cât mai mulți câini, nu se poate doar ce aș scădea calitatea 

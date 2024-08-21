@@ -67,8 +67,8 @@ function Header2() {
     >
       <div className="container-fluid d-flex justify-content-between align-items-center">
         <div
-          className="header-logo d-flex flex-row align-items-center"
-          style={{ width: "300px" }}
+          className="header-logo d-flex flex-column align-items-center"
+          style={{ width: "150px" }}
         >
           <Link legacyBehavior href="/">
             <a>
