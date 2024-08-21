@@ -74,7 +74,7 @@ function Home1Service() {
               </h3>
               <p>
                 Blănosul altuia stă peste noapte la tine acasă și e tratat ca un
-                oapete de seamă, ca un membru al familiei
+                oaspete de seamă, ca un membru al familiei
               </p>
             </div>
           </div>
