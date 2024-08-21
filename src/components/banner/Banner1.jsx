@@ -63,7 +63,7 @@ function Banner1() {
           />
         </div>
         <div className="d-sm-none">
-          <p className="text-center">
+          <p className="text-center px-2" style={{ color: "black" }}>
             O platformă de house sharing pentru câini, unde iubitorii de animale
             pot găzdui câini atunci când stăpânii lor nu pot. Alătură-te
             comunității
@@ -93,7 +93,7 @@ function Banner1() {
         style={{ maxWidth: "100%" }}
       >
         <h1 className="text-center">Câinele tău e pe mâini bune</h1>
-        <p className="text-center">
+        <p className="text-center px-5" style={{ color: "black" }}>
           Primii 100 înscriși în comunitatea noastră vor beneficia GRATUIT de un
           mini-curs video (9 episoade) despre mersul în lesă, în valoare de 800
           RON.{" "}
