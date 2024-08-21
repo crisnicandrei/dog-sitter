@@ -3,10 +3,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 // ** React Imports
-import React from "react";
+import React, { useRef, useContext } from "react";
 
-// ** Context Imports
-import { useContext } from "react";
+import emailjs from "emailjs-com";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
@@ -47,6 +46,7 @@ const validationSchema = yup.object().shape({
 });
 
 function signUpPage() {
+  const form = useRef();
   const router = useRouter();
   const { register: registerUser, signInAndRegisterUsingGoogle } =
     useContext(AuthContext);
@@ -60,9 +60,24 @@ function signUpPage() {
     resolver: yupResolver(validationSchema),
   });
 
+  const sendEmail = (formData) => {
+    // e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_USER_ID
+      )
+      .then((result) => console.log(result));
+  };
+
   const onSubmit = (formData) => {
     const { firstName, lastName, email, password } = formData;
     const name = firstName + " " + lastName;
+
+    sendEmail(formData);
 
     registerUser(name, email, password, router);
   };
@@ -92,7 +107,11 @@ function signUpPage() {
                       </Link>
                     </p>
                   </div>
-                  <form className="w-100" onSubmit={handleSubmit(onSubmit)}>
+                  <form
+                    ref={form}
+                    className="w-100"
+                    onSubmit={handleSubmit(onSubmit)}
+                  >
                     <div className="row">
                       <div className="col-md-6">
                         <div className="form-inner">

@@ -9,9 +9,9 @@ function Home1Blog() {
           <div className="col-lg-12 d-flex justify-content-center">
             <div className="section-title1 text-center">
               <span>
-                <img src="assets/images/icon/section-vec-l2.svg" alt="" />
+                <img src="/assets/images/icon/section-vec-l2.svg" alt="" />
                 Latest Blog
-                <img src="assets/images/icon/section-vec-r2.svg" alt="" />
+                <img src="/assets/images/icon/section-vec-r2.svg" alt="" />
               </span>
               <h2>valueable words from Customers</h2>
             </div>

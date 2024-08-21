@@ -49,7 +49,7 @@ function Home1Service() {
   };
   return (
     <div className="h1-service-area pt-0 mb-120">
-      <div className="container">
+      <div className="container ">
         <div className="row">
           <div className="col-lg-12 d-flex justify-content-center"></div>
         </div>

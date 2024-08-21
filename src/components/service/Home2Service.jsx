@@ -83,17 +83,17 @@ function Home2Service() {
                 <div className="card-vector">
                   <img
                     className="services-card-vect-01"
-                    src="assets/images/bg/services-card-vec.png"
+                    src="/assets/images/bg/services-card-vec.png"
                     alt=""
                   />
                   <img
                     className="services-card-vect-02"
-                    src="assets/images/bg/services-card-vec2.png"
+                    src="/assets/images/bg/services-card-vec2.png"
                     alt=""
                   />
                 </div>
                 <div className="services-icon">
-                  <img src="assets/images/icon/daycare3.svg" alt="" />
+                  <img src="/assets/images/icon/daycare3.svg" alt="" />
                 </div>
                 <div className="services-content">
                   <h3>
@@ -109,7 +109,10 @@ function Home2Service() {
                     <Link legacyBehavior href="/shop-details">
                       <a>
                         More Details
-                        <img src="assets/images/icon/h2-btn-arrow.svg" alt="" />
+                        <img
+                          src="/assets/images/icon/h2-btn-arrow.svg"
+                          alt=""
+                        />
                       </a>
                     </Link>
                   </div>
@@ -121,17 +124,17 @@ function Home2Service() {
                 <div className="card-vector">
                   <img
                     className="services-card-vect-01"
-                    src="assets/images/bg/services-card-vec.png"
+                    src="/assets/images/bg/services-card-vec.png"
                     alt=""
                   />
                   <img
                     className="services-card-vect-02"
-                    src="assets/images/bg/services-card-vec2.png"
+                    src="/assets/images/bg/services-card-vec2.png"
                     alt=""
                   />
                 </div>
                 <div className="services-icon">
-                  <img src="assets/images/icon/grooming3.svg" alt="" />
+                  <img src="/assets/images/icon/grooming3.svg" alt="" />
                 </div>
                 <div className="services-content">
                   <h3>
@@ -148,7 +151,10 @@ function Home2Service() {
                       <a>
                         {" "}
                         More Details
-                        <img src="assets/images/icon/h2-btn-arrow.svg" alt="" />
+                        <img
+                          src="/assets/images/icon/h2-btn-arrow.svg"
+                          alt=""
+                        />
                       </a>
                     </Link>
                   </div>
@@ -160,17 +166,17 @@ function Home2Service() {
                 <div className="card-vector">
                   <img
                     className="services-card-vect-01"
-                    src="assets/images/bg/services-card-vec.png"
+                    src="/assets/images/bg/services-card-vec.png"
                     alt=""
                   />
                   <img
                     className="services-card-vect-02"
-                    src="assets/images/bg/services-card-vec2.png"
+                    src="/assets/images/bg/services-card-vec2.png"
                     alt=""
                   />
                 </div>
                 <div className="services-icon">
-                  <img src="assets/images/icon/bording3.svg" alt="" />
+                  <img src="/assets/images/icon/bording3.svg" alt="" />
                 </div>
                 <div className="services-content">
                   <h3>
@@ -187,7 +193,10 @@ function Home2Service() {
                       <a>
                         {" "}
                         More Details
-                        <img src="assets/images/icon/h2-btn-arrow.svg" alt="" />
+                        <img
+                          src="/assets/images/icon/h2-btn-arrow.svg"
+                          alt=""
+                        />
                       </a>
                     </Link>
                   </div>
@@ -199,17 +208,17 @@ function Home2Service() {
                 <div className="card-vector">
                   <img
                     className="services-card-vect-01"
-                    src="assets/images/bg/services-card-vec.png"
+                    src="/assets/images/bg/services-card-vec.png"
                     alt=""
                   />
                   <img
                     className="services-card-vect-02"
-                    src="assets/images/bg/services-card-vec2.png"
+                    src="/assets/images/bg/services-card-vec2.png"
                     alt=""
                   />
                 </div>
                 <div className="services-icon">
-                  <img src="assets/images/icon/vetenary3.svg" alt="" />
+                  <img src="/assets/images/icon/vetenary3.svg" alt="" />
                 </div>
                 <div className="services-content">
                   <h3>
@@ -226,7 +235,10 @@ function Home2Service() {
                       <a>
                         {" "}
                         More Details
-                        <img src="assets/images/icon/h2-btn-arrow.svg" alt="" />
+                        <img
+                          src="/assets/images/icon/h2-btn-arrow.svg"
+                          alt=""
+                        />
                       </a>
                     </Link>
                   </div>
@@ -242,18 +254,21 @@ function Home2Service() {
             <div className="col-lg-5">
               <div className="services-img">
                 <div className="services-img-bg">
-                  <img src="assets/images/icon/h2-services-img-bg.svg" alt="" />
+                  <img
+                    src="/assets/images/icon/h2-services-img-bg.svg"
+                    alt=""
+                  />
                 </div>
                 <img
                   className="img-fluid"
-                  src="assets/images/bg/h2-services-img.png"
+                  src="/assets/images/bg/h2-services-img.png"
                   alt=""
                 />
               </div>
             </div>
             <div className="col-lg-7">
               <div className="services-content">
-                <img src="assets/images/icon/section-sl-no.svg" alt="" />
+                <img src="/assets/images/icon/section-sl-no.svg" alt="" />
                 <h2>we are providing pet care service for years.</h2>
                 <p>
                   Pellentesque maximus augue orci, quis congue purus iaculison
@@ -268,7 +283,7 @@ function Home2Service() {
                     <p>
                       <sup>
                         <img
-                          src="assets/images/icon/author-quat-icon.svg"
+                          src="/assets/images/icon/author-quat-icon.svg"
                           alt=""
                         />
                       </sup>{" "}
