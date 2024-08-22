@@ -28,9 +28,6 @@ function Home1feature() {
                 </div>
                 <div className="content text-center">
                   <h4>Pet First-Aid Trained</h4>
-                  <p>
-                    Pellentesque maximus augue orci, quis congue purus iaculison
-                  </p>
                 </div>
               </div>
             </div>
