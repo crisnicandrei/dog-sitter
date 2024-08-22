@@ -107,7 +107,14 @@ function Home1Service() {
               alt=""
             />
             <div className="icon">
-              <img src="/assets/images/icon/care.svg" alt="" />
+              <img
+                style={{
+                  width: "100px",
+                  height: "100px",
+                }}
+                src="/assets/images/day-care.png"
+                alt=""
+              />
             </div>
             <div className="content">
               <h3>
