@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Câinele tău îi pe mâini bune!" />
         <meta
           name="keywords"
-          content="Azorel Hotel, plimba cainele, cazeaza cainele, lasa in grija cainele, caine"
+          content="Azorel Hotel, azorel, hotel,plimba cainele, cazeaza cainele, lasa in grija cainele, caine, "
         />
 
         {/* Open Graph Meta Tags */}
@@ -33,10 +33,10 @@ function MyApp({ Component, pageProps }) {
           content="Câinele tău îi pe mâini bune!"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://example.com/" />
+        <meta property="og:url" content="http://azorelhotel.ro/" />
         <meta
           property="og:image"
-          content="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          content="http://azorelhotel.ro/assets/images/image2.jpeg"
         />
 
         {/* Optional: Facebook App ID */}
