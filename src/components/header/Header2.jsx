@@ -127,10 +127,6 @@ function Header2() {
               <Link href="/" legacyBehavior>
                 <a>Acasă</a>
               </Link>
-              <i
-                className="bi bi-plus dropdown-icon"
-                onClick={() => dispatch({ type: "home" })}
-              />
             </li>
             {user ? (
               <>
@@ -138,10 +134,6 @@ function Header2() {
                   <Link href="/profil" legacyBehavior>
                     <a>Profil</a>
                   </Link>
-                  <i
-                    className="bi bi-plus dropdown-icon"
-                    onClick={() => dispatch({ type: "home" })}
-                  />
                 </li>
                 <li
                   className={currentRoute === "/editare-profil" ? "active" : ""}
@@ -149,10 +141,6 @@ function Header2() {
                   <Link href="/editare-profil" legacyBehavior>
                     <a>Editare Profil</a>
                   </Link>
-                  <i
-                    className="bi bi-plus dropdown-icon"
-                    onClick={() => dispatch({ type: "home" })}
-                  />
                 </li>
               </>
             ) : (
@@ -163,10 +151,6 @@ function Header2() {
                 <Link href="/profiluri" legacyBehavior>
                   <a>Profiluri</a>
                 </Link>
-                <i
-                  className="bi bi-plus dropdown-icon"
-                  onClick={() => dispatch({ type: "home" })}
-                />
               </li>
             )}
             {user?.isSuperAdmin && (
@@ -174,10 +158,6 @@ function Header2() {
                 <Link href="/cereri" legacyBehavior>
                   <a>Cereri</a>
                 </Link>
-                <i
-                  className="bi bi-plus dropdown-icon"
-                  onClick={() => dispatch({ type: "home" })}
-                />
               </li>
             )}
             <li className="menu-item-has-children">
