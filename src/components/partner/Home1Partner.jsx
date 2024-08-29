@@ -25,13 +25,6 @@ function Home1Partner() {
                   </div>
                   <div className="img">
                     <img
-                      style={{ width: "200px", height: "200px" }}
-                      src="/assets/images/partener1.png"
-                      alt="Logo Partener"
-                    />
-                  </div>
-                  <div className="img">
-                    <img
                       style={{
                         width: "200px",
                         height: "200px",
@@ -39,6 +32,13 @@ function Home1Partner() {
                       }}
                       src="/assets/images/partener2.png"
                       alt=""
+                    />
+                  </div>
+                  <div className="img">
+                    <img
+                      style={{ width: "200px", height: "200px" }}
+                      src="/assets/images/partener1.png"
+                      alt="Logo Partener"
                     />
                   </div>
                   <div className="img">
