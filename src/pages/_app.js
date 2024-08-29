@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
         <title>Azorel Hotel</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Câinele tău îi pe mâini bune!" />
+        <meta name="description" content="Câinele tău este pe mâini bune!" />
         <meta
           name="keywords"
           content="Azorel Hotel, azorel, hotel,plimba cainele, cazeaza cainele, lasa in grija cainele, caine, "
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="Azorel Hotel" />
         <meta
           property="og:description"
-          content="Câinele tău îi pe mâini bune!"
+          content="Câinele tău este pe mâini bune!"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="http://azorelhotel.ro/" />
