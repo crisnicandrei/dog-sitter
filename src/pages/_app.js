@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Câinele tău este pe mâini bune!" />
         <meta
           name="keywords"
-          content="Azorel Hotel, azorel, hotel,plimba cainele, cazeaza cainele, lasa in grija cainele, caine, "
+          content="Azorel Hotel, azorel, hotel,plimba cainele, cazeaza cainele, lasa in grija cainele, caine, Hotel căței, hotel catei, Hotel catei, hotel canin, Hotel Caini, hotel pentru caini, hotel de caini, Hotel de caini, Hotel pentru Caini"
         />
 
         {/* Open Graph Meta Tags */}
