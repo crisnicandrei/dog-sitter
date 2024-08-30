@@ -61,15 +61,20 @@ function signUpPage() {
   });
 
   const sendEmail = (formData) => {
-    // e.preventDefault();
-    // emailjs
-    //   .sendForm(
-    //     process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-    //     process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-    //     form.current,
-    //     process.env.NEXT_PUBLIC_USER_ID
-    //   )
-    //   .then((result) => console.log(result));
+    const templateParams = {
+      user_first_name: formData.firstName,
+      user_last_name: formData.lastName,
+      user_email: formData.email,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_USER_ID
+      )
+      .then((result) => console.log(result));
   };
 
   const onSubmit = (formData) => {
@@ -118,6 +123,7 @@ function signUpPage() {
                           <input
                             type="text"
                             placeholder="Prenume"
+                            name="user_first_name"
                             {...register("firstName")}
                           />
                           {errors.firstName && (
@@ -133,6 +139,7 @@ function signUpPage() {
                           <input
                             type="text"
                             placeholder="Nume"
+                            name="user_last_name"
                             {...register("lastName")}
                           />
                           {errors.lastName && (
@@ -148,6 +155,7 @@ function signUpPage() {
                           <input
                             type="text"
                             placeholder="Introduceți adresa de email"
+                            name="user_email"
                             {...register("email")}
                           />
                           {errors.email && (
