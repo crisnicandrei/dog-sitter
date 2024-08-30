@@ -81,9 +81,9 @@ function signUpPage() {
     const { firstName, lastName, email, password } = formData;
     const name = firstName + " " + lastName;
 
-    sendEmail(formData);
-
-    registerUser(name, email, password, router);
+    registerUser(name, email, password, router).then(() => {
+      sendEmail(formData);
+    });
   };
 
   const handleLoginWithGoogle = () => {
