@@ -261,6 +261,17 @@ function Header2() {
                 </li>
               </>
             )}
+            <li className="menu-item">
+              {user && (
+                <button
+                  onClick={logout}
+                  className="primary-btn3 p-2 d-md-none"
+                  type="submit"
+                >
+                  Log out
+                </button>
+              )}
+            </li>
           </ul>
         </div>
         <div className="nav-right d-flex jsutify-content-end align-items-center">
