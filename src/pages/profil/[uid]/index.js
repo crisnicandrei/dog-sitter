@@ -1,7 +1,7 @@
 // ** Next Imports
 import { useRouter } from "next/router";
 // ** React Imports
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 // ** Layout Imports
 import Layout from "../../../layout/Layout";
@@ -15,6 +15,10 @@ import Scheduler from "devextreme-react/scheduler";
 // ** Firebase Imports
 import { getUserData } from "../../../configs/firebase.config";
 
+import { AuthContext } from "../../../context/AuthContext";
+
+import emailjs from "emailjs-com";
+
 const currentDate = new Date();
 const views = ["day", "week", "workWeek", "month"];
 
@@ -23,6 +27,11 @@ function Profile() {
   const { uid } = router.query;
 
   const [user, setUser] = useState(null);
+
+  const { user: viewingUser } = useContext(AuthContext);
+
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
 
   useEffect(() => {
     const getUserInformation = async () => {
@@ -42,6 +51,51 @@ function Profile() {
     };
     getUserInformation();
   }, [uid]);
+
+  const handleBookSitterEmail = () => {
+    const templateParams = {
+      sitter_name: user.displayName,
+      user_name: viewingUser.displayName,
+      start_date: startDate,
+      end_date: endDate,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_BOOK_EMAIL_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_USER_ID
+      )
+      .then((result) => console.log(result));
+  };
+
+  const handleAppointmentClick = (e) => {
+    const appointmentStartDate = e.appointmentData.startDate;
+    const appointmentEndDate = e.appointmentData.endDate;
+
+    const options = {
+      weekday: "long", // "sâmbătă"
+      year: "numeric", // "2024"
+      month: "long", // "august"
+      day: "numeric", // "31"
+      hour: "numeric", // "19"
+      minute: "numeric", // "00"
+      timeZoneName: "short", // "GMT+3"
+    };
+
+    const formattedStartDate = appointmentStartDate.toLocaleString(
+      "ro-RO",
+      options
+    );
+    const formattedEndDate = appointmentEndDate.toLocaleString(
+      "ro-RO",
+      options
+    );
+
+    setStartDate(formattedStartDate);
+    setEndDate(formattedEndDate);
+  };
 
   return (
     <Layout>
@@ -112,7 +166,7 @@ function Profile() {
                         <h1>Orar</h1>
 
                         <Scheduler
-                          timeZone="America/Los_Angeles"
+                          timeZone="Europe/Bucharest"
                           dataSource={user.appointments || []}
                           views={views}
                           defaultCurrentView="day"
@@ -129,6 +183,7 @@ function Profile() {
                           // onAppointmentDeleted={onAppointmentsChanges}
                           // onAppointmentAdded={onAppointmentsChanges}
                           // onAppointmentUpdated={onAppointmentsChanges}
+                          onAppointmentClick={handleAppointmentClick}
                         />
                       </div>
                     </div>
@@ -151,6 +206,20 @@ function Profile() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xl-10 col-lg-10 col-md-10 mt-100 d-flex justify-content-center">
+                <button
+                  style={{
+                    backgroundColor: "rgb(46, 103, 209)",
+                    color: "white",
+                  }}
+                  className="nav-link"
+                  onClick={handleBookSitterEmail}
+                >
+                  Book Now
+                </button>
               </div>
             </div>
           </div>

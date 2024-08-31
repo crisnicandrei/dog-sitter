@@ -329,7 +329,7 @@ function editProfilePage() {
                 <h1>Orar</h1>
 
                 <Scheduler
-                  timeZone="America/Los_Angeles"
+                  timeZone="Europe/Bucharest"
                   dataSource={user.appointments || []}
                   views={views}
                   defaultCurrentView="day"
