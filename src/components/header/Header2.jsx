@@ -142,6 +142,11 @@ function Header2() {
                     <a>Editare Profil</a>
                   </Link>
                 </li>
+                <li className="menu-item">
+                  <Link legacyBehavior href="/gaseste-sitter">
+                    <a>Gaseste Pet Sitter</a>
+                  </Link>
+                </li>
               </>
             ) : (
               <></>
@@ -235,11 +240,7 @@ function Header2() {
                 </li>
               </ul>
             </li>
-            <li className="menu-item">
-              <Link legacyBehavior href="/gaseste-sitter">
-                <a>Gaseste Pet Sitter</a>
-              </Link>
-            </li>
+
             {!user && (
               <>
                 <li className="menu-item">
