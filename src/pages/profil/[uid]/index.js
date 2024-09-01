@@ -229,4 +229,4 @@ function Profile() {
   );
 }
 
-export default withAdminRoute(Profile);
+export default Profile;
