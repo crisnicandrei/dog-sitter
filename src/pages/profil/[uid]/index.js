@@ -67,7 +67,10 @@ function Profile() {
         templateParams,
         process.env.NEXT_PUBLIC_USER_ID
       )
-      .then((result) => console.log(result));
+      .then((result) => {
+        console.log(result);
+        alert("Cererea a fost trimisa cu succes");
+      });
   };
 
   const handleAppointmentClick = (e) => {
