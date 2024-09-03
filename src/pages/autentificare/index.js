@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // ** React Imports
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
@@ -43,6 +43,7 @@ const validationSchema = yup.object().shape({
 function loginPage() {
   const { login, signInAndRegisterUsingGoogle } = useContext(AuthContext);
   const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -69,6 +70,10 @@ function loginPage() {
     } catch (error) {
       alert("A aparut o problema");
     }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -113,13 +118,18 @@ function loginPage() {
                         <div className="form-inner">
                           <label>Parola *</label>
                           <input
-                            type="password"
+                            type={showPassword ? "text" : "password"}
                             name="password"
                             id="password"
                             placeholder="Parola"
                             {...register("password")}
                           />
-                          <i className="bi bi-eye-slash" id="togglePassword" />
+                          <i
+                            onClick={togglePasswordVisibility}
+                            style={{ cursor: "pointer" }}
+                            className="bi bi-eye-slash"
+                            id="togglePassword"
+                          />
                           {errors.password && (
                             <p className="text-danger">
                               {errors.password.message}

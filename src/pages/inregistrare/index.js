@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 // ** React Imports
-import React, { useRef, useContext } from "react";
+import React, { useRef, useContext, useState } from "react";
 
 import emailjs from "emailjs-com";
 
@@ -60,6 +60,9 @@ function signUpPage() {
     resolver: yupResolver(validationSchema),
   });
 
+  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
+
   const sendEmail = (formData) => {
     const templateParams = {
       user_first_name: formData.firstName,
@@ -88,6 +91,14 @@ function signUpPage() {
 
   const handleLoginWithGoogle = () => {
     signInAndRegisterUsingGoogle();
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const togglePassword2Visibility = () => {
+    setShowPassword2(!showPassword2);
   };
 
   return (
@@ -169,13 +180,18 @@ function signUpPage() {
                         <div className="form-inner">
                           <label>Parola *</label>
                           <input
-                            type="password"
+                            type={showPassword ? "text" : "password"}
                             name="password"
                             id="password"
                             placeholder="Creați o parolă"
                             {...register("password")}
                           />
-                          <i className="bi bi-eye-slash" id="togglePassword" />
+                          <i
+                            style={{ cursor: "pointer" }}
+                            onClick={togglePasswordVisibility}
+                            className="bi bi-eye-slash"
+                            id="togglePassword"
+                          />
                           {errors.password && (
                             <p className="text-danger">
                               {errors.password.message}
@@ -187,13 +203,18 @@ function signUpPage() {
                         <div className="form-inner">
                           <label>Confirmare parolă *</label>
                           <input
-                            type="password"
+                            type={showPassword2 ? "text" : "password"}
                             name="password"
                             id="password2"
                             placeholder="Confirmare parolă"
                             {...register("confirmPassword")}
                           />
-                          <i className="bi bi-eye-slash" id="togglePassword2" />
+                          <i
+                            onClick={togglePassword2Visibility}
+                            style={{ cursor: "pointer" }}
+                            className="bi bi-eye-slash"
+                            id="togglePassword2"
+                          />
                           {errors.confirmPassword && (
                             <p className="text-danger">
                               {errors.confirmPassword.message}
