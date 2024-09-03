@@ -27,6 +27,7 @@ const defaultValues = {
   lastName: "",
   phone: "",
   description: "",
+  tarif: "",
   boarding: false,
   walking: false,
   daycare: false,
@@ -40,6 +41,7 @@ const validationSchema = yup
     lastName: yup.string().required("Numele este obligatoriu."),
     phone: yup.string().required("Telefonul este obligatoriu."),
     description: yup.string().required("Descrierea este obligatorie."),
+    tarif: yup.string().required("Tariful este obligatorie."),
     boarding: yup.boolean(),
     walking: yup.boolean(),
     daycare: yup.boolean(),
@@ -84,6 +86,7 @@ function editProfilePage() {
       firstName,
       lastName,
       description,
+      tarif,
       phone,
       boarding,
       walking,
@@ -96,6 +99,7 @@ function editProfilePage() {
       ...user,
       displayName,
       description,
+      tarif,
       phone,
       boarding,
       walking,
@@ -116,6 +120,7 @@ function editProfilePage() {
       const {
         displayName,
         description,
+        tarif,
         phone,
         boarding,
         walking,
@@ -128,6 +133,7 @@ function editProfilePage() {
       setValue("lastName", lastName);
       setValue("phone", phone);
       setValue("description", description);
+      setValue("tarif", tarif);
       setValue("boarding", boarding);
       setValue("walking", walking);
       setValue("daycare", daycare);
@@ -148,8 +154,6 @@ function editProfilePage() {
 
   useEffect(() => {
     if (url) {
-      console.log(url);
-      console.log(user);
       updateUser({ ...user, profileImage: url });
     }
   }, [url]);
@@ -232,6 +236,23 @@ function editProfilePage() {
                           {errors.description && (
                             <p className="text-danger">
                               {errors.description.message}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="col-12">
+                        <div className="form-inner">
+                          <label>Descriere tarif</label>
+                          <textarea
+                            type="text"
+                            rows={3}
+                            placeholder="Descriere tarif"
+                            {...register("tarif")}
+                          />
+                          {errors.description && (
+                            <p className="text-danger">
+                              {errors.tarif.message}
                             </p>
                           )}
                         </div>

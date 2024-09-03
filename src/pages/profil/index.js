@@ -5,6 +5,7 @@ import React, { useEffect, useState, useContext } from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
+import Map from "../../components/map";
 
 // ** Third party libraries imports
 import Scheduler from "devextreme-react/scheduler";

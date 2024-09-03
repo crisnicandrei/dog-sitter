@@ -11,6 +11,27 @@ import { acceptOrDeclineUserProfile } from "../../configs/firebase.config";
 function ShopCardSimple({ users, setRefetchUsers }) {
   function handleAcceptOrDeclineUserProfile(uid, bolleanAcceptence) {
     acceptOrDeclineUserProfile(uid, bolleanAcceptence);
+    // if (bolleanAcceptence) {
+    //   const templateParams = {
+    //     sitter_name: user.displayName,
+    //     user_name: viewingUser.displayName,
+    //     start_date: startDate,
+    //     end_date: endDate,
+    //   };
+
+    //   emailjs
+    //     .send(
+    //       process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+    //       process.env.NEXT_PUBLIC_BOOK_EMAIL_ID,
+    //       templateParams,
+    //       process.env.NEXT_PUBLIC_USER_ID
+    //     )
+    //     .then((result) => {
+    //       console.log(result);
+    //       alert("Cererea a fost trimisa cu succes");
+    //     });
+    // } else {
+    // }
     setRefetchUsers((prev) => !prev);
   }
 
