@@ -84,27 +84,27 @@ const signInWithGoogle = async () => {
 
     localStorage.setItem("user", JSON.stringify(userData));
 
-    // const q = query(collection(db, "users"), where("uid", "==", uid));
-    // const docs = await getDocs(q);
-    // if (docs.docs.length === 0) {
-    //   await addDoc(collection(db, "users"), {
-    //     uid: user.uid,
-    //     displayName: user.displayName,
-    //     authProvider: "google",
-    //     email: user.email,
-    //     isSuperAdmin: false,
-    //     isAccepted: false,
-    //     isReviewed: false,
-    //     appointments: [],
-    //     phone: "",
-    //     description: "",
-    //     tarif: "",
-    //     boarding: false,
-    //     walking: false,
-    //     daycare: false,
-    //     sitting: false,
-    //   });
-    // }
+    const q = query(collection(db, "users"), where("uid", "==", uid));
+    const docs = await getDocs(q);
+    if (docs.docs.length === 0) {
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        displayName: user.displayName,
+        authProvider: "google",
+        email: user.email,
+        isSuperAdmin: false,
+        isAccepted: false,
+        isReviewed: false,
+        appointments: [],
+        phone: "",
+        description: "",
+        tarif: "",
+        boarding: false,
+        walking: false,
+        daycare: false,
+        sitting: false,
+      });
+    }
 
     return { uid };
   } catch (err) {
