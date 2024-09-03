@@ -109,10 +109,10 @@ function Home1Service() {
             <div className="icon">
               <img
                 style={{
-                  width: "100px",
-                  height: "100px",
+                  width: "60px",
+                  height: "60px",
                 }}
-                src="/assets/images/day-care.png"
+                src="/assets/images/day_care.png"
                 alt=""
               />
             </div>
