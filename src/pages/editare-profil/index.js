@@ -341,15 +341,12 @@ function editProfilePage() {
                         </div>
                       </div>
                     </div>
-
-                    <button className="account-btn">Salveaza</button>
+                    <Map latlong={user?.coords} profileEdit={true} />
+                    <button className="account-btn mt-10">Salveaza</button>
                   </form>
                 </div>
               </div>
 
-              <div className="col-xl-10 col-lg-10 col-md-10 mt-5">
-                <Map latlong={user?.coords} profileEdit={true} />
-              </div>
               <div className="col-xl-10 col-lg-10 col-md-10 mt-100">
                 <h1>Orar</h1>
 
