@@ -325,6 +325,10 @@ function editProfilePage() {
                   </form>
                 </div>
               </div>
+
+              <div className="col-xl-10 col-lg-10 col-md-10 mt-5">
+                <Map latlong={user?.coords} profileEdit={true} />
+              </div>
               <div className="col-xl-10 col-lg-10 col-md-10 mt-100">
                 <h1>Orar</h1>
 
@@ -340,10 +344,6 @@ function editProfilePage() {
                   onAppointmentAdded={onAppointmentsChanges}
                   onAppointmentUpdated={onAppointmentsChanges}
                 />
-              </div>
-              <div className="col-xl-10 col-lg-10 col-md-10 mt-5">
-                <Map latlong={user?.coords} profileEdit={true} />
-                <div />
               </div>
             </div>
           </div>

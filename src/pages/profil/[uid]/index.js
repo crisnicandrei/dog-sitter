@@ -18,6 +18,7 @@ import { getUserData } from "../../../configs/firebase.config";
 import { AuthContext } from "../../../context/AuthContext";
 
 import emailjs from "emailjs-com";
+import Map from "../../../components/map";
 
 const currentDate = new Date();
 const views = ["day", "week", "workWeek", "month"];
@@ -35,19 +36,21 @@ function Profile() {
 
   useEffect(() => {
     const getUserInformation = async () => {
-      const userData = await getUserData(uid);
+      if (uid) {
+        const userData = await getUserData(uid);
 
-      if (userData && userData.appointments) {
-        userData.appointments = userData.appointments.map((appointment) => {
-          return {
-            ...appointment,
-            startDate: new Date(appointment.startDate.seconds * 1000),
-            endDate: new Date(appointment.endDate.seconds * 1000),
-          };
-        });
+        if (userData && userData.appointments) {
+          userData.appointments = userData.appointments.map((appointment) => {
+            return {
+              ...appointment,
+              startDate: new Date(appointment.startDate.seconds * 1000),
+              endDate: new Date(appointment.endDate.seconds * 1000),
+            };
+          });
+        }
+
+        setUser(userData);
       }
-
-      setUser(userData);
     };
     getUserInformation();
   }, [uid]);
@@ -197,16 +200,7 @@ function Profile() {
                     role="tabpanel"
                     aria-labelledby="v-pills-profile-tab"
                   >
-                    <div className="description">
-                      <p className="para-2 mb-3">
-                        Choosing a pet care service, it is important to do your
-                        research and select a reputable provider that has
-                        experience and a good track record. You should also
-                        discuss your pet's needs and any special instructions
-                        with the provider to ensure that your pet will receive
-                        the best possible care.
-                      </p>
-                    </div>
+                    <Map latlong={user?.coords} profileEdit={false} />
                   </div>
                 </div>
               </div>

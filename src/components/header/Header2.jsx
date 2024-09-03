@@ -142,11 +142,6 @@ function Header2() {
                     <a>Editare Profil</a>
                   </Link>
                 </li>
-                <li className="menu-item">
-                  <Link legacyBehavior href="/gaseste-sitter">
-                    <a>Gaseste Pet Sitter</a>
-                  </Link>
-                </li>
               </>
             ) : (
               <></>
@@ -165,6 +160,11 @@ function Header2() {
                 </Link>
               </li>
             )}
+            <li className="menu-item">
+              <Link legacyBehavior href="/gaseste-sitter">
+                <a>Găsește pet sitter</a>
+              </Link>
+            </li>
             <li className="menu-item-has-children">
               <Link legacyBehavior href="/doneaza">
                 <a>Donează</a>

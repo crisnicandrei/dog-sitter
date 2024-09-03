@@ -109,16 +109,7 @@ function Profile() {
                     role="tabpanel"
                     aria-labelledby="v-pills-profile-tab"
                   >
-                    <div className="description">
-                      <p className="para-2 mb-3">
-                        Choosing a pet care service, it is important to do your
-                        research and select a reputable provider that has
-                        experience and a good track record. You should also
-                        discuss your pet's needs and any special instructions
-                        with the provider to ensure that your pet will receive
-                        the best possible care.
-                      </p>
-                    </div>
+                    <Map latlong={user?.coords} profileEdit={false} />
                   </div>
                 </div>
               </div>
