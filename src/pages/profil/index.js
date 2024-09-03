@@ -101,36 +101,6 @@ function Profile() {
                           // onAppointmentUpdated={onAppointmentsChanges}
                         />
                       </div>
-                      <div className="col-xl-10 col-lg-10 col-md-10 mt-100">
-                        <button
-                          className="nav-link"
-                          id="v-pills-profile-tab"
-                          data-bs-toggle="pill"
-                          data-bs-target="#v-pills-profile"
-                          type="button"
-                          role="tab"
-                          aria-controls="v-pills-profile"
-                          aria-selected="true"
-                        >
-                          Book Now
-                        </button>
-                      </div>
-                    </div>
-                    <div className="description">
-                      <div className="col-xl-10 col-lg-10 col-md-10 mt-100">
-                        <button
-                          className="nav-link"
-                          id="v-pills-profile-tab"
-                          data-bs-toggle="pill"
-                          data-bs-target="#v-pills-profile"
-                          type="button"
-                          role="tab"
-                          aria-controls="v-pills-profile"
-                          aria-selected="true"
-                        >
-                          Book Now
-                        </button>
-                      </div>
                     </div>
                   </div>
                   <div
