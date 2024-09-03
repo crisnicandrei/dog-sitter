@@ -69,6 +69,8 @@ const googleProvider = new GoogleAuthProvider();
 const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
+
+    console.log(res);
     const user = res.user;
 
     const { uid } = user;
@@ -82,26 +84,27 @@ const signInWithGoogle = async () => {
 
     localStorage.setItem("user", JSON.stringify(userData));
 
-    const q = query(collection(db, "users"), where("uid", "==", uid));
-    const docs = await getDocs(q);
-    if (docs.docs.length === 0) {
-      await addDoc(collection(db, "users"), {
-        uid: user.uid,
-        displayName: user.displayName,
-        authProvider: "google",
-        email: user.email,
-        isSuperAdmin: false,
-        isAccepted: false,
-        isReviewed: false,
-        appointments: [],
-        phone: "",
-        description: "",
-        boarding: false,
-        walking: false,
-        daycare: false,
-        sitting: false,
-      });
-    }
+    // const q = query(collection(db, "users"), where("uid", "==", uid));
+    // const docs = await getDocs(q);
+    // if (docs.docs.length === 0) {
+    //   await addDoc(collection(db, "users"), {
+    //     uid: user.uid,
+    //     displayName: user.displayName,
+    //     authProvider: "google",
+    //     email: user.email,
+    //     isSuperAdmin: false,
+    //     isAccepted: false,
+    //     isReviewed: false,
+    //     appointments: [],
+    //     phone: "",
+    //     description: "",
+    //     tarif: "",
+    //     boarding: false,
+    //     walking: false,
+    //     daycare: false,
+    //     sitting: false,
+    //   });
+    // }
 
     return { uid };
   } catch (err) {
@@ -139,6 +142,7 @@ const registerWithEmailAndPassword = async (name, email, password, router) => {
       appointments: [],
       phone: "",
       description: "",
+      tarif: "",
       boarding: false,
       walking: false,
       daycare: false,

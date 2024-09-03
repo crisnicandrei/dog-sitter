@@ -15,6 +15,7 @@ import {
 } from "../configs/firebase.config";
 import { set } from "date-fns";
 import { async } from "@firebase/util";
+import { useRouter } from "next/router";
 
 // ** Defaults
 const defaultProvider = {
@@ -37,6 +38,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [loginError, setLoginError] = useState(false);
+  const router = useRouter();
 
   const signInAndRegisterUsingGoogle = async () => {
     const { uid } = await signInWithGoogle();

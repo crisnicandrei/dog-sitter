@@ -54,7 +54,8 @@ function Profile() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitSuccessful },
   } = useForm({
     defaultValues,
     resolver: yupResolver(validationSchema),
@@ -89,6 +90,10 @@ function Profile() {
     };
     getUserInformation();
   }, [uid]);
+
+  useEffect(() => {
+    reset();
+  }, [isSubmitSuccessful]);
 
   const onSubmit = (formData) => {
     const templateParams = {
