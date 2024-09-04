@@ -151,9 +151,9 @@ function loginPage() {
                               &amp; <a href="/gdpr">Politica</a>
                             </label>
                           </div>
-                          <a href="#" className="forgot-pass">
-                            Parolă uitată
-                          </a>
+                          <Link legacyBehavior href={"/recuperare-parola"}>
+                            <a className="forgot-pass">Parolă uitată</a>
+                          </Link>
                           {errors.termsAndConditions && (
                             <p className="text-danger">
                               {errors.termsAndConditions.message}

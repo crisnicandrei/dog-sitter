@@ -22,6 +22,11 @@ import Spinner from "../../components/common/Spinner";
 const currentDate = new Date();
 const views = ["day", "week", "workWeek", "month"];
 
+const containsPhoneNumber = (value) => {
+  const phoneNumberRegex = /[0-9]{7,}/;
+  return phoneNumberRegex.test(value);
+};
+
 const defaultValues = {
   firstName: "",
   lastName: "",
@@ -40,7 +45,16 @@ const validationSchema = yup
     firstName: yup.string().required("Prenumele este obligatoriu."),
     lastName: yup.string().required("Numele este obligatoriu."),
     phone: yup.string().required("Telefonul este obligatoriu."),
-    description: yup.string().required("Descrierea este obligatorie."),
+    description: yup
+      .string()
+      .required("Descrierea este obligatorie.")
+      .test(
+        "no-phone-number",
+        "Descrierea nu trebuie să conțină un număr de telefon.",
+        (value) => {
+          return !containsPhoneNumber(value);
+        }
+      ),
     tarif: yup.string().required("Tariful este obligatorie."),
     boarding: yup.boolean(),
     walking: yup.boolean(),
@@ -250,7 +264,7 @@ function editProfilePage() {
                             placeholder="Descriere tarif"
                             {...register("tarif")}
                           />
-                          {errors.description && (
+                          {errors.tarif && (
                             <p className="text-danger">
                               {errors.tarif.message}
                             </p>

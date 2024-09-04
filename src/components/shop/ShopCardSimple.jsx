@@ -3,42 +3,44 @@ import Link from "next/link";
 
 // React imports
 import React from "react";
+import emailjs from "emailjs-com";
 
 // ** FIrebase impports
 
 import { acceptOrDeclineUserProfile } from "../../configs/firebase.config";
 
 function ShopCardSimple({ users, setRefetchUsers }) {
-  function handleAcceptOrDeclineUserProfile(uid, bolleanAcceptence) {
+  function handleAcceptOrDeclineUserProfile(
+    uid,
+    bolleanAcceptence,
+    email,
+    displayName
+  ) {
     acceptOrDeclineUserProfile(uid, bolleanAcceptence);
-    // if (bolleanAcceptence) {
-    //   const templateParams = {
-    //     sitter_name: user.displayName,
-    //     user_name: viewingUser.displayName,
-    //     start_date: startDate,
-    //     end_date: endDate,
-    //   };
-
-    //   emailjs
-    //     .send(
-    //       process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-    //       process.env.NEXT_PUBLIC_BOOK_EMAIL_ID,
-    //       templateParams,
-    //       process.env.NEXT_PUBLIC_USER_ID
-    //     )
-    //     .then((result) => {
-    //       console.log(result);
-    //       alert("Cererea a fost trimisa cu succes");
-    //     });
-    // } else {
-    // }
+    if (bolleanAcceptence) {
+      const templateParams = {
+        sitter_mail: email,
+        name: displayName,
+      };
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+          process.env.NEXT_PUBLIC_ACCEPT_SITTER_ID,
+          templateParams,
+          process.env.NEXT_PUBLIC_USER_ID
+        )
+        .then((result) => {
+          console.log(result);
+          alert("Cererea a fost trimisa cu succes");
+        });
+    }
     setRefetchUsers((prev) => !prev);
   }
 
   return (
     <>
       {users.map((item) => {
-        const { uid, displayName, description, profileImage } = item;
+        const { uid, displayName, description, profileImage, email } = item;
         return (
           <div key={uid} className="col-lg-4 col-md-4 col-sm-6">
             <div className="collection-card">
@@ -71,7 +73,12 @@ function ShopCardSimple({ users, setRefetchUsers }) {
                     <a
                       style={{ cursor: "pointer" }}
                       onClick={() =>
-                        handleAcceptOrDeclineUserProfile(uid, false)
+                        handleAcceptOrDeclineUserProfile(
+                          uid,
+                          false,
+                          email,
+                          displayName
+                        )
                       }
                     >
                       <i className="bi bi-x-lg text-white" />
@@ -81,7 +88,12 @@ function ShopCardSimple({ users, setRefetchUsers }) {
                     <a
                       style={{ cursor: "pointer" }}
                       onClick={() =>
-                        handleAcceptOrDeclineUserProfile(uid, true)
+                        handleAcceptOrDeclineUserProfile(
+                          uid,
+                          true,
+                          email,
+                          displayName
+                        )
                       }
                     >
                       <i className="bi bi-check-lg text-white" />

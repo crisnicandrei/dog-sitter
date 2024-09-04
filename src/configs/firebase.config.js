@@ -303,4 +303,5 @@ export {
   getUserData,
   uploadImageToFirebase,
   getUsersByCity,
+  sendPasswordResetEmail,
 };

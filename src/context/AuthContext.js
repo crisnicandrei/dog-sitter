@@ -12,6 +12,7 @@ import {
   updateProfile,
   uploadImageToFirebase,
   getUsersByCity,
+  sendPasswordResetEmail,
 } from "../configs/firebase.config";
 import { set } from "date-fns";
 import { async } from "@firebase/util";
@@ -161,6 +162,12 @@ const AuthProvider = ({ children }) => {
     }
   };
 
+  const resetPassword = async (email) => {
+    try {
+      await sendPasswordResetEmail(auth, email);
+    } catch (error) {}
+  };
+
   const values = {
     user,
     loading,
@@ -172,6 +179,7 @@ const AuthProvider = ({ children }) => {
     logoutUser,
     uploadImage,
     fetchSitters,
+    resetPassword,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
