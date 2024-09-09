@@ -21,6 +21,8 @@ function Cereri() {
     const getPendingUsers = async () => {
       const pendingUsersData = await getAllPendingUsers();
 
+      console.log(pendingUsersData);
+
       setPendingUsers(pendingUsersData);
     };
 

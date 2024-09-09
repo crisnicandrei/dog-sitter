@@ -19,15 +19,16 @@ function ShopCardSimple({ users, setRefetchUsers }) {
     email,
     displayName
   ) {
-    acceptOrDeclineUserProfile(uid, bolleanAcceptence);
-    setIsReviewed(bolleanAcceptence);
-    setData({ email, displayName });
-
-    setRefetchUsers((prev) => !prev);
+    acceptOrDeclineUserProfile(uid, bolleanAcceptence).then(() => {
+      setRefetchUsers((prev) => !prev);
+      setIsReviewed(bolleanAcceptence);
+      setData({ email, displayName });
+    });
   }
 
   useEffect(() => {
     if (isReviewed) {
+      console.log(data);
       const templateParams = {
         sitter_mail: data.email,
         name: data.displayName,
