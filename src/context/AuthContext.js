@@ -16,6 +16,7 @@ import {
 } from "../configs/firebase.config";
 import { set } from "date-fns";
 import { async } from "@firebase/util";
+import emailjs from "emailjs-com";
 import { useRouter } from "next/router";
 
 // ** Defaults
@@ -27,7 +28,7 @@ const defaultProvider = {
   login: () => Promise.resolve(),
   logout: () => Promise.resolve(),
   register: () => Promise.resolve(),
-  signInAndRegisterUsingGoogle: () => Promise.resolve(),
+  signInAndRegisterUsingGoogle: (bool) => Promise.resolve(),
   updateUser: () => Promise.resolve(),
   logoutUser: () => Promise.resolve(),
   getUsersByCity: () => Promise.resolve(),
@@ -41,7 +42,7 @@ const AuthProvider = ({ children }) => {
   const [loginError, setLoginError] = useState(false);
   const router = useRouter();
 
-  const signInAndRegisterUsingGoogle = async () => {
+  const signInAndRegisterUsingGoogle = async (isRegister) => {
     const { uid } = await signInWithGoogle();
 
     const userData = await getUserInfoUsingUiid(uid);
@@ -54,6 +55,25 @@ const AuthProvider = ({ children }) => {
           endDate: new Date(appointment.endDate.seconds * 1000),
         };
       });
+    }
+
+    if (isRegister) {
+      const firstName = userData.displayName.split(" ")[0];
+      const lastName = userData.displayName.split(" ")[1];
+      const email = userData.email;
+      const templateParams = {
+        user_first_name: firstName,
+        user_last_name: lastName,
+        user_email: email,
+      };
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+          templateParams,
+          process.env.NEXT_PUBLIC_USER_ID
+        )
+        .then((result) => console.log(result));
     }
 
     setUser(userData);

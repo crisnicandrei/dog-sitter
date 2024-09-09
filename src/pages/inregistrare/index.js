@@ -90,7 +90,7 @@ function signUpPage() {
   };
 
   const handleLoginWithGoogle = () => {
-    signInAndRegisterUsingGoogle();
+    signInAndRegisterUsingGoogle(true);
   };
 
   const togglePasswordVisibility = () => {
