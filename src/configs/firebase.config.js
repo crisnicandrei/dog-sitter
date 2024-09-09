@@ -95,6 +95,7 @@ const signInWithGoogle = async () => {
         isSuperAdmin: false,
         isAccepted: false,
         isReviewed: false,
+        isRejected: false,
         appointments: [],
         phone: "",
         description: "",
@@ -139,6 +140,7 @@ const registerWithEmailAndPassword = async (name, email, password, router) => {
       isSuperAdmin: false,
       isAccepted: false,
       isReviewed: false,
+      isRejected: false,
       appointments: [],
       phone: "",
       description: "",
@@ -189,7 +191,8 @@ const getAllPendingUsers = async (id) => {
   const usersQueryCollection = query(
     collection(db, "users"),
     where("isAccepted", "==", false),
-    where("isSuperAdmin", "==", false)
+    where("isSuperAdmin", "==", false),
+    where("isRejected", "==", false)
   );
   try {
     const querySnapshot = await getDocs(usersQueryCollection);
@@ -205,7 +208,8 @@ const getAllAcceptedUsers = async (id) => {
   const usersQueryCollection = query(
     collection(db, "users"),
     where("isAccepted", "==", true),
-    where("isReviewed", "==", true)
+    where("isReviewed", "==", true),
+    where("isRejected", "==", false)
   );
   try {
     const querySnapshot = await getDocs(usersQueryCollection);
@@ -262,6 +266,7 @@ const acceptOrDeclineUserProfile = async (uid, bolleanAcceptence) => {
     await updateDoc(userRef, {
       isReviewed: true,
       isAccepted: bolleanAcceptence,
+      isRejected: !bolleanAcceptence,
     });
 
     console.log("User profile updated successfully.");

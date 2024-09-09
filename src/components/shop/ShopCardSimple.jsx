@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // React imports
-import React from "react";
+import React, { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 
 // ** FIrebase impports
@@ -10,6 +10,9 @@ import emailjs from "emailjs-com";
 import { acceptOrDeclineUserProfile } from "../../configs/firebase.config";
 
 function ShopCardSimple({ users, setRefetchUsers }) {
+  const [isReviewed, setIsReviewed] = useState(false);
+  const [data, setData] = useState({});
+
   function handleAcceptOrDeclineUserProfile(
     uid,
     bolleanAcceptence,
@@ -17,10 +20,17 @@ function ShopCardSimple({ users, setRefetchUsers }) {
     displayName
   ) {
     acceptOrDeclineUserProfile(uid, bolleanAcceptence);
-    if (bolleanAcceptence) {
+    setIsReviewed(bolleanAcceptence);
+    setData({ email, displayName });
+
+    setRefetchUsers((prev) => !prev);
+  }
+
+  useEffect(() => {
+    if (isReviewed) {
       const templateParams = {
-        sitter_mail: email,
-        name: displayName,
+        sitter_mail: data.email,
+        name: data.displayName,
       };
       emailjs
         .send(
@@ -34,8 +44,7 @@ function ShopCardSimple({ users, setRefetchUsers }) {
           alert("Cererea a fost trimisa cu succes");
         });
     }
-    setRefetchUsers((prev) => !prev);
-  }
+  }, [isReviewed]);
 
   return (
     <>
