@@ -32,7 +32,14 @@ function Profile() {
                 <p></p>
               </div>
               <div className="col-lg-6">
-                <img className="img-fluid" src={user.profileImage} alt="" />
+                <img
+                  className="img-fluid"
+                  src={
+                    user.profileImage ||
+                    "https://static.vecteezy.com/system/resources/thumbnails/008/951/892/small_2x/cute-puppy-pomeranian-mixed-breed-pekingese-dog-run-on-the-grass-with-happiness-photo.jpg"
+                  }
+                  alt=""
+                />
               </div>
             </div>
             <div className="row mb-120">
