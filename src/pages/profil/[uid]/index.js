@@ -157,7 +157,9 @@ function Profile() {
             <div className="row g-4 align-items-center mb-40 pt-10">
               <div className="col-lg-6">
                 <h1 style={{ color: "black" }}>Nume: {user.displayName}</h1>
-                <h4 style={{ color: "black" }}>Telefon: {user.phone}</h4>
+                {user.isSuperAdmin && (
+                  <h4 style={{ color: "black" }}>Telefon: {user.phone}</h4>
+                )}
 
                 <p>Descriere: {user.description}</p>
                 <p></p>
