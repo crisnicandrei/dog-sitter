@@ -162,7 +162,9 @@ function GasesteSitter() {
         {sitters.length && (
           <div className="row">
             <div className="col-lg-12">
-              <h1 className="mb-30">Sitterii disponibili:</h1>
+              <h1 className="mb-30 mt-30 d-flex justify-content-center">
+                Sitterii disponibili:
+              </h1>
             </div>
             <div className="col-lg-12">
               <div className="row g-4 justify-content-center">

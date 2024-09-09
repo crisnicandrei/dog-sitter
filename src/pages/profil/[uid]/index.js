@@ -165,7 +165,11 @@ function Profile() {
               <div className="col-lg-6">
                 <img
                   className="img-fluid"
-                  src="../assets/images/blog/blog-dt-img2.png"
+                  src={
+                    user.profileImage
+                      ? user.profileImage
+                      : "https://static.vecteezy.com/system/resources/thumbnails/008/951/892/small_2x/cute-puppy-pomeranian-mixed-breed-pekingese-dog-run-on-the-grass-with-happiness-photo.jpg"
+                  }
                   alt=""
                 />
               </div>

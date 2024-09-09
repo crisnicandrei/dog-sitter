@@ -10,7 +10,7 @@ function ProfileCard({ users }) {
   return (
     <>
       {users.map((item) => {
-        const { uid, displayName, description } = item;
+        const { uid, displayName, description, profileImage } = item;
         return (
           <div key={uid} className="col-lg-4 col-md-4 col-sm-6">
             <div className="collection-card">
@@ -24,6 +24,7 @@ function ProfileCard({ users }) {
                     objectPosition: "center",
                   }}
                   src={
+                    profileImage ||
                     "https://static.vecteezy.com/system/resources/thumbnails/008/951/892/small_2x/cute-puppy-pomeranian-mixed-breed-pekingese-dog-run-on-the-grass-with-happiness-photo.jpg"
                   }
                   alt="User Profile Picture"
