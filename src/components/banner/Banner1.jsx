@@ -42,7 +42,12 @@ function Banner1() {
           </div>
         </div>
       </div>
-
+      <div className="d-none d-sm-block mt-50">
+        <p className="text-center px-2" style={{ color: "black" }}>
+          Prima platformă națională de house sharing pentru găzduirea legală și
+          contra cost a animalelor de companie.
+        </p>
+      </div>
       <div className="d-flex justify-content-center flex-column flex-sm-row">
         <div className="reservation-btn m-2 p-lg-2 p-1 d-flex justify-content-center text-center">
           <Link legacyBehavior href="/gaseste-sitter">
@@ -68,10 +73,9 @@ function Banner1() {
           />
         </div>
         <div className="d-sm-none">
-          <p className="text-center px-2" style={{ color: "black" }}>
-            O platformă de house sharing pentru câini, unde iubitorii de animale
-            pot găzdui câini atunci când stăpânii lor nu pot. Alătură-te
-            comunității
+          <p className="text-center px-4" style={{ color: "black" }}>
+            Prima platformă națională de house sharing pentru găzduirea legală
+            și contra cost a animalelor de companie.
           </p>
         </div>
         <div className="reservation-btn m-2 p-lg-2 p-1 d-flex justify-content-center">
