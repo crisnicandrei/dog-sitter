@@ -27,6 +27,7 @@ import Map from "../../../components/map";
 const validationSchema = yup.object().shape({
   firstName: yup.string().required("Prenumele este obligatoriu."),
   lastName: yup.string().required("Numele este obligatoriu."),
+  description: yup.string().required("Descrierea este obligatorie"),
   email: yup
     .string()
     .email("Adresa de email nu este validă.")
@@ -34,6 +35,9 @@ const validationSchema = yup.object().shape({
   phoneNumber: yup
     .string()
     .required("Telefonul este obligatoriu pentru contact."),
+  data: yup.string().required("Data este obligatorie"),
+  startHour: yup.string().required("Ora este obligatorie"),
+  endHour: yup.string().required("Ora este obligatorie"),
 });
 
 const defaultValues = {
@@ -67,8 +71,8 @@ function Profile() {
 
   const { user: viewingUser } = useContext(AuthContext);
 
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
+  const [startHour, setStartHour] = useState("");
+  const [endHour, setEndHour] = useState("");
 
   useEffect(() => {
     const getUserInformation = async () => {
@@ -96,13 +100,17 @@ function Profile() {
   }, [isSubmitSuccessful]);
 
   const onSubmit = (formData) => {
+    const date = formData.data.split("-").reverse().join("-");
+
     const templateParams = {
       sitter_name: user.displayName,
       user_name: formData.firstName + " " + formData.lastName,
       phone_number: formData.phoneNumber,
       viewer_email: formData.email,
-      start_date: startDate,
-      end_date: endDate,
+      date,
+      start_hour: formData.startHour,
+      end_hour: formData.endHour,
+      description: formData.description,
     };
     emailjs
       .send(
@@ -121,32 +129,8 @@ function Profile() {
     setDisplayForm(true);
   };
 
-  const handleAppointmentClick = (e) => {
-    console.log(e);
-    const appointmentStartDate = e.appointmentData.startDate;
-    const appointmentEndDate = e.appointmentData.endDate;
-
-    const options = {
-      weekday: "long", // "sâmbătă"
-      year: "numeric", // "2024"
-      month: "long", // "august"
-      day: "numeric", // "31"
-      hour: "numeric", // "19"
-      minute: "numeric", // "00"
-      timeZoneName: "short", // "GMT+3"
-    };
-
-    const formattedStartDate = appointmentStartDate.toLocaleString(
-      "ro-RO",
-      options
-    );
-    const formattedEndDate = appointmentEndDate.toLocaleString(
-      "ro-RO",
-      options
-    );
-
-    setStartDate(formattedStartDate);
-    setEndDate(formattedEndDate);
+  const handleStartHourChange = (e) => {
+    setStartHour(e.target.value); // Update startHour state on user selection
   };
 
   return (
@@ -176,183 +160,146 @@ function Profile() {
                 />
               </div>
             </div>
-            <div className="row mb-120">
-              <div className="col-lg-12">
-                <div
-                  className="nav nav2 nav  nav-pills mb-20"
-                  id="v-pills-tab2"
-                  role="tablist"
-                  aria-orientation="vertical"
-                >
-                  <button
-                    className="nav-link active mr-10"
-                    id="v-pills-home-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-home"
-                    type="button"
-                    role="tab"
-                    aria-controls="v-pills-home"
-                    aria-selected="false"
-                  >
-                    Calendar
-                  </button>
-                  <button
-                    className="nav-link"
-                    id="v-pills-profile-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-profile"
-                    type="button"
-                    role="tab"
-                    aria-controls="v-pills-profile"
-                    aria-selected="true"
-                  >
-                    Hartă
-                  </button>
-                </div>
-                <div
-                  className="tab-content tab-content2"
-                  id="v-pills-tabContent2"
-                >
-                  <div
-                    className="tab-pane fade active show"
-                    id="v-pills-home"
-                    role="tabpanel"
-                    aria-labelledby="v-pills-home-tab"
-                  >
-                    <div className="description">
-                      <div className="col-xl-10 col-lg-10 col-md-10 mt-100">
-                        <h1>Orar</h1>
 
-                        <Scheduler
-                          timeZone="Europe/Bucharest"
-                          dataSource={user.appointments || []}
-                          views={views}
-                          defaultCurrentView="day"
-                          defaultCurrentDate={currentDate}
-                          height={730}
-                          startDayHour={9}
-                          editing={{
-                            allowAdding: true,
-                            allowDeleting: false,
-                            allowDragging: false,
-                            allowResizing: false,
-                            allowUpdating: false,
-                          }}
-                          onAppointmentClick={handleAppointmentClick}
-                          onAppointmentAdded={handleAppointmentClick}
-                        />
-                      </div>
+            <div
+              className="form-wrapper wow fadeInUp"
+              data-wow-duration="1.5s"
+              data-wow-delay=".2s"
+            >
+              <form
+                ref={form}
+                className="w-100"
+                onSubmit={handleSubmit(onSubmit)}
+              >
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-inner">
+                      <label>Prenume *</label>
+                      <input
+                        type="text"
+                        placeholder="Prenume"
+                        name="user_first_name"
+                        {...register("firstName")}
+                      />
+                      {errors.firstName && (
+                        <p className="text-danger">
+                          {errors.firstName.message}
+                        </p>
+                      )}
                     </div>
                   </div>
-                  <div
-                    className="tab-pane fade"
-                    id="v-pills-profile"
-                    role="tabpanel"
-                    aria-labelledby="v-pills-profile-tab"
-                  >
-                    <Map latlong={user?.coords} profileEdit={false} />
+                  <div className="col-md-6">
+                    <div className="form-inner">
+                      <label>Nume *</label>
+                      <input
+                        type="text"
+                        placeholder="Nume"
+                        name="user_last_name"
+                        {...register("lastName")}
+                      />
+                      {errors.lastName && (
+                        <p className="text-danger">{errors.lastName.message}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-md-12">
+                    <div className="form-inner">
+                      <label>Introduceți adresa de email *</label>
+                      <input
+                        type="text"
+                        placeholder="Introduceți adresa de email"
+                        name="user_email"
+                        {...register("email")}
+                      />
+                      {errors.email && (
+                        <p className="text-danger">{errors.email.message}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-md-12">
+                    <div className="form-inner">
+                      <label>Introduceți descrierea *</label>
+                      <input
+                        type="text"
+                        placeholder="Introduceți descrierea"
+                        name="description"
+                        {...register("description")}
+                      />
+                      {errors.description && (
+                        <p className="text-danger">
+                          {errors.description.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-md-12">
+                    <div className="form-inner">
+                      <label>Telefon *</label>
+                      <input
+                        type="number"
+                        placeholder="Introduceți telefonul"
+                        name="phone_number"
+                        {...register("phoneNumber")}
+                      />
+                      {errors.email && (
+                        <p className="text-danger">
+                          {errors.phoneNumber.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-md-12">
+                    <div className="form-inner">
+                      <label>Data *</label>
+                      <input
+                        type="date"
+                        placeholder="Introduceți data"
+                        name="data"
+                        {...register("data")}
+                      />
+                      {errors.data && (
+                        <p className="text-danger">{errors.data.message}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-inner">
+                      <label>Ora *</label>
+                      <input
+                        type="time"
+                        placeholder="Introduceți ora"
+                        name="start_hour"
+                        onChange={handleStartHourChange}
+                        {...register("startHour")}
+                      />
+                      {errors.start_hour && (
+                        <p className="text-danger">
+                          {errors.start_hour.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="form-inner">
+                      <label>Ora *</label>
+                      <input
+                        type="time"
+                        placeholder="Introduceți ora"
+                        name="end_hour"
+                        min={startHour}
+                        {...register("endHour")}
+                      />
+                      {errors.endHour && (
+                        <p className="text-danger">{errors.endHour.message}</p>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xl-10 col-lg-10 col-md-10 mt-100 d-flex justify-content-center">
-                <button
-                  disabled={!startDate && !endDate}
-                  style={{
-                    backgroundColor: "rgb(46, 103, 209)",
-                    color: "white",
-                    opacity: startDate && endDate ? 1 : 0.5,
-                    cursor: startDate && endDate ? "pointer" : "not-allowed",
-                  }}
-                  className="nav-link"
-                  onClick={toggleDataForm}
-                >
-                  Adauga Detalii
+                <button disabled={form.errors} className="account-btn">
+                  Book Now
                 </button>
-              </div>
+              </form>
             </div>
-            {displayForm && (
-              <div
-                className="form-wrapper wow fadeInUp"
-                data-wow-duration="1.5s"
-                data-wow-delay=".2s"
-              >
-                <form
-                  ref={form}
-                  className="w-100"
-                  onSubmit={handleSubmit(onSubmit)}
-                >
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-inner">
-                        <label>Prenume *</label>
-                        <input
-                          type="text"
-                          placeholder="Prenume"
-                          name="user_first_name"
-                          {...register("firstName")}
-                        />
-                        {errors.firstName && (
-                          <p className="text-danger">
-                            {errors.firstName.message}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-inner">
-                        <label>Nume *</label>
-                        <input
-                          type="text"
-                          placeholder="Nume"
-                          name="user_last_name"
-                          {...register("lastName")}
-                        />
-                        {errors.lastName && (
-                          <p className="text-danger">
-                            {errors.lastName.message}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-inner">
-                        <label>Introduceți adresa de email *</label>
-                        <input
-                          type="text"
-                          placeholder="Introduceți adresa de email"
-                          name="user_email"
-                          {...register("email")}
-                        />
-                        {errors.email && (
-                          <p className="text-danger">{errors.email.message}</p>
-                        )}
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-inner">
-                        <label>Telefon *</label>
-                        <input
-                          type="number"
-                          placeholder="Introduceți telefonul"
-                          name="phone_number"
-                          {...register("phoneNumber")}
-                        />
-                        {errors.email && (
-                          <p className="text-danger">
-                            {errors.phoneNumber.message}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  <button disabled={form.errors} className="account-btn">
-                    Book Now
-                  </button>
-                </form>
-              </div>
-            )}
           </div>
         </div>
       )}
