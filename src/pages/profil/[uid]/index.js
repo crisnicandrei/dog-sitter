@@ -128,11 +128,16 @@ function Profile() {
       .then((result) => {
         console.log(result);
         alert("Cererea a fost trimisa cu succes");
+        setDisplayForm(false);
       });
   };
 
   const handleStartHourChange = (e) => {
     setStartHour(e.target.value);
+  };
+
+  const handleDisplayForm = () => {
+    setDisplayForm(!displayForm);
   };
 
   return (
@@ -177,139 +182,151 @@ function Profile() {
               data-wow-duration="1.5s"
               data-wow-delay=".2s"
             >
-              <form
-                ref={form}
-                className="w-100"
-                onSubmit={handleSubmit(onSubmit)}
+              <button
+                onClick={handleDisplayForm}
+                className="account-btn mb-100"
               >
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-inner">
-                      <label>Prenume *</label>
-                      <input
-                        type="text"
-                        placeholder="Prenume"
-                        name="user_first_name"
-                        {...register("firstName")}
-                      />
-                      {errors.firstName && (
-                        <p className="text-danger">
-                          {errors.firstName.message}
-                        </p>
-                      )}
+                {displayForm ? "Ascunde Formularul" : "Rezervă"}
+              </button>
+              {displayForm && (
+                <form
+                  ref={form}
+                  className="w-100"
+                  onSubmit={handleSubmit(onSubmit)}
+                >
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-inner">
+                        <label>Prenume *</label>
+                        <input
+                          type="text"
+                          placeholder="Prenume"
+                          name="user_first_name"
+                          {...register("firstName")}
+                        />
+                        {errors.firstName && (
+                          <p className="text-danger">
+                            {errors.firstName.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-inner">
+                        <label>Nume *</label>
+                        <input
+                          type="text"
+                          placeholder="Nume"
+                          name="user_last_name"
+                          {...register("lastName")}
+                        />
+                        {errors.lastName && (
+                          <p className="text-danger">
+                            {errors.lastName.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="form-inner">
+                        <label>Introduceți adresa de email *</label>
+                        <input
+                          type="text"
+                          placeholder="Introduceți adresa de email"
+                          name="user_email"
+                          {...register("email")}
+                        />
+                        {errors.email && (
+                          <p className="text-danger">{errors.email.message}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="form-inner">
+                        <label>Introduceți descrierea *</label>
+                        <input
+                          type="text"
+                          placeholder="Introduceți descrierea"
+                          name="description"
+                          {...register("description")}
+                        />
+                        {errors.description && (
+                          <p className="text-danger">
+                            {errors.description.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="form-inner">
+                        <label>Telefon *</label>
+                        <input
+                          type="number"
+                          placeholder="Introduceți telefonul"
+                          name="phone_number"
+                          {...register("phoneNumber")}
+                        />
+                        {errors.email && (
+                          <p className="text-danger">
+                            {errors.phoneNumber.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="form-inner">
+                        <label>Data *</label>
+                        <input
+                          type="date"
+                          placeholder="Introduceți data"
+                          name="data"
+                          {...register("data")}
+                        />
+                        {errors.data && (
+                          <p className="text-danger">{errors.data.message}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-inner">
+                        <label>Ora *</label>
+                        <input
+                          type="time"
+                          placeholder="Introduceți ora"
+                          name="start_hour"
+                          onChange={handleStartHourChange}
+                          {...register("startHour")}
+                        />
+                        {errors.start_hour && (
+                          <p className="text-danger">
+                            {errors.start_hour.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-inner">
+                        <label>Ora *</label>
+                        <input
+                          type="time"
+                          placeholder="Introduceți ora"
+                          name="end_hour"
+                          min={startHour}
+                          {...register("endHour")}
+                        />
+                        {errors.endHour && (
+                          <p className="text-danger">
+                            {errors.endHour.message}
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </div>
-                  <div className="col-md-6">
-                    <div className="form-inner">
-                      <label>Nume *</label>
-                      <input
-                        type="text"
-                        placeholder="Nume"
-                        name="user_last_name"
-                        {...register("lastName")}
-                      />
-                      {errors.lastName && (
-                        <p className="text-danger">{errors.lastName.message}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="col-md-12">
-                    <div className="form-inner">
-                      <label>Introduceți adresa de email *</label>
-                      <input
-                        type="text"
-                        placeholder="Introduceți adresa de email"
-                        name="user_email"
-                        {...register("email")}
-                      />
-                      {errors.email && (
-                        <p className="text-danger">{errors.email.message}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="col-md-12">
-                    <div className="form-inner">
-                      <label>Introduceți descrierea *</label>
-                      <input
-                        type="text"
-                        placeholder="Introduceți descrierea"
-                        name="description"
-                        {...register("description")}
-                      />
-                      {errors.description && (
-                        <p className="text-danger">
-                          {errors.description.message}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="col-md-12">
-                    <div className="form-inner">
-                      <label>Telefon *</label>
-                      <input
-                        type="number"
-                        placeholder="Introduceți telefonul"
-                        name="phone_number"
-                        {...register("phoneNumber")}
-                      />
-                      {errors.email && (
-                        <p className="text-danger">
-                          {errors.phoneNumber.message}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="col-md-12">
-                    <div className="form-inner">
-                      <label>Data *</label>
-                      <input
-                        type="date"
-                        placeholder="Introduceți data"
-                        name="data"
-                        {...register("data")}
-                      />
-                      {errors.data && (
-                        <p className="text-danger">{errors.data.message}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-inner">
-                      <label>Ora *</label>
-                      <input
-                        type="time"
-                        placeholder="Introduceți ora"
-                        name="start_hour"
-                        onChange={handleStartHourChange}
-                        {...register("startHour")}
-                      />
-                      {errors.start_hour && (
-                        <p className="text-danger">
-                          {errors.start_hour.message}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-inner">
-                      <label>Ora *</label>
-                      <input
-                        type="time"
-                        placeholder="Introduceți ora"
-                        name="end_hour"
-                        min={startHour}
-                        {...register("endHour")}
-                      />
-                      {errors.endHour && (
-                        <p className="text-danger">{errors.endHour.message}</p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <button disabled={form.errors} className="account-btn">
-                  Rezervă
-                </button>
-              </form>
+                  <button disabled={form.errors} className="account-btn">
+                    Rezervă
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>
