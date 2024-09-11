@@ -121,6 +121,8 @@ function editProfilePage() {
       sitting,
     };
 
+    console.log(updatedUserObject);
+
     updateUser(updatedUserObject);
   };
 

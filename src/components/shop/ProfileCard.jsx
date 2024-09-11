@@ -1,18 +1,33 @@
 // ** Next Imports
 import Link from "next/link";
 
+import { useRouter } from "next/router";
+
 // React imports
 import React from "react";
 
 // ** FIrebase impports
 
 function ProfileCard({ users }) {
+  const router = useRouter();
+
+  const handleProfileClick = (uid) => {
+    router.push("/profil/" + uid);
+  };
+
   return (
     <>
       {users.map((item) => {
         const { uid, displayName, description, profileImage } = item;
         return (
-          <div key={uid} className="col-lg-4 col-md-4 col-sm-6">
+          <div
+            onClick={() => {
+              handleProfileClick(uid);
+            }}
+            key={uid}
+            className="col-lg-4 col-md-4 col-sm-6"
+            style={{ cursor: "pointer" }}
+          >
             <div className="collection-card">
               <div className="collection-img">
                 <img
