@@ -1,5 +1,6 @@
 // ** Next Imports
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 // React imports
 import React, { useEffect, useState } from "react";
@@ -12,13 +13,16 @@ import { acceptOrDeclineUserProfile } from "../../configs/firebase.config";
 function ShopCardSimple({ users, setRefetchUsers }) {
   const [isReviewed, setIsReviewed] = useState(false);
   const [data, setData] = useState({});
+  const router = useRouter();
 
   function handleAcceptOrDeclineUserProfile(
+    e,
     uid,
     bolleanAcceptence,
     email,
     displayName
   ) {
+    e.stopPropagation();
     acceptOrDeclineUserProfile(uid, bolleanAcceptence).then(() => {
       setRefetchUsers((prev) => !prev);
       setIsReviewed(bolleanAcceptence);
@@ -47,12 +51,21 @@ function ShopCardSimple({ users, setRefetchUsers }) {
     }
   }, [isReviewed]);
 
+  const handleProfileClick = (uid) => {
+    router.push("/profil/" + uid);
+  };
+
   return (
     <>
       {users.map((item) => {
         const { uid, displayName, description, profileImage, email } = item;
         return (
-          <div key={uid} className="col-lg-4 col-md-4 col-sm-6">
+          <div
+            onClick={() => handleProfileClick(uid)}
+            key={uid}
+            className="col-lg-4 col-md-4 col-sm-6 cursor-pointer"
+            style={{ cursor: "pointer" }}
+          >
             <div className="collection-card">
               <div className="collection-img">
                 <img
@@ -70,9 +83,6 @@ function ShopCardSimple({ users, setRefetchUsers }) {
                   alt="User Profile Picture"
                 />
                 <div className="view-dt-btn ">
-                  <div className="plus-icon" style={{ padding: "19px" }}>
-                    <i className="bi bi-eye" />
-                  </div>
                   <Link legacyBehavior href={`/profil/${uid}`}>
                     <a>Vezi Detalii</a>
                   </Link>
@@ -82,8 +92,9 @@ function ShopCardSimple({ users, setRefetchUsers }) {
                   <li>
                     <a
                       style={{ cursor: "pointer" }}
-                      onClick={() =>
+                      onClick={(e) =>
                         handleAcceptOrDeclineUserProfile(
+                          e,
                           uid,
                           false,
                           email,
@@ -97,8 +108,9 @@ function ShopCardSimple({ users, setRefetchUsers }) {
                   <li>
                     <a
                       style={{ cursor: "pointer" }}
-                      onClick={() =>
+                      onClick={(e) =>
                         handleAcceptOrDeclineUserProfile(
+                          e,
                           uid,
                           true,
                           email,

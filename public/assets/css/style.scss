@@ -7690,12 +7690,12 @@ footer {
     .view-dt-btn {
       display: flex;
       align-items: center;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      background: transparent;
+      // position: absolute;
+      // left: 0;
+      // bottom: 0;
+      background: var(--primary-color3);
       border-radius: 10px;
-      transition: 0.5s;
+      // transition: 0.5s;
       cursor: pointer;
       .plus-icon {
         width: 30px;
@@ -7721,18 +7721,16 @@ footer {
         border-radius: 10px;
         white-space: nowrap;
         padding: 4px 10px;
-        opacity: 0;
-        transform: scaleX(0);
+        opacity: 1;
+        transform: scaleX(1);
         transform-origin: left;
         transition: 0.5s;
       }
-      &:hover {
-        background: var(--primary-color3);
-        a {
-          opacity: 1;
-          transform: scaleX(1);
-        }
-      }
+      // &:hover {
+      //   background: var(--primary-color3);
+      //   a {
+      //   }
+      // }
     }
   }
   .cart-icon-list {

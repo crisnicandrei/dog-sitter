@@ -8092,7 +8092,7 @@ footer.style2 .social-area ul li:hover a i {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: transparent;
+  background-color: #f46f30;
   border-radius: 10px;
   transition: 0.5s;
   cursor: pointer;
@@ -8121,16 +8121,12 @@ footer.style2 .social-area ul li:hover a i {
   border-radius: 10px;
   white-space: nowrap;
   padding: 4px 10px;
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: 0.5s;
+  opacity: 1;
 }
 .collection-card .collection-img .view-dt-btn:hover {
   background: var(--primary-color3);
 }
 .collection-card .collection-img .view-dt-btn:hover a {
-  opacity: 1;
   transform: scaleX(1);
 }
 .collection-card .cart-icon-list {

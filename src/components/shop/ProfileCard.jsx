@@ -30,9 +30,9 @@ function ProfileCard({ users }) {
                   alt="User Profile Picture"
                 />
                 <div className="view-dt-btn ">
-                  <div className="plus-icon" style={{ padding: "19px" }}>
+                  {/* <div className="plus-icon" style={{ padding: "19px" }}>
                     <i className="bi bi-eye" />
-                  </div>
+                  </div> */}
                   <Link legacyBehavior href={`/profil/${uid}`}>
                     <a>Vezi Detalii</a>
                   </Link>
