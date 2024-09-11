@@ -105,6 +105,7 @@ const signInWithGoogle = async () => {
         walking: false,
         daycare: false,
         sitting: false,
+        profileReady: false,
       });
     }
 
@@ -150,6 +151,7 @@ const registerWithEmailAndPassword = async (name, email, password, router) => {
       walking: false,
       daycare: false,
       sitting: false,
+      profileReady: false,
     });
 
     return user;
@@ -193,7 +195,8 @@ const getAllPendingUsers = async (id) => {
     collection(db, "users"),
     where("isAccepted", "==", false),
     where("isSuperAdmin", "==", false),
-    where("isRejected", "==", false)
+    where("isRejected", "==", false),
+    where("profileReady", "==", true)
   );
   try {
     const querySnapshot = await getDocs(usersQueryCollection);

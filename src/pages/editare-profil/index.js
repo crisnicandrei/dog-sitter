@@ -1,7 +1,13 @@
 // ** Next Imports
 
 // ** React Imports
-import React, { useEffect, useState, useCallback, useContext } from "react";
+import React, {
+  useEffect,
+  useState,
+  useCallback,
+  useContext,
+  useMemo,
+} from "react";
 
 // ** Layout Imports
 import Layout from "../../layout/Layout";
@@ -65,6 +71,7 @@ const validationSchema = yup
     name: "at-least-one-service",
     test: function (value) {
       const { boarding, walking, daycare, sitting } = value;
+      console.log(boarding);
       return boarding || walking || daycare || sitting;
     },
     message: "Cel putin un serviciu trebuie sa fie selectat.",
@@ -89,13 +96,28 @@ function editProfilePage() {
     handleSubmit,
     formState: { errors },
     setValue,
-    control,
   } = useForm({
     defaultValues,
     resolver: yupResolver(validationSchema),
   });
 
   const onSubmit = (data) => {
+    console.log(data);
+    if (data.walking === undefined) {
+      data.walking = false;
+    }
+
+    if (data.daycare === undefined) {
+      data.daycare = false;
+    }
+
+    if (data.sitting === undefined) {
+      data.sitting = false;
+    }
+
+    if (data.boarding === undefined) {
+      data.boarding = false;
+    }
     const {
       firstName,
       lastName,
@@ -119,9 +141,8 @@ function editProfilePage() {
       walking,
       daycare,
       sitting,
+      profileReady: true,
     };
-
-    console.log(updatedUserObject);
 
     updateUser(updatedUserObject);
   };
@@ -145,17 +166,27 @@ function editProfilePage() {
       } = user;
       const [firstName, lastName] = displayName.split(" ");
 
+      const phoneStorage = localStorage.getItem("phone") || "";
+      const descriptionStorage = localStorage.getItem("description") || "";
+      const tarifStorage = localStorage.getItem("tarif") || "";
+
       setValue("firstName", firstName);
       setValue("lastName", lastName);
-      setValue("phone", phone);
-      setValue("description", description);
-      setValue("tarif", tarif);
+      const phoneFinal = phoneStorage ? phoneStorage : phone;
+      const descriptionFinal = descriptionStorage
+        ? descriptionStorage
+        : description;
+      const tarifFinal = tarifStorage ? tarifStorage : tarif;
+
+      setValue("phone", phoneFinal);
+      setValue("description", descriptionFinal);
+      setValue("tarif", tarifFinal);
       setValue("boarding", boarding);
       setValue("walking", walking);
       setValue("daycare", daycare);
       setValue("sitting", sitting);
     }
-  }, [user, setValue]);
+  }, [user, setValue, user?.coords]);
 
   const files = acceptedFiles.map((file) => (
     <li key={file.path}>
@@ -173,6 +204,11 @@ function editProfilePage() {
       updateUser({ ...user, profileImage: url });
     }
   }, [url]);
+
+  const handleChange = (e, key) => {
+    console.log(e.target.value);
+    localStorage.setItem(key, e.target.value);
+  };
 
   if (loading || !user) {
     return <Spinner />;
@@ -232,6 +268,7 @@ function editProfilePage() {
                             type="text"
                             placeholder="Telefon"
                             {...register("phone")}
+                            onBlur={(e) => handleChange(e, "phone")}
                           />
                           {errors.phone && (
                             <p className="text-danger">
@@ -248,6 +285,7 @@ function editProfilePage() {
                             rows={3}
                             placeholder="Scurtă descriere"
                             {...register("description")}
+                            onBlur={(e) => handleChange(e, "description")}
                           />
                           {errors.description && (
                             <p className="text-danger">
@@ -265,6 +303,7 @@ function editProfilePage() {
                             rows={3}
                             placeholder="Descriere tarif"
                             {...register("tarif")}
+                            onBlur={(e) => handleChange(e, "tarif")}
                           />
                           {errors.tarif && (
                             <p className="text-danger">
@@ -357,8 +396,22 @@ function editProfilePage() {
                         </div>
                       </div>
                     </div>
+                    {!user?.coords && (
+                      <p style={{ color: "red", fontWeight: "bold" }}>
+                        Locatia este obligatorie
+                      </p>
+                    )}
                     <Map latlong={user?.coords} profileEdit={true} />
-                    <button className="account-btn mt-10">Salveaza</button>
+                    <button
+                      style={{
+                        cursor: !user?.coords ? "not-allowed" : "pointer",
+                        pointerEvents: !user?.coords ? "none" : "all",
+                      }}
+                      disabled={!user?.coords}
+                      className="account-btn mt-10"
+                    >
+                      Salveaza
+                    </button>
                   </form>
                 </div>
               </div>

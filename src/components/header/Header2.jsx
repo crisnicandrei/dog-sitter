@@ -51,6 +51,14 @@ function Header2() {
 
   const logout = async () => {
     try {
+      localStorage.removeItem("daycare");
+      localStorage.removeItem("sitting");
+      localStorage.removeItem("boarding");
+      localStorage.removeItem("walking");
+      localStorage.removeItem("description");
+      localStorage.removeItem("phone");
+      localStorage.removeItem("tarif");
+
       await logoutUser();
       router.push("/autentificare");
     } catch (error) {}
