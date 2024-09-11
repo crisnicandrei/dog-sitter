@@ -22,6 +22,7 @@ import {
   doc,
   getDoc,
   updateDoc,
+  deleteDoc,
 } from "firebase/firestore";
 
 import { ref, uploadBytes, getStorage, getDownloadURL } from "firebase/storage";
@@ -250,6 +251,18 @@ const updateProfile = async (updatedUserData) => {
   }
 };
 
+const deleteUser = async (uid) => {
+  const q = query(collection(db, "users"), where("uid", "==", uid));
+  try {
+    const docSnap = await getDocs(q);
+    docSnap.forEach((doc) => {
+      deleteDoc(doc.ref);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const acceptOrDeclineUserProfile = async (uid, bolleanAcceptence) => {
   try {
     const q = query(collection(db, "users"), where("uid", "==", uid));
@@ -309,4 +322,5 @@ export {
   uploadImageToFirebase,
   getUsersByCity,
   sendPasswordResetEmail,
+  deleteUser,
 };

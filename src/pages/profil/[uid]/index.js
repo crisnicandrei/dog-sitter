@@ -13,7 +13,7 @@ import withAdminRoute from "../../../hocs/withAdminRoute";
 import Scheduler from "devextreme-react/scheduler";
 
 // ** Firebase Imports
-import { getUserData } from "../../../configs/firebase.config";
+import { getUserData, deleteUser } from "../../../configs/firebase.config";
 
 import { AuthContext } from "../../../context/AuthContext";
 
@@ -95,6 +95,12 @@ function Profile() {
     getUserInformation();
   }, [uid]);
 
+  const deleteSitter = (id) => {
+    deleteUser(id);
+    alert("Sitter-ul a fost sters");
+    router.push("/gaseste-sitter/");
+  };
+
   useEffect(() => {
     reset();
   }, [isSubmitSuccessful]);
@@ -125,12 +131,8 @@ function Profile() {
       });
   };
 
-  const toggleDataForm = () => {
-    setDisplayForm(true);
-  };
-
   const handleStartHourChange = (e) => {
-    setStartHour(e.target.value); // Update startHour state on user selection
+    setStartHour(e.target.value);
   };
 
   return (
@@ -160,6 +162,15 @@ function Profile() {
                 />
               </div>
             </div>
+
+            {viewingUser?.isSuperAdmin && (
+              <div
+                onClick={() => deleteSitter(uid)}
+                className="row g-4 align-items-center mb-40 pt-10"
+              >
+                <button className="btn btn-primary">Șterge sitter</button>
+              </div>
+            )}
 
             <div
               className="form-wrapper wow fadeInUp"
@@ -296,7 +307,7 @@ function Profile() {
                   </div>
                 </div>
                 <button disabled={form.errors} className="account-btn">
-                  Book Now
+                  Rezervă
                 </button>
               </form>
             </div>

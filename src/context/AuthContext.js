@@ -13,6 +13,7 @@ import {
   uploadImageToFirebase,
   getUsersByCity,
   sendPasswordResetEmail,
+  deleteUser,
 } from "../configs/firebase.config";
 import { set } from "date-fns";
 import { async } from "@firebase/util";
@@ -200,6 +201,7 @@ const AuthProvider = ({ children }) => {
     uploadImage,
     fetchSitters,
     resetPassword,
+    deleteUser,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
