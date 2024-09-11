@@ -25,6 +25,12 @@ function Profile() {
           <div className="container">
             <div className="row g-4 align-items-center mb-40 pt-10">
               <div className="col-lg-6">
+                {!user.profileReady && (
+                  <h1 style={{ color: "red", fontWeight: "bold" }}>
+                    Pentru a apărea în lista de cereri a sitterilor, aveți
+                    nevoie de un profil complet editat.
+                  </h1>
+                )}
                 <h1 style={{ color: "black" }}>Nume: {user.displayName}</h1>
                 <h4 style={{ color: "black" }}>Telefon: {user.phone}</h4>
 
