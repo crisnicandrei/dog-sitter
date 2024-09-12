@@ -56,6 +56,7 @@ export default function Map({ latlong, profileEdit = false }) {
             "geometry",
             "name",
           ],
+          language: "ro",
           componentRestrictions: {
             country: ["ro"],
           },
