@@ -24,6 +24,7 @@ import {
   updateDoc,
   deleteDoc,
 } from "firebase/firestore";
+import emailjs from "emailjs-com";
 
 import { ref, uploadBytes, getStorage, getDownloadURL } from "firebase/storage";
 
@@ -85,8 +86,14 @@ const signInWithGoogle = async () => {
     localStorage.setItem("user", JSON.stringify(userData));
 
     const q = query(collection(db, "users"), where("uid", "==", uid));
+
     const docs = await getDocs(q);
+
     if (docs.docs.length === 0) {
+      const firstName = user.displayName.split(" ")[0];
+      const lastName = user.displayName.split(" ")[1];
+      const email = user.email;
+
       await addDoc(collection(db, "users"), {
         uid: user.uid,
         displayName: user.displayName,
@@ -106,6 +113,21 @@ const signInWithGoogle = async () => {
         sitting: false,
         profileReady: false,
       });
+
+      const templateParams = {
+        user_first_name: firstName,
+        user_last_name: lastName,
+        user_email: email,
+      };
+
+      const resemail = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_USER_ID
+      );
+
+      console.log(resemail);
     }
 
     return { uid };
