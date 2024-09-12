@@ -29,6 +29,7 @@ export default function Map({ latlong, profileEdit = false }) {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyC2Q3EuM1N37s_5AZSDhKlZc_Z-PZoyfxM",
     libraries: libs,
+    language: "ro",
   });
 
   useEffect(() => {

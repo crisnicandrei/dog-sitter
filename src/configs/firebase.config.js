@@ -71,7 +71,6 @@ const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
 
-    console.log(res);
     const user = res.user;
 
     const { uid } = user;
