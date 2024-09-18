@@ -53,3 +53,6 @@ yarn-error.log*
 # Next.js exported directories and files
 .next/cache
 node_modules
+
+
+.env.local

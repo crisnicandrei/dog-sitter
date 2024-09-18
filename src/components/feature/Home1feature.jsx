@@ -12,13 +12,13 @@ function Home1feature() {
                   <img src="/assets/images/icon/insured1.svg" alt="" />
                 </div>
                 <div className="content">
-                  <h4>Verified Sitters</h4>
+                  <h4>Sitteri verificați prin 3 surse</h4>
                 </div>
               </div>
             </div>
             <div className="freture-title">
               <h2>
-                <span>Câinele </span> tău e pe mâini bune
+                <span>Câinele tău</span> e pe mâini bune
               </h2>
             </div>
             <div className="feature-right">

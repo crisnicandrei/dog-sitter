@@ -27,8 +27,8 @@ function Footer1() {
                 </div>
                 <div className="email-info">
                   <h6 className="mb-10">
-                    <a href="mailto:claudia.dana.marcu@gmail.com">
-                      claudia.dana.marcu@gmail.com
+                    <a href="mailto:azorelhotel2024@gmail.com">
+                      azorelhotel2024@gmail.com
                     </a>
                   </h6>
                 </div>
@@ -51,9 +51,8 @@ function Footer1() {
           <div className="col-lg-6 d-flex align-items-center order-lg-2 order-1 justify-content-sm-center justify-content-start">
             <div className="footer-items">
               <h2>
-                want <span>to keep</span>
-                <br />
-                your pet in, <span>our center</span>?
+                <span>Vrei ca al tău</span> #Blănos{" "}
+                <span>de #Acasă să fie pe mâini bune? </span>
               </h2>
               <div
                 className={
@@ -70,7 +69,7 @@ function Footer1() {
                         : "primary-btn1"
                     }
                   >
-                    Book Now
+                    REZERVĂ ACUM
                   </a>
                 </Link>
               </div>
