@@ -21,6 +21,7 @@ import { useDropzone } from "react-dropzone";
 import Scheduler from "devextreme-react/scheduler";
 import { AuthContext } from "../../context/AuthContext";
 import useProtectedRoute from "../../hooks/useProtectedRoute";
+import { removeDiacriticsAndLowercase } from "../../utils";
 
 // ** Components imports
 import Spinner from "../../components/common/Spinner";
@@ -39,6 +40,7 @@ const defaultValues = {
   phone: "",
   description: "",
   tarif: "",
+  city: "",
   boarding: false,
   walking: false,
   daycare: false,
@@ -62,6 +64,7 @@ const validationSchema = yup
         }
       ),
     tarif: yup.string().required("Tariful este obligatorie."),
+    city: yup.string().required("Localitatea este obligatorie"),
     boarding: yup.boolean(),
     walking: yup.boolean(),
     daycare: yup.boolean(),
@@ -128,6 +131,7 @@ function editProfilePage() {
       walking,
       daycare,
       sitting,
+      city,
     } = data;
 
     const displayName = `${firstName} ${lastName}`;
@@ -141,15 +145,11 @@ function editProfilePage() {
       walking,
       daycare,
       sitting,
+      city: removeDiacriticsAndLowercase(city),
       profileReady: true,
     };
 
     updateUser(updatedUserObject);
-  };
-
-  const onAppointmentsChanges = () => {
-    const structedUserClone = structuredClone(user);
-    updateUser(structedUserClone);
   };
 
   useEffect(() => {
@@ -163,30 +163,24 @@ function editProfilePage() {
         walking,
         daycare,
         sitting,
+        city,
       } = user;
       const [firstName, lastName] = displayName.split(" ");
 
-      const phoneStorage = localStorage.getItem("phone") || "";
-      const descriptionStorage = localStorage.getItem("description") || "";
-      const tarifStorage = localStorage.getItem("tarif") || "";
+      const cityStorage = localStorage.getItem("city");
 
       setValue("firstName", firstName);
       setValue("lastName", lastName);
-      const phoneFinal = phoneStorage ? phoneStorage : phone;
-      const descriptionFinal = descriptionStorage
-        ? descriptionStorage
-        : description;
-      const tarifFinal = tarifStorage ? tarifStorage : tarif;
-
-      setValue("phone", phoneFinal);
-      setValue("description", descriptionFinal);
-      setValue("tarif", tarifFinal);
+      setValue("phone", phone);
+      setValue("description", description);
+      setValue("tarif", tarif);
+      setValue("city", cityStorage ? cityStorage : city);
       setValue("boarding", boarding);
       setValue("walking", walking);
       setValue("daycare", daycare);
       setValue("sitting", sitting);
     }
-  }, [user, setValue, user?.coords]);
+  }, [user, setValue]);
 
   const files = acceptedFiles.map((file) => (
     <li key={file.path}>
@@ -205,14 +199,13 @@ function editProfilePage() {
     }
   }, [url]);
 
-  const handleChange = (e, key) => {
-    console.log(e.target.value);
-    localStorage.setItem(key, e.target.value);
-  };
-
   if (loading || !user) {
     return <Spinner />;
   }
+
+  const handleCityChange = (e) => {
+    localStorage.setItem("city", e.target.value);
+  };
 
   return (
     <>
@@ -268,7 +261,6 @@ function editProfilePage() {
                             type="text"
                             placeholder="Telefon"
                             {...register("phone")}
-                            onBlur={(e) => handleChange(e, "phone")}
                           />
                           {errors.phone && (
                             <p className="text-danger">
@@ -285,7 +277,6 @@ function editProfilePage() {
                             rows={3}
                             placeholder="Scurtă descriere"
                             {...register("description")}
-                            onBlur={(e) => handleChange(e, "description")}
                           />
                           {errors.description && (
                             <p className="text-danger">
@@ -297,17 +288,32 @@ function editProfilePage() {
 
                       <div className="col-12">
                         <div className="form-inner">
-                          <label>Descriere tarif</label>
+                          <label>Descriere tarif *</label>
                           <textarea
                             type="text"
                             rows={3}
                             placeholder="Descriere tarif"
                             {...register("tarif")}
-                            onBlur={(e) => handleChange(e, "tarif")}
                           />
                           {errors.tarif && (
                             <p className="text-danger">
                               {errors.tarif.message}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                      <div className="col-12">
+                        <div className="form-inner">
+                          <label>Localitate *</label>
+                          <input
+                            type="text"
+                            placeholder="Localitate"
+                            {...register("city")}
+                            onChange={(e) => handleCityChange(e)}
+                          />
+                          {errors.city && (
+                            <p className="text-danger">
+                              {errors.city?.message}
                             </p>
                           )}
                         </div>
@@ -396,41 +402,9 @@ function editProfilePage() {
                         </div>
                       </div>
                     </div>
-                    {!user?.coords && (
-                      <p style={{ color: "red", fontWeight: "bold" }}>
-                        Locatia este obligatorie
-                      </p>
-                    )}
-                    <Map latlong={user?.coords} profileEdit={true} />
-                    <button
-                      style={{
-                        cursor: !user?.coords ? "not-allowed" : "pointer",
-                        pointerEvents: !user?.coords ? "none" : "all",
-                      }}
-                      disabled={!user?.coords}
-                      className="account-btn mt-10"
-                    >
-                      Salveaza
-                    </button>
+                    <button className="account-btn mt-10">Salveaza</button>
                   </form>
                 </div>
-              </div>
-
-              <div className="col-xl-10 col-lg-10 col-md-10 mt-100">
-                <h1>Orar</h1>
-
-                <Scheduler
-                  timeZone="Europe/Bucharest"
-                  dataSource={user.appointments || []}
-                  views={views}
-                  defaultCurrentView="day"
-                  defaultCurrentDate={currentDate}
-                  height={730}
-                  startDayHour={9}
-                  onAppointmentDeleted={onAppointmentsChanges}
-                  onAppointmentAdded={onAppointmentsChanges}
-                  onAppointmentUpdated={onAppointmentsChanges}
-                />
               </div>
             </div>
           </div>

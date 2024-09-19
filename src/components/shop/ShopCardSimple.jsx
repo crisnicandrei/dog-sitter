@@ -3,8 +3,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 // React imports
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import emailjs from "emailjs-com";
+import { AuthContext } from "../../context/AuthContext";
 
 // ** FIrebase impports
 
@@ -14,6 +15,7 @@ function ShopCardSimple({ users, setRefetchUsers }) {
   const [isReviewed, setIsReviewed] = useState(false);
   const [data, setData] = useState({});
   const router = useRouter();
+  const { user: viewingUser } = useContext(AuthContext);
 
   function handleAcceptOrDeclineUserProfile(
     e,
@@ -58,7 +60,8 @@ function ShopCardSimple({ users, setRefetchUsers }) {
   return (
     <>
       {users.map((item) => {
-        const { uid, displayName, description, profileImage, email } = item;
+        const { uid, displayName, description, profileImage, email, city } =
+          item;
         return (
           <div
             onClick={() => handleProfileClick(uid)}
@@ -139,6 +142,17 @@ function ShopCardSimple({ users, setRefetchUsers }) {
                   }}
                 >
                   {description}
+                </p>
+                <p
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  {viewingUser?.isSuperAdmin && city}
                 </p>
               </div>
             </div>

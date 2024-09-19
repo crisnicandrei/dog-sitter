@@ -5,11 +5,15 @@ import { useRouter } from "next/router";
 
 // React imports
 import React from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 // ** FIrebase impports
 
 function ProfileCard({ users }) {
   const router = useRouter();
+
+  const { user: viewingUser } = useContext(AuthContext);
 
   const handleProfileClick = (uid) => {
     router.push("/profil/" + uid);
@@ -18,7 +22,7 @@ function ProfileCard({ users }) {
   return (
     <>
       {users.map((item) => {
-        const { uid, displayName, description, profileImage } = item;
+        const { uid, displayName, description, profileImage, city } = item;
         return (
           <div
             onClick={() => {
@@ -70,6 +74,19 @@ function ProfileCard({ users }) {
                 >
                   {description}
                 </p>
+                {viewingUser?.isSuperAdmin && (
+                  <p
+                    style={{
+                      display: "-webkit-box",
+                      WebkitLineClamp: 3,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                    }}
+                  >
+                    {city}
+                  </p>
+                )}
               </div>
             </div>
           </div>
